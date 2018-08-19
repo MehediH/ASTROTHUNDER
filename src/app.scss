@@ -1,28 +1,37 @@
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "PT Mono", monospace;
   text-rendering: optimizeLegibility;
   padding: 0px;
   overflow-x: hidden;
-  color: #333;
+  color: #fff;
+  margin: 0px;
+  background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
 
   body {
     margin: 0px;
-    padding: 0px;
-    
+    height: 100vh;
     padding: 5px;
-
+    
     .content {
       background-color: #000;
       display: block;
       width: 100%;
       height: 100%;
 
-      .meta {
+      .header {
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         padding: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
 
         h1 {
           font-size: 6em;
@@ -38,12 +47,22 @@ html {
 
           a {
             transition: 0.1s all ease-in-out;
+
+            &:hover {
+              background: linear-gradient(
+                to right,
+                rgb(37, 4, 223) 0%,
+                rgb(212, 2, 125) 100%
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
         }
 
         p {
           font-size: 2em;
-          color: #333;
+          color: #fff;
           opacity: 0.85;
         }
 
@@ -69,7 +88,7 @@ html {
 
         a {
           font-style: italic;
-          color: #333;
+          color: #fff;
           text-decoration: none;
           transition: 0.1s all ease-in-out;
           opacity: 0.75;
@@ -171,4 +190,3 @@ html {
     margin: 30px !important;
   }
 }
- 
