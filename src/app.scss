@@ -23,15 +23,24 @@ html {
       width: 100%;
       height: 100%;
 
-      .header {
+      .wrapper{
+        max-width: 1600px;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 99vh;
+      }
+
+      .header { 
         position: absolute;
         top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        padding: 100px;
+        -webkit-transform: translateY(-90%);
+        transform: translateY(-90%);
         width: 100%;
         display: flex;
-        justify-content: space-around;
+
+        .art{
+          margin-left: 150px;
+        }
 
         h1 {
           font-size: 6em;
@@ -76,117 +85,87 @@ html {
         }
       }
 
-      .contact {
+      .footer {
+        bottom: 20px;
         position: absolute;
-        bottom: 0;
-        margin: 50px 100px;
-        font-size: 1.5em;
+        display: flex;
+        justify-content: start;
 
-        span {
-          opacity: 0.75;
+        .container{
+          display: grid;
+          grid-gap: 10px;
+          grid-auto-flow: column;
+          width: 100%;
         }
 
         a {
-          font-style: italic;
-          color: #fff;
           text-decoration: none;
-          transition: 0.1s all ease-in-out;
-          opacity: 0.75;
+        }
 
-          &:hover {
-            opacity: 1;
+        .card {
+          overflow: visible;
+          overflow: visible;
+          color: #fff;
+          padding: 20px;
+          margin-right: 20px;
+          min-width: 500px;
+          min-height: 430px;
+          position: relative;
+
+          h1{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50px;
+            position: absolute;
+            text-transform: uppercase;
+            top: -75px;
+            text-shadow: 2px 3px 0px #9c0270;
+          }
+
+          svg{
+            margin: 0px auto;
+            display: block;
+            position: absolute;
+          }
+        }
+
+        .work {
+          background: linear-gradient(0deg, rgba(185, 21, 86, 1.00), hsl(0, 0%, 0%));
+          box-shadow: 0px 0px 3px 0px rgba(185, 21, 86, 1.00);
+          
+          svg{
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+          }
+        }
+
+        .services{
+          background: linear-gradient(0deg, #22dcef, rgba(0,0,0,0));
+          box-shadow: 0px 0px 3px 0px #22dcef;
+
+          svg{
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .contact{
+          background: linear-gradient(0deg, #8f64d4, hsl(0, 0%, 0%));
+          box-shadow: 0px 0px 3px 0px #8f64d4;
+
+          svg{
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
           }
         }
       }
 
-      .projects-act {
-        position: absolute;
-        right: 100px;
-        bottom: 50px;
-        font-size: 1.5em;
-        font-style: italic;
-        color: #fff;
-        transition: 0.1s all ease-in-out;
-        opacity: 0.75;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0px;
-
-        li {
-          font-size: 1.5em;
-          text-transform: uppercase;
-          margin-bottom: 15px;
-
-          a {
-            text-decoration: none;
-            opacity: 0.75;
-            color: #fff;
-
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
     }
   }
 }
 
-@media (max-width: 1075px) {
-  h1 {
-    font-size: 4em !important;
-  }
-
-  p {
-    font-size: 1.5em !important;
-  }
-
-  .sub,
-  .contact {
-    font-size: 1.4em !important;
-  }
-}
-
-@media (max-width: 840px) {
-  .meta {
-    padding: 50px !important;
-  }
-
-  .contact {
-    margin: 50px !important;
-  }
-}
-
-@media (max-width: 685px) {
-  h1 {
-    font-size: 3em !important;
-  }
-}
-
-@media (max-width: 580px) {
-  h1 {
-    font-size: 2em !important;
-  }
-
-  p {
-    font-size: 1.2em !important;
-  }
-
-  .sub {
-    font-size: 1.2em !important;
-  }
-
-  .contact {
-    font-size: 0.9em !important;
-  }
-
-  .meta {
-    padding: 30px !important;
-  }
-
-  .contact {
-    margin: 30px !important;
-  }
-}
