@@ -57,15 +57,7 @@ html {
           a {
             transition: 0.1s all ease-in-out;
 
-            &:hover {
-              background: linear-gradient(
-                to right,
-                rgb(37, 4, 223) 0%,
-                rgb(212, 2, 125) 100%
-              );
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
+
           }
         }
 
@@ -116,7 +108,7 @@ html {
             font-family: 'Montserrat', sans-serif;
             font-size: 50px;
             position: absolute;
-            text-transform: uppercase;
+            text-transform: lowercase;
             top: -75px;
             text-shadow: 2px 3px 0px #9c0270;
           }
@@ -144,12 +136,18 @@ html {
         .services{
           background: linear-gradient(0deg, #22dcef, rgba(0,0,0,0));
           box-shadow: 0px 0px 3px 0px #22dcef;
+          transition: 0.2s all ease-in-out;
 
           svg{
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+          }
+
+          &:hover{
+            box-shadow: 0px 0px 10px 0px #22dcef;
+           
           }
         }
 
