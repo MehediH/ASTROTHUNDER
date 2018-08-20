@@ -40,6 +40,28 @@ html {
 
         .art{
           margin-left: 150px;
+          position: relative;
+
+          svg{
+            position: absolute;
+          }
+
+          #blobs{
+            left: 0;
+            bottom: -50px;
+            width: 260px;
+            height: 170px;
+            padding-top: 20px;
+          }
+
+          #face{
+            left: 150px;
+            top: -50px;
+          }
+
+          #code {
+            right: 20px;
+          }
         }
 
         h1 {
@@ -122,7 +144,8 @@ html {
 
             svg{
               position: absolute;
-              transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+              transition-delay: 0.2s;
             }
           }
         }
