@@ -4,7 +4,7 @@
 }
 
 html {
-  font-family: "PT Mono", monospace;
+  font-family: 'Montserrat', sans-serif;
   text-rendering: optimizeLegibility;
   padding: 0px;
   overflow-x: hidden;
@@ -53,11 +53,13 @@ html {
           }
 
           #blobs{
-            left: 0;
-            bottom: -50px;
+            left: -40px;
+            bottom: -80px;
             width: 260px;
             height: 170px;
             padding-top: 20px;
+
+            animation: boomtown 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
           #face{
@@ -66,18 +68,24 @@ html {
           }
 
           #code {
-            right: 20px;
+            right: -20px;
+            top: -20px;
+
+            animation: fallen 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           }
 
           #phone{
-            right: 20px;
-            bottom: -30px;
+            right: -20px;
+            bottom: -80px;
+
+            animation: sickomode 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           }
         }
 
         .meta{
 
           h1 {
+            font-style: italic;
             font-size: 6em;
             background: linear-gradient(
               to right,
@@ -90,7 +98,7 @@ html {
             margin-top: 0px;
             opacity: 0;
             animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-  
+            
             a {
               transition: 0.1s all ease-in-out;
   
@@ -148,7 +156,6 @@ html {
           position: relative;
 
           h1{
-            font-family: 'Montserrat', sans-serif;
             font-size: 50px;
             position: absolute;
             text-transform: lowercase;
@@ -165,7 +172,7 @@ html {
 
             svg{
               position: absolute;
-              transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+              transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
               transition-delay: 0.2s;
             }
           }
@@ -298,5 +305,42 @@ html {
   100%{
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+
+@keyframes sickomode {
+  0% {
+    right: -20px;
+    bottom: -80px;
+  }
+
+  100%{
+    right: 20px;
+    bottom: -30px;
+  }
+}
+
+@keyframes fallen {
+  0% {
+    right: -20px;
+    top: -20px;
+  }
+
+  100%{
+    right: 20px;
+    top: 0;
+  }
+}
+
+@keyframes boomtown {
+  0% {
+    left: -40;
+    bottom: -80px;
+  }
+
+  100% {
+   left: 0px;
+   bottom: -50px; 
   }
 }
