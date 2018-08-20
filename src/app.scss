@@ -130,7 +130,7 @@ html {
         .work {
           background: linear-gradient(0deg, rgba(185, 21, 86, 1.00), hsl(0, 0%, 0%));
           box-shadow: 0px 0px 3px 0px rgba(185, 21, 86, 1.00);
-          transition: 0.5s all ease-in-out;
+          transition: 0.2s all ease-in-out;
 
           &:hover{
             box-shadow: 0px 0px 10px 0px rgba(185, 21, 86, 1.00);
@@ -183,36 +183,59 @@ html {
           box-shadow: 0px 0px 3px 0px #22dcef;
           transition: 0.2s all ease-in-out;
 
-          svg{
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+          &:hover{
+            box-shadow: 0px 0px 10px 0px #22dcef;
+           
           }
-          
+
           .art-container{
+            svg{
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
             &:hover{
               svg{
                 transform: translate(-50%, -50%) scale(1.2);
               }
             }
-          }
-
-          &:hover{
-            box-shadow: 0px 0px 10px 0px #22dcef;
-           
-          }
+          }  
         }
 
         .contact{
           background: linear-gradient(0deg, #8f64d4, hsl(0, 0%, 0%));
           box-shadow: 0px 0px 3px 0px #8f64d4;
 
-          svg{
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+          &:hover{
+            box-shadow: 0px 0px 10px 0px #8f64d4;
+          }
+
+          .art-container{
+            svg{
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+            }
+
+            #send{
+              right: 55px !important;
+              transform: none;
+              left: initial;
+              top: 18%;
+            }
+
+            &:hover{
+              #email{
+                transform: translate(-65%, -40%) scale(1.1);
+              }
+
+              #send{
+                transform: scale(1.3);
+              }
+            }
           }
         }
       }
