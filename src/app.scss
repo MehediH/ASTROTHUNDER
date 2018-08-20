@@ -11,12 +11,14 @@ html {
   color: #fff;
   margin: 0px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
+  overflow: hidden;
 
   body {
     margin: 0px;
     height: 100vh;
     padding: 5px;
     
+
     .content {
       background-color: #000;
       display: block;
@@ -31,7 +33,7 @@ html {
       }
 
       .header { 
-        position: absolute;
+        position: relative;
         top: 50%;
         -webkit-transform: translateY(-90%);
         transform: translateY(-90%);
@@ -41,6 +43,10 @@ html {
         .art{
           margin-left: 150px;
           position: relative;
+          width: 35%;
+          float: right;
+          opacity: 0;
+          animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           svg{
             position: absolute;
@@ -62,40 +68,53 @@ html {
           #code {
             right: 20px;
           }
-        }
 
-        h1 {
-          font-size: 6em;
-          background: linear-gradient(
-            to right,
-            rgb(212, 2, 125) 0%,
-            rgb(37, 4, 223) 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-bottom: 10px;
-          margin-top: 0px;
-
-          a {
-            transition: 0.1s all ease-in-out;
-
-
+          #phone{
+            right: 20px;
+            bottom: -30px;
           }
         }
 
-        p {
-          font-size: 2em;
-          color: #fff;
-          opacity: 0.85;
-        }
+        .meta{
 
-        .sub {
-          font-size: 1.8em;
-          background: linear-gradient(to left, #4e35d6 0%, #d4027d 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          max-width: 800px;
-          opacity: 1;
+          h1 {
+            font-size: 6em;
+            background: linear-gradient(
+              to right,
+              rgb(212, 2, 125) 0%,
+              rgb(37, 4, 223) 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            opacity: 0;
+            animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+            a {
+              transition: 0.1s all ease-in-out;
+  
+  
+            }
+          }
+  
+          p {
+            font-size: 2em;
+            color: rgba(255, 255, 255, 0.753);
+            opacity: 0;
+            animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+  
+          .sub {
+            font-size: 1.8em;
+            background: linear-gradient(to left, #4e35d6 0%, #d4027d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 800px;
+            opacity: 0;
+            animation: stargazing 3s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+
         }
       }
 
@@ -104,6 +123,8 @@ html {
         position: absolute;
         display: flex;
         justify-content: start;
+        opacity: 0;
+        animation: stargazing 3s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
         .container{
           display: grid;
@@ -267,3 +288,15 @@ html {
   }
 }
 
+
+@keyframes stargazing {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
