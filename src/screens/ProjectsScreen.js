@@ -26,22 +26,35 @@ export default class ProjectScreen extends Component {
 
     render() {
         const projects = this.state.projects;
+        console.log(projects)
         return (
-            <div>
-                <div className="meta">
-                    <h1>
-                        <Link to="./">projects</Link>
-                    </h1>
-                    <p>a creative design studio based in london.</p>
-                    <p className="sub">we craft beautiful, robust, and effortless web-based experiences for businesses.</p>
+            <div className="wrapper">
+                <div className="comp-header">
+                    <div className="meta">
+                        <h1>
+                            <Link to="./">inspect element</Link>
+                        </h1>  
+                    </div>
                 </div>
-                <span className="contact">
-                    <Link to="./projects">view our work</Link>
 
-                    { this.state.projects.map(({fields}, i) =>
-                        <Link to="./projects/">{fields.title}</Link>
-                    )}
-                </span>
+                <div className="projects">
+                    {
+                        projects.map((project) =>
+                            project.fields.visible ? 
+                                <article key={project.sys.id}>
+                                    <img src={project.fields.featuredImage.fields.file.url}/>
+
+                                    <div className="meta" style={{backgroundColor: project.fields.accent, boxShadow: `0 2px 20px ${project.fields.accent}`}}>
+                                        <h1>{project.fields.title}</h1>
+                                        <p>{project.fields.blogExcerpt}</p>
+                                    </div>
+
+                                </article>
+                            : <div> </div>
+                            
+                        )
+                    }
+                </div>
             </div>
         )
     }

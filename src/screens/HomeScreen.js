@@ -22,7 +22,7 @@ export default class HomeScreen extends Component {
                 </div>
             </div>
             
-            <div className="footer">
+            <div className="links">
                 <div className="container">
                     <Link to="./projects" className="card work">
                         <h1>Our Work</h1>
