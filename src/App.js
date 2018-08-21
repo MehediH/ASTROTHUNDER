@@ -6,6 +6,7 @@ import { Switch, Route, BrowserRouter, Link } from 'react-router-dom'
  
 import Home from './screens/HomeScreen.js';
 import Projects from './screens/ProjectsScreen.js';
+import Project from './screens/ProjectScreen.js';
 
 
 class About extends Component{
@@ -16,14 +17,6 @@ class About extends Component{
   }
 }
 
-
-class SingProject extends Component{
-  render() {
-    return (
-      <div>singularproject</div>
-    )
-  }
-}
 
 class NoMatch extends Component{
   render() {
@@ -41,7 +34,7 @@ export default class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route exact path="/projects" component={Projects}/>
-          <Route path="/projects/:project" component={SingProject}/>
+          <Route path="/projects/:project" component={Project}/>
           <Route component={NoMatch}/>
         </Switch>
       </BrowserRouter>

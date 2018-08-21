@@ -364,6 +364,15 @@ html {
         }
       }
 
+
+      .project-wrapper{
+        opacity: 0;
+        animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+        img{
+          max-width: 100%;
+        }
+      }
     }
   }
 }

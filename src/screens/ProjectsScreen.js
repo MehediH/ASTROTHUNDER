@@ -18,7 +18,7 @@ export default class ProjectScreen extends Component {
         }
     } 
 
-    componentWillMount(){
+    componentDidMount(){
         client.getEntries().then(entries => {
             this.setState({projects: entries.items});
         }) 
@@ -26,7 +26,7 @@ export default class ProjectScreen extends Component {
 
     render() {
         const projects = this.state.projects;
-        console.log(projects)
+
         return (
             <div className="wrapper">
                 <div className="comp-header">
@@ -42,14 +42,10 @@ export default class ProjectScreen extends Component {
                         projects.map((project) =>
                             project.fields.visible ? 
                                 <article key={project.sys.id}>
-                                    <img src={project.fields.featuredImage.fields.file.url}/>
-
-                                    <div className="meta" style={{backgroundColor: project.fields.accent, boxShadow: `0 2px 20px ${project.fields.accent}`}}>
-                                        <h1>{project.fields.title}</h1>
-                                        <p>{project.fields.blogExcerpt}</p>
-                                    </div>
-
-                                </article>
+                                    <Link to={"projects/"  + project.sys.id }>
+                                        <img src={project.fields.featuredImage.fields.file.url}/>
+                                    </Link>
+                                </article>  
                             : <div> </div>
                             
                         )
