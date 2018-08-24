@@ -12,7 +12,7 @@ html {
   margin: 0px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
   overflow: hidden;
-  animation: nc17 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: nc17 3s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
   body {
     margin: 0px;
@@ -36,8 +36,8 @@ html {
       .header { 
         position: relative;
         top: 50%;
-        -webkit-transform: translateY(-90%);
-        transform: translateY(-90%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
         width: 100%;
         display: flex;
 
@@ -166,7 +166,7 @@ html {
           overflow: visible;
           color: #fff;
           padding: 20px;
-          min-height: 430px;
+          min-height: 0px;
           position: relative;
 
           h1{
@@ -194,7 +194,6 @@ html {
         }
 
         .work {
-          background: linear-gradient(0deg, rgba(185, 21, 86, 1.00), hsl(0, 0%, 0%));
           box-shadow: 0px 0px 3px 0px rgba(185, 21, 86, 1.00);
           transition: 0.2s all ease-in-out;
 
@@ -245,7 +244,6 @@ html {
         }
 
         .services{
-          background: linear-gradient(0deg, #0569bf, rgba(0, 0, 0, 0));
           box-shadow: 0px 0px 3px 0px #0569bf;
           transition: 0.2s all ease-in-out;
 
@@ -271,7 +269,6 @@ html {
         }
 
         .contact{
-          background: linear-gradient(0deg, #630707, hsl(0, 0%, 0%));
           box-shadow: 0px 0px 3px 0px #630707;
 
           &:hover{
