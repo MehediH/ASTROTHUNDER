@@ -29,30 +29,37 @@ export default class ProjectScreen extends Component {
         console.log(projects)
         return (
             <div className="wrapper">
-                <div className="comp-header">
+                <div className="header">
                     <div className="meta">
                         <h1>
-                            <Link to="./">inspect element</Link>
-                        </h1>  
+                            <Link to="./">my work</Link>
+                        </h1>
+                        <p className="sub">here's everything i have worked on so far.</p>
                     </div>
+                
+       
                 </div>
-
-                <div className="projects">
+                
                     {
                         projects.map((project) =>
                             project.fields.visible ? 
                                 <article key={project.sys.id}>
-        
                                         <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
-                                        <p>{project.fields.description}</p>
-                                        <img src={project.fields.coverImage.fields.file.url}/>
+                                        
+                                        {/* <div class="images">
+                                            { 
+                                                project.fields.images.map((image) => 
+                                                    <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
+                                                )
+                                            }
+                                        </div> */}
                                 </article>  
                             : <div> </div>
                             
                         )
                     }
-                </div>
             </div>
         )
     }
 }
+

@@ -30,13 +30,11 @@ export default class HomeScreen extends Component {
                     </Link>
                     <Link to="./services" className="card services">
                         <h1>What I Do</h1>
-                        
-              
+
                     </Link>
                     <Link to="./contact" className="card contact">
-                        <h1>contact me</h1>
+                        <h1>Contact Me</h1>
                         
-                      
                     </Link>    
                 </div>
             </div>
