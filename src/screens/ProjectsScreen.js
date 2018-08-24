@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import * as contentful from 'contentful';
 
 var client = contentful.createClient({
-  space: "1tg8czgj9nfc",
-  accessToken: "e2a48051290e82b794a4eb9e50829d63cfb5ded5befd4f0c637994497206a333"
+  space: "f1nnr97nijby",
+  accessToken: "5a1f8b547286fd1ca20085700faf704f17836f0cbe89209e8b61a3326af658ed"
 })
 
 
@@ -19,14 +19,14 @@ export default class ProjectScreen extends Component {
     } 
 
     componentDidMount(){
-        client.getEntries().then(entries => {
+        client.getEntries({content_type: "7leLzv8hW06amGmke86y8G"}).then(entries => {
             this.setState({projects: entries.items});
         }) 
     }
 
     render() {
         const projects = this.state.projects;
-
+        console.log(projects)
         return (
             <div className="wrapper">
                 <div className="comp-header">
@@ -42,9 +42,10 @@ export default class ProjectScreen extends Component {
                         projects.map((project) =>
                             project.fields.visible ? 
                                 <article key={project.sys.id}>
-                                    <Link to={"projects/"  + project.sys.id }>
-                                        <img src={project.fields.featuredImage.fields.file.url}/>
-                                    </Link>
+        
+                                        <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
+                                        <p>{project.fields.description}</p>
+                                        <img src={project.fields.coverImage.fields.file.url}/>
                                 </article>  
                             : <div> </div>
                             

@@ -12,6 +12,7 @@ html {
   margin: 0px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
   overflow: hidden;
+  animation: nc17 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
   body {
     margin: 0px;
@@ -28,8 +29,8 @@ html {
       .wrapper{
         max-width: 1600px;
         margin: 0 auto;
-        overflow: hidden;
-        height: 99vh;
+        height: 100vh;
+        position: relative;
       }
 
       .header { 
@@ -145,16 +146,16 @@ html {
       .links {
         bottom: 20px;
         position: absolute;
-        display: flex;
-        justify-content: start;
         opacity: 0;
         animation: stargazing 3s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        width: 100%;
 
         .container{
           display: grid;
-          grid-gap: 10px;
+          grid-gap: 20px;
           grid-auto-flow: column;
           width: 100%;
+          grid-template-columns: repeat(3, 1fr);
         }
 
         a {
@@ -163,11 +164,8 @@ html {
 
         .card {
           overflow: visible;
-          overflow: visible;
           color: #fff;
           padding: 20px;
-          margin-right: 20px;
-          min-width: 500px;
           min-height: 430px;
           position: relative;
 
@@ -177,6 +175,7 @@ html {
             position: absolute;
             text-transform: lowercase;
             top: -75px;
+            text-shadow: 4px 3px 0px #6b1638;
           }
 
           .art-container{
@@ -340,26 +339,18 @@ html {
           position: relative;
           opacity: 0;
           animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          background-color: #1d1d1d;
+          padding: 50px;
 
           img{
             width: 100%;
             transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
           }
 
-          .meta{
-            position: absolute;
-            bottom: 80px;
-            right: 20px;
-            padding: 20px;
-            max-width: 500px;
-            opacity: 0;
-            animation: stargazing 3s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
-            h1{
-              margin: 0px 0px 10px 0;
-            }
+          h1{
+            margin: 0px 0px 10px 0;
+            font-size: 2em;
           }
-
        
         }
       }
@@ -424,5 +415,17 @@ html {
   100% {
    left: 0px;
    bottom: -50px; 
+  }
+}
+
+@keyframes nc17{
+  0% {
+    background-position: 0 0%;
+    background-size: 400% 400%;
+  }
+
+  100% {
+    background-position: 0 55%;
+    background-size: 400% 400%;
   }
 }
