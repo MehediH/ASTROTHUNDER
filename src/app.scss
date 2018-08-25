@@ -18,259 +18,63 @@ html {
     margin: 0px;
     height: 100vh;
     padding: 5px;
-    
-
-    .content {
+  
+    .content{
       background-color: #000;
       display: block;
       width: 100%;
       height: 100%;
+      padding: 50px 100px;
+    }
 
-      .wrapper{
-        max-width: 1600px;
-        margin: 0 auto;
-        height: 100vh;
-        position: relative;
-      }
+    header{
+      display: grid;
+      grid-template-columns: max-content 1fr;
 
-      .header { 
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        width: 100%;
-        display: flex;
-
-        .art{
-          margin-left: 150px;
-          position: relative;
-          width: 35%;
-          float: right;
-          opacity: 0;
-          animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
-          svg{
-            position: absolute;
-          }
-
-          #blobs{
-            left: -40px;
-            bottom: -80px;
-            width: 260px;
-            height: 170px;
-            padding-top: 20px;
-
-            animation: boomtown 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          }
-
-          #face{
-            left: 150px;
-            top: -50px;
-          }
-
-          #code {
-            right: -20px;
-            top: -20px;
-
-            animation: fallen 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          }
-
-          #phone{
-            right: -20px;
-            bottom: -80px;
-            animation: sickomode 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1) 1;
-          }
-
-          &:hover{
-            #phone{
-              right: -20px !important;
-              bottom: -80px !important;
-            }
-
-            #blobs{
-              left: -40px;
-              bottom: -80px !important;
-            }
-  
-            #face{
-              left: 150px !important;
-              top: -50px !important;
-            }
-          }
-        }
-
-        .meta{
-
-          h1 {
-            font-style: italic;
-            font-size: 6em;
-            background: linear-gradient(
-              to right,
-              rgb(212, 2, 125) 0%,
-              rgb(37, 4, 223) 100%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            margin-top: 0px;
-            opacity: 0;
-            animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-            
-            a {
-              transition: 0.1s all ease-in-out;
-  
-  
-            }
-          }
-  
-          p {
-            font-size: 2em;
-            color: rgba(255, 255, 255, 1);
-            opacity: 0;
-            animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          }
-  
-          .sub {
-            font-size: 1.8em;
-            background: linear-gradient(to left, #4e35d6 0%, #d4027d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            max-width: 800px;
-            opacity: 0;
-            animation: stargazing 3s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          }
-
-        }
-      }
-
-      .links {
-        bottom: 20px;
-        position: absolute;
-        display: flex;
-        justify-content: start;
+      h1 {
+        font-style: italic;
+        font-size: 6em;
+        background: linear-gradient(
+          to right,
+          rgb(212, 2, 125) 0%,
+          rgb(37, 4, 223) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0px;
         opacity: 0;
         animation: stargazing 3s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        width: 100%;
-
-        .container{
-          display: grid;
-          grid-gap: 10px;
-          grid-auto-flow: column;
-          width: 100%;
-          grid-template-columns: repeat(3, 1fr);
-        }
-
+        
         a {
-          text-decoration: none;
-        }
-
-        .card {
-          overflow: visible;
-          color: #fff;
-          padding: 20px;
-          position: relative;
-
-          h1{
-            font-size: 50px;
-            font-style: italic;
-            position: absolute;
-            text-transform: lowercase;
-            top: -75px;
-          }
-
-        }
-
-        .work {
-          box-shadow: 0px 0px 5px 0px rgba(185, 21, 86, 1.00);
-          transition: 0.2s all ease-in-out;
-
-          &:hover{
-            box-shadow: 0px 0px 10px 0px rgba(185, 21, 86, 1.00);
-          }
-          
-  
-        }
-
-        .services{
-          box-shadow: 0px 0px 5px 0px #0569bf;
-          transition: 0.2s all ease-in-out;
-
-          &:hover{
-            box-shadow: 0px 0px 10px 0px #0569bf;
-           
-          }
-        }
-
-        .contact{
-          box-shadow: 0px 0px 5px 0px #93a021;
-
-          &:hover{
-            box-shadow: 0px 0px 10px 0px #93a021;
-          }
-
-  
+          transition: 0.1s all ease-in-out;
         }
       }
 
-      .comp-header{
-        padding-top: 35px;
+      div{
+        position: relative;
+        margin-left: 15px;
 
-        h1 {
-          font-style: italic;
-          font-size: 2em;
-          background: linear-gradient(
-            to right,
-            rgb(212, 2, 125) 0%,
-            rgb(37, 4, 223) 100%
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          margin-bottom: 10px;
-          margin-top: 0px;
+        span{
           opacity: 0;
-          animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          
-          a {
-            transition: 0.1s all ease-in-out;
+          position: absolute;
+          bottom: 25px;
+          width: 0%;
+          height: 5px;
+          background-color: #B91556;
+          border-radius: 50px 0 0 0;
+          right: 0;
+          animation: pickupthephonebaby 2s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
 
-
-          }
+        .alt{
+          bottom: 45px;
+          background-color: #3FFF00;
         }
       }
-
-      .projects{
-        margin-top: 50px;
-
-        article{
-          position: relative;
-          opacity: 0;
-          animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          background-color: #1d1d1d;
-          padding: 50px;
-
-          img{
-            width: 100%;
-            transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
-          }
-
-          h1{
-            margin: 0px 0px 10px 0;
-            font-size: 2em;
-          }
        
-        }
-      }
 
-
-      .project-wrapper{
-        opacity: 0;
-        animation: stargazing 3s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
-        img{
-          max-width: 100%;
-        }
-      }
     }
+
   }
 }
 
@@ -333,5 +137,17 @@ html {
   100% {
     background-position: 0 55%;
     background-size: 400% 400%;
+  }
+}
+
+@keyframes pickupthephonebaby{
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
   }
 }
