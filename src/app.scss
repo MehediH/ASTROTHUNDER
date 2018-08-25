@@ -150,8 +150,9 @@ html {
       display: grid;
       margin: 10px;
       grid-gap: 0;
-      opacity: 0.5;
+      opacity: 1;
       grid-template-columns: repeat(10, 1fr);
+      animation: wasted 5s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
       span{
         border: 2px solid #00c4ff;
@@ -307,5 +308,15 @@ html {
     opacity: 1;
     transform: translateY(0px);
     box-shadow: 25px 21px 0px 0px  #7755cc;
+  }
+}
+
+@keyframes wasted {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
   }
 }
