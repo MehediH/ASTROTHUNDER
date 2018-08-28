@@ -7,7 +7,6 @@ html {
 
   text-rendering: optimizeLegibility;
   padding: 0px;
-  overflow-x: hidden;
   color: #fff;
   margin: 0px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
@@ -105,6 +104,18 @@ html {
           font-family: "Inconsolata", monospace;
           font-weight: 400;
         }
+
+        .services{
+          position: absolute;
+          bottom: 45px;
+          font-size: 30px;
+          text-decoration: none;
+          color: #def919;
+          
+          border-bottom: 3px solid #def919;
+        }
+
+        
       }
 
       .nice-smort{
@@ -168,155 +179,5 @@ html {
 }
 
 
-@keyframes stargazing {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-
-@keyframes sickomode {
-  0% {
-    right: -20px;
-    bottom: -80px;
-  }
-  
-  100%{
-    right: 20px;
-    bottom: -30px;
-  }
-}
-
-@keyframes fallen {
-  0% {
-    right: -20px;
-    top: -20px;
-  }
-  
-  100%{
-    right: 20px;
-    top: 0;
-  }
-}
-
-@keyframes boomtown {
-  0% {
-    left: -40;
-    bottom: -80px;
-  }
-  
-  100% {
-    left: 0px;
-    bottom: -50px; 
-  }
-}
-
-@keyframes nc17{
-  0% {
-    background-position: 0 0%;
-    background-size: 400% 400%;
-  }
-  
-  100% {
-    background-position: 0 55%;
-    background-size: 400% 400%;
-  }
-}
-
-@keyframes pickupthephonebaby{
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  
-  100% {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes sweetsweet{
-  0% {
-    transform: rotate(45deg);
-  }
-  
-  50% {
-    transform: rotate(130deg);
-  }
-  
-  
-  100% {
-    transform: rotate(45deg);
-  }
-}
-
-@keyframes chanel{
-  0% {
-    opacity: 0;
-    margin-left: -300px;
-  }
-  
-  50% {
-    margin-left: 150px;
-  }
-  
-  100%{
-    opacity: 1;
-    margin-left: 0px;
-  }
-}
-
-@keyframes trekked {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #a70296;
-  }
-}
-
-@keyframes boasy {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #ddf819;
-  }
-}
-
-@keyframes darkvader {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px  #5d03bd;
-  }
-}
-
-@keyframes wasted {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0.3;
-  }
-}
+@import "./_animations.scss";
+@import "./_fluid.scss"
