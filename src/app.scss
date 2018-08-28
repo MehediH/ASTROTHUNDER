@@ -1,10 +1,10 @@
-
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+
   text-rendering: optimizeLegibility;
   padding: 0px;
   overflow-x: hidden;
@@ -38,21 +38,15 @@ html {
       padding-left: 100px;
 
       h1 {
-        font-style: italic;
-        font-size: 6em;
-        background: linear-gradient(
-          to right,
-          rgb(212, 2, 125) 0%,
-          rgb(37, 4, 223) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 50px;
         margin: 0px;
         opacity: 0;
         animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         
         a {
           transition: 0.1s all ease-in-out;
+          text-decoration: none;
+          color: #ddf819;
         }
       }
 
@@ -64,18 +58,18 @@ html {
         span{
           opacity: 0;
           position: absolute;
-          bottom: 25px;
+          bottom: 15px;
           width: 0%;
           height: 5px;
-          background-color: #9d039c;
+          background-color: #dcf719;
           border-radius: 50px 0 0 0;
           right: 0;
           animation: pickupthephonebaby 2s 1.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) ;
         }
 
         .alt{
-          bottom: 45px;
-          background-color: #5d03be;
+          bottom: 30px;
+          background-color: #4790fe;
         }
       }
       
@@ -91,29 +85,30 @@ html {
       h1, h2{
         margin: 0px;
       }
+
       
       .hey-how-are-you{
         padding: 50px;
-        background-color: hsl(216, 100%, 64%);
+        background-color: #4791ff;
         border: 10px solid #def919;
         opacity: 0;
         animation: trekked 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        max-height: 330px;
 
         h1{
           padding-bottom: 20px;
           font-size: 3em;
-          font-style: italic;
           color: #e7ff0e;
         }
 
         h2{
           font-size: 2em;
+          font-family: "Inconsolata", monospace;
+          font-weight: 400;
         }
       }
 
       .nice-smort{
-        margin-top: 150px;
+        margin-top: 100px;
 
         a{
           text-decoration: none;
@@ -123,18 +118,23 @@ html {
 
       .i-am-good{
         padding: 50px;
-        background-color: #14bbab;
-        border: 10px solid #ddf819;
+        background-color: #a60295;
+        border: 10px solid #344cfb;
         opacity: 0;
         margin-bottom: 100px;
         animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        transition: cubic-bezier(0.2, 0.8, 0.2, 1);
+        
+        &:hover{
+          box-shadow: -25px -21px 0px 0px #4790fe
+        }
 
       }
 
       .how-about-you{
         padding: 50px;
         background-color: #751414;
-        border: 10px solid hsl(66, 100%, 53%);
+        border: 10px solid #e7ff0f;
         
         opacity: 0;
         animation: darkvader 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -151,7 +151,7 @@ html {
       margin: 10px;
       grid-gap: 0;
       opacity: 1;
-      grid-template-columns: repeat(10, 1fr);
+      
       animation: wasted 5s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
       span{
@@ -281,7 +281,7 @@ html {
   100%{
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #14bcac;
+    box-shadow: 25px 21px 0px 0px #a70296;
   }
 }
 
@@ -294,7 +294,7 @@ html {
   100%{
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #4790fe
+    box-shadow: 25px 21px 0px 0px #ddf819;
   }
 }
 
@@ -307,7 +307,7 @@ html {
   100%{
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px  #7755cc;
+    box-shadow: 25px 21px 0px 0px  #5d03bd;
   }
 }
 

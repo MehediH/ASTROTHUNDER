@@ -9,7 +9,7 @@ export default class HomeScreen extends Component {
                 <header>
                     <h1><Link to="/">mehedi hassan</Link></h1>
                     <div>
-                        <span></span><span class="alt"></span>
+                        <span></span><span className="alt"></span>
                     </div>
                 </header>
                 
@@ -36,9 +36,10 @@ export default class HomeScreen extends Component {
 
             </div>
 
-            <div className="background-overlay">
-                {
-                    [...Array(50)].map((e, i) => <span></span>)
+            <div className="background-overlay" style={{gridTemplateColumns: "repeat(" + Math.round(window.innerWidth / 256) + ", 1fr"}}>
+                {   
+
+                    [...Array(Math.round(window.innerWidth / 256) * Math.round(window.innerHeight / 288))].map((e, i) => <span key={i}></span>)
                 }
             </div>
         </div>
