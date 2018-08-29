@@ -10,6 +10,20 @@
   }
 }
 
+
+@keyframes ricky {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 @keyframes sickomode {
   0% {
     right: -20px;
