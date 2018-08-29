@@ -2,27 +2,26 @@
   box-sizing: border-box;
 }
 
+
+
+
 html {
   font-family: 'Roboto Mono', monospace;
-
+  overflow: hidden;
   text-rendering: optimizeLegibility;
   padding: 0px;
   color: #fff;
   margin: 0px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
-  overflow: hidden;
   animation: nc17 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
   body {
     margin: 0px;
     height: 100vh;
-    padding: 5px;
   
     .content{
-      background-color: #000;
       display: block;
       width: 100%;
-      height: 100%;
       padding: 50px 0;
     }
 
@@ -45,7 +44,7 @@ html {
         a {
           transition: 0.1s all ease-in-out;
           text-decoration: none;
-          color: #ddf819;
+          color: #b5f9bb;
         }
       }
 
@@ -68,13 +67,13 @@ html {
 
         .alt{
           bottom: 30px;
-          background-color: #4790fe;
+          background-color: #fe846b;
         }
       }
       
     }
 
-    .ratchet{
+    .main{
       display: grid;
       overflow: hidden;
       padding: 100px;
@@ -86,7 +85,7 @@ html {
       }
 
       
-      .hey-how-are-you{
+      .hero{
         padding: 50px;
         background-color: #4791ff;
         border: 10px solid #def919;
@@ -111,6 +110,7 @@ html {
           font-size: 30px;
           text-decoration: none;
           color: #def919;
+          display: inline-block;
           
           border-bottom: 3px solid #def919;
         }
@@ -118,37 +118,50 @@ html {
         
       }
 
-      .nice-smort{
+      .children{
         margin-top: 100px;
 
         a{
           text-decoration: none;
           color: #fff;
         }
-      }
-
-      .i-am-good{
-        padding: 50px;
-        background-color: #a60295;
-        border: 10px solid #344cfb;
-        opacity: 0;
-        margin-bottom: 100px;
-        animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        transition: cubic-bezier(0.2, 0.8, 0.2, 1);
         
-        &:hover{
-          box-shadow: -25px -21px 0px 0px #4790fe
+        .projects{
+          padding: 50px;
+          background-color: #a60295;
+          border: 10px solid #ff856a;
+          opacity: 0;
+          margin-bottom: 100px;
+          animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          transition: cubic-bezier(0.2, 0.8, 0.2, 1);
+          
+          &:hover{
+            box-shadow: -25px -21px 0px 0px #4790fe
+          }
+  
         }
-
+  
+        .contact{
+          padding: 50px;
+          background-color: #751414;
+          border: 10px solid #e7ff0f;
+          
+          opacity: 0;
+          animation: darkvader 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
       }
 
-      .how-about-you{
-        padding: 50px;
-        background-color: #751414;
-        border: 10px solid #e7ff0f;
-        
-        opacity: 0;
-        animation: darkvader 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      .card{
+        .arrow {
+          transition: 0.3s all cubic-bezier(1, -0.22, 0.49, 1.49);
+        } 
+
+        &:hover{
+          .arrow{
+            margin-left: 10px;
+          }
+        }
       }
     }
 
@@ -163,11 +176,11 @@ html {
       grid-gap: 0;
       opacity: 1;
       
-      animation: wasted 5s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      animation: wasted 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
       span{
-        border: 2px solid #00c4ff;
-        box-shadow: 0px 0px 20px 4px #c50283;
+        border: 2px solid #ffffff;
+        box-shadow: 0px 0px 20px 5px #f334df;
         height: 100%;
         margin-left: -300px;
         opacity: 0;
@@ -180,4 +193,4 @@ html {
 
 
 @import "./_animations.scss";
-@import "./_fluid.scss"
+@import "./_fluid.scss";

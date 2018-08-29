@@ -1,5 +1,65 @@
+@media (max-width: 2125px){
+    .main{
+        grid-template-columns: 3fr 1.5fr 0.5fr !important;
+        
+        .hero{
+            h1{
+                font-size: 2.5em !important;
+            }
+
+            .services{
+                font-size: 25px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1840px){
+    .main{
+        .children{
+            h2{
+                font-size: 1.3em !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px){
+    .main{
+        grid-template-columns: 3fr 1.5fr !important;
+    }
+}
+
+@media (max-width: 1165px){
+    .main{        
+        .hero{
+            padding: 30px !important;
+
+            h1{
+                font-size: 2em !important;
+            }
+
+            .services{
+                font-size: 20px !important;
+            }
+        }
+
+        .children{
+            div{
+                padding: 30px !important;
+            }
+
+            h2{
+                font-size: 1.2em !important;
+            }
+        }
+
+        
+    }
+}
+
 @media (max-width: 1156px){
-    .ratchet{
+    .main{
         display: block !important;
 
         .services{
@@ -9,8 +69,95 @@
             display: block;
         }
 
-        .nice-smort{
+        .children{
             margin-top: 0px;
         }
     }
 } 
+
+@media (max-width: 850px){
+    .content{
+        padding: 50px 0 !important;
+
+        header{
+            padding-left: 50px !important;
+
+            h1{
+                font-size: 30px !important;
+            }
+
+            .alt{
+                bottom: 20px !important;
+            }
+            
+            span{
+                bottom: 8px !important;
+            }
+        }
+
+        .main{
+            padding: 50px !important;
+        }
+
+        .children{
+            margin-top: 50px !important;
+
+            div{
+                margin-bottom: 50px !important;
+            }
+        }
+    }
+
+    .main{        
+        .hero{
+            h1{
+                font-size: 1.5em !important;
+            }
+
+            h2{
+                font-size: 1.2em !important;
+            }
+
+            .services{
+                font-size: 18px !important;
+            }
+        }
+
+        .children{
+            h2{
+                font-size: 1em !important;
+            }
+        }
+
+        
+    }
+}
+
+@media (max-width: 430px){
+
+    .main{
+        .hero{
+            padding: 15px !important;
+
+            h1{
+                font-size: 20px !important;
+            }
+        }
+
+        .children{
+            div{
+                padding: 15px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .main{
+        padding: 20px !important;
+
+        .hero{
+            border: 5px !important;
+        }
+    }
+}

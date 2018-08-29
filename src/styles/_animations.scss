@@ -109,11 +109,8 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #a70296;
+    box-shadow: 25px 21px 0px 0px #2cd08c;
 
-    &:hover {
-      box-shadow: -25px -21px 0px 0px #a70296;
-    }
   }
 }
 
@@ -139,7 +136,7 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #5d03bd;
+    box-shadow: 25px 21px 0px 0px #4890ff;
   }
 }
 
@@ -149,6 +146,6 @@
   }
 
   100% {
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }

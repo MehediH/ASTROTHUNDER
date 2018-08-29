@@ -39,23 +39,23 @@ export default class HomeScreen extends Component {
                     </div>
                 </header>
                 
-                <div className="ratchet">
-                    <div className="hey-how-are-you">
-                        <h1>a creative designer/developer based in london.</h1>
+                <div className="main">
+                    <div className="hero">
+                        <h1>a creative designer, developer based in london.</h1>
                         <h2>i craft beautiful, robust, and effortless web-based experiences.</h2>
-                        <Link to="/services" className="services">see what i do -></Link>
+                        <Link to="/services" className="services card">see what i do <span className="arrow">-></span></Link>
                     </div>
 
-                    <div className="nice-smort">
+                    <div className="children">
                         <Link to="./projects">
-                            <div className="i-am-good">
+                            <div className="projects card">
                                 <h2>view my projects</h2>
                             </div>
                         </Link>
 
                         <Link to="./contact">
-                            <div className="how-about-you">
-                                <h2>let's work together.</h2>
+                            <div className="contact card">
+                                <h2>let's work together</h2>
                             </div>
                         </Link>
                     </div>
