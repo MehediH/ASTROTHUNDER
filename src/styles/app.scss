@@ -7,7 +7,6 @@
 
 html {
   font-family: 'Roboto Mono', monospace;
-  overflow: hidden;
   text-rendering: optimizeLegibility;
   padding: 0px;
   color: #fff;
@@ -178,7 +177,8 @@ html {
       top: 0;
       left: 0;
       display: grid;
-      margin: 10px;
+      margin: 0px;
+      overflow: hidden;
       grid-gap: 0;
       opacity: 1;
 

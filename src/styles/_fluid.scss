@@ -152,12 +152,12 @@
     }
 }
 
-@media only screen and (max-width: 370px){
+@media (max-width: 370px){
     .main{
         padding: 20px !important;
 
-        .hero{
-            border: 5px !important;
+        .hero, .children div{
+            border: 0px !important;
         }
     }
 }
