@@ -28,36 +28,38 @@ export default class ProjectScreen extends Component {
         const projects = this.state.projects;
         console.log(projects)
         return (
-            <div className="wrapper">
-                <div className="header">
-                    <div className="meta">
-                        <h1>
-                            <Link to="./">my work</Link>
-                        </h1>
-                        <p className="sub">here's everything i have worked on so far.</p>
-                    </div>
-                
-       
-                </div>
-                
+            <div className="app">
+                <div className="wrapper">
+                    <header>
+                        <h1><Link to="/">mehedi hassan</Link></h1>
+                        <div>
+                            <span></span><span className="alt"></span>
+                        </div>
+                    </header>
+                    
+                    <div className="main">
                     {
                         projects.map((project) =>
                             project.fields.visible ? 
                                 <article key={project.sys.id}>
                                         <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
                                         
-                                        {/* <div class="images">
+                                        <div class="images">
                                             { 
                                                 project.fields.images.map((image) => 
                                                     <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
                                                 )
                                             }
-                                        </div> */}
+                                        </div>
                                 </article>  
                             : <div> </div>
                             
                         )
                     }
+                    </div>
+
+                </div>
+
             </div>
         )
     }

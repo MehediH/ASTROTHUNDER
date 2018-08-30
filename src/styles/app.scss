@@ -17,11 +17,14 @@ html {
   body {
     margin: 0px;
     height: 100vh;
+    overflow: hidden;
   
     .content{
       display: block;
       width: 100%;
       padding: 50px 0;
+      overflow-y: auto;
+      height: 100%;
     }
 
     .wrapper{
@@ -189,12 +192,12 @@ html {
         margin-left: -300px;
         opacity: 0;
 
-        animation: chanel 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1), sweetsweet 3s 0.1s infinite cubic-bezier(1, -0.22, 0.49, 1.49);
+        animation: chanel 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1), sweetsweet 3s 0.1s forwards cubic-bezier(1, -0.22, 0.65, 0.73);
       }
     }
 
     .anim{
-      animation: wasted 6s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      animation: wasted 5s 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
     .four{
