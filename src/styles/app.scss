@@ -3,26 +3,25 @@
 }
 
 
-
-
 html {
   font-family: 'Roboto Mono', monospace;
   text-rendering: optimizeLegibility;
   padding: 0px;
   color: #fff;
-  margin: 0px;
+  margin: 5px;
   background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
   animation: nc17 6s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
   body {
     margin: 0px;
-    height: 100vh;
+    height: 99vh;
     overflow: hidden;
-  
+    
     .content{
+      background-color: #000;
       display: block;
       width: 100%;
-      padding: 50px 0;
+      padding: 50px 0 0 0;
       overflow-y: auto;
       height: 100%;
     }
@@ -50,11 +49,12 @@ html {
         }
       }
 
+      
       div{
         position: relative;
         margin-left: 15px;
         
-
+        
         span{
           opacity: 0;
           position: absolute;
@@ -66,7 +66,7 @@ html {
           right: 0;
           animation: pickupthephonebaby 2s 1.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) ;
         }
-
+        
         .alt{
           bottom: 30px;
           background-color: #fe846b;
@@ -74,18 +74,18 @@ html {
       }
       
     }
-
+    
     .main{
       display: grid;
       overflow: hidden;
-      padding: 100px;
+      padding: 100px 100px 50px 100px;
       grid-template-columns: 2fr 1fr 1fr;
       grid-gap: 80px;
-
+      
       h1, h2{
         margin: 0px;
       }
-
+      
       
       .hero{
         padding: 50px;
@@ -93,11 +93,16 @@ html {
         border: 10px solid #def919;
         opacity: 0;
         animation: trekked 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
+        
         h1{
           padding-bottom: 20px;
           font-size: 3em;
           color: #e7ff0e;
+        }
+        
+        .hi{
+          font-size: 2.7em;
+          color: #b5f9bb;
         }
 
         h2{
@@ -186,8 +191,8 @@ html {
       opacity: 1;
 
       span{
-        border: 2px solid #ffffff;
-        box-shadow: 0px 0px 20px 5px #f334df;
+        border: 2px solid #f334df;
+        box-shadow: 0px 0px 20px 3px rgb(37, 4, 223);
         height: 100%;
         margin-left: -300px;
         opacity: 0;
