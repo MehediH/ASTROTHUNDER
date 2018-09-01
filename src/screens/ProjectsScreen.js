@@ -59,11 +59,11 @@ export default class ProjectScreen extends Component {
                             projects.map((project) =>
                                 project.fields.visible ? 
                                     <article key={project.sys.id}>
-                                            <div class="meta">
+                                            <Link to={"./projects/" + project.fields.slug}>
+                                                <img alt={project.fields.coverImage.fields.title} src={project.fields.coverImage.fields.file.url}/>
+                                            
                                                 <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
-                                                <p>{project.fields.slogan}</p>    
-                                            </div>
-                                            <img alt={project.fields.coverImage.fields.title} src={project.fields.coverImage.fields.file.url}/>
+                                            </Link>
                                             {/* <div class="images">
                                                 { 
                                                     project.fields.images.map((image) => 
