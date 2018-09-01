@@ -239,6 +239,42 @@ html {
       }
 
     }
+
+    .projects{
+      padding: 50px 100px;
+      article{
+        opacity: 0;
+        animation: stargazing 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        width: 70%;
+        position: relative;
+
+        .meta{
+          background-color: #b5f9bb;
+          padding: 20px 50px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-top: 0px;
+          color: rgb(37, 4, 223);
+          box-shadow: 0 2px 50px rgba(0, 0, 0, 0.4196078431372549);
+          
+          h1{
+            font-size: 1.8em;
+          }
+
+          p{
+            font-size: 20px;
+            font-family: "Inconsolata", monospace;
+            font-weight: 400;
+          }
+        }
+
+        img{
+          width: 100%;
+          padding-left: 100px;
+        }
+      }
+    }
   }
 }
 

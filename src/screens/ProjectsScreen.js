@@ -14,9 +14,26 @@ export default class ProjectScreen extends Component {
         super(props)
 
         this.state = {
-            projects: []
+            projects: [],
+            gridSizeX: 0,
+            gridSizeY: 0
         }
     } 
+
+    componentWillMount(){
+        this.setState({
+            gridSizeX: Math.round(window.innerWidth / 256),
+            gridSizeY: Math.round(window.innerHeight / 288)
+        })
+        
+        window.addEventListener('resize', () => {        
+            this.setState({
+                gridSizeX: Math.round(window.innerWidth / 256),
+                gridSizeY: Math.round(window.innerHeight / 288)
+            })
+    
+        })
+    }
 
     componentDidMount(){
         client.getEntries({content_type: "7leLzv8hW06amGmke86y8G"}).then(entries => {
@@ -31,35 +48,44 @@ export default class ProjectScreen extends Component {
             <div className="app">
                 <div className="wrapper">
                     <header>
-                        <h1><Link to="/">mehedi hassan</Link></h1>
+                        <h1><Link to="/">built by meh.</Link></h1>
                         <div>
                             <span></span><span className="alt"></span>
                         </div>
                     </header>
                     
-                    <div className="main">
-                    {
-                        projects.map((project) =>
-                            project.fields.visible ? 
-                                <article key={project.sys.id}>
-                                        <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
-                                        
-                                        <div class="images">
-                                            { 
-                                                project.fields.images.map((image) => 
-                                                    <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
-                                                )
-                                            }
-                                        </div>
-                                </article>  
-                            : <div> </div>
-                            
-                        )
-                    }
+                    <div className="projects">
+                        {
+                            projects.map((project) =>
+                                project.fields.visible ? 
+                                    <article key={project.sys.id}>
+                                            <div class="meta">
+                                                <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
+                                                <p>{project.fields.slogan}</p>    
+                                            </div>
+                                            <img alt={project.fields.coverImage.fields.title} src={project.fields.coverImage.fields.file.url}/>
+                                            {/* <div class="images">
+                                                { 
+                                                    project.fields.images.map((image) => 
+                                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
+                                                    )
+                                                }
+                                            </div> */}
+                                    </article>  
+                                : <div> </div>
+                                
+                            )
+                        }
                     </div>
 
                 </div>
+                
+                <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
 
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
             </div>
         )
     }
