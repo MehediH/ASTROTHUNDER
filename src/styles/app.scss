@@ -273,14 +273,19 @@ html {
         }
 
         h1{
-          font-size: 8em;
+          font-size: 5em;
           margin: 0px;
-          text-shadow: 4px 4px 20px #000000b8;
+          color: #fff;
+          padding: 20px 50px;
 
+        }
+
+        a{
+          position: relative;
         }
         
         img{
-          width: 100%;
+          width: calc(100% - 250px);
           margin-left: 200px;
           max-width: 1300px;
           position: absolute;
@@ -336,7 +341,7 @@ html {
             h2{
               color: #fff;
             }
-            
+
             &:hover{
               border: 10px solid #6fdeb0;
             }

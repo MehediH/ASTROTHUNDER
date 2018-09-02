@@ -66,7 +66,7 @@ export default class ProjectScreen extends Component {
                                                     style={{color: project.fields.acent}}
                                                 />
                                             
-                                                <div className="meta"><h1 style={{color: project.fields.accent}}>{project.fields.title}</h1></div>
+                                                <div className="meta"><h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1></div>
 
                                             </Link>
                                             
@@ -99,12 +99,7 @@ export default class ProjectScreen extends Component {
 
                 </div>
                 
-                <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
-                    {   
-
-                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
-                    }
-                </div>
+               
             </div>
         )
     }
