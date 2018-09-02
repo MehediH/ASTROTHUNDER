@@ -92,7 +92,8 @@ html {
         background-color: #4791ff;
         border: 10px solid #def919;
         opacity: 0;
-        animation: trekked 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        color: #2cd08c;
+        animation: boasy 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         
         h1{
           padding-bottom: 20px;
@@ -109,6 +110,7 @@ html {
           font-size: 2em;
           font-family: "Inconsolata", monospace;
           font-weight: 400;
+          color: #fff;
         }
 
         .services{
@@ -139,6 +141,7 @@ html {
           border: 10px solid #ff856a;
           opacity: 0;
           margin-bottom: 100px;
+          color: #ddf819;
           animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
           
@@ -154,10 +157,15 @@ html {
           border: 10px solid #e7ff0f;
         
           opacity: 0;
-          animation: darkvader 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          color: #4890ff;
+          animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
           
+          h2{
+            color: #fff;
+          }
+
           &:hover{
             border: 10px solid #6fdeb0;
           }
@@ -253,29 +261,86 @@ html {
         height: calc(100vh - 200px);
         position: relative;
         margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
         
-        
+        .meta{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          animation: stronger 3s 1.5s forwards cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
         h1{
           font-size: 8em;
           margin: 0px;
           text-shadow: 4px 4px 20px #000000b8;
-          position: absolute;
-          left: 25%;
-          top: 45%;
-          transform: translate(-50%, -50%);
-          opacity: 0;
-          animation: stronger 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
         }
         
         img{
           width: 100%;
+          margin-left: 200px;
           max-width: 1300px;
           position: absolute;
-          left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(0, -50%);
           opacity: 0;
-          animation: ricky 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: bounceback 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1), hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .inner{
+          width: 100%;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .links{
+          width: 100%;
+          position: relative;
+          display: block;
+          
+          .detail{
+            padding: 20px 50px;
+            background-color: #a60295;
+            border: 10px solid #ff856a;
+            opacity: 0;
+            margin-bottom: 100px;
+            color: #ddf819;
+            animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+            display: block;
+            overflow: hidden;
+
+            &:hover{
+              border: 10px solid #6fdeb0;
+            }
+    
+          }
+    
+          .project{
+            padding: 20px 50px;
+            background-color: #751414;
+            border: 10px solid #e7ff0f;
+            display: block;
+            overflow: hidden;
+            opacity: 0;
+            color: #4890ff;
+            animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+            transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+            
+            h2{
+              color: #fff;
+            }
+            
+            &:hover{
+              border: 10px solid #6fdeb0;
+            }
+          }
         }
       }
     }

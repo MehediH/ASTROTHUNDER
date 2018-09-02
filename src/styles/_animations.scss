@@ -114,19 +114,6 @@
   }
 }
 
-@keyframes trekked {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #2cd08c;
-
-  }
-}
 
 @keyframes boasy {
   0% {
@@ -137,22 +124,10 @@
   100% {
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #ddf819;
+    box-shadow: 25px 21px 0px 0px;
   }
 }
 
-@keyframes darkvader {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-    box-shadow: 25px 21px 0px 0px #4890ff;
-  }
-}
 
 @keyframes wasted {
   0% {
@@ -173,5 +148,26 @@
   100% {
     opacity: 1;
     top: 50%;
+  }
+}
+
+@keyframes bounceback {
+  0% {
+    transform: translateY(calc(-50% + 20px));
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes hope {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    box-shadow: 25px 21px 0px 0px;
   }
 }

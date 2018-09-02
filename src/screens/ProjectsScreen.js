@@ -59,11 +59,30 @@ export default class ProjectScreen extends Component {
                             projects.map((project) =>
                                 project.fields.visible ? 
                                     <article key={project.sys.id}>
-                                            <Link to={"./projects/" + project.fields.slug}>
-                                                <img alt={project.fields.coverImage.fields.title} src={project.fields.coverImage.fields.file.url}/>
+                                            <Link to={"./projects/" + project.fields.slug} className="project">
+                                                <img 
+                                                    alt={project.fields.coverImage.fields.title}
+                                                    src={project.fields.coverImage.fields.file.url}
+                                                    style={{color: project.fields.acent}}
+                                                />
                                             
-                                                <h1 style={{color: project.fields.accent}}>{project.fields.title}</h1>
+                                                <div className="meta"><h1 style={{color: project.fields.accent}}>{project.fields.title}</h1></div>
+
                                             </Link>
+                                            
+                                            <div className="links">
+                                                <div className="inner">
+                                                    <Link to={"./projects/" + project.fields.slug} className="detail">
+                                                        <h2>view in detail</h2>
+                                                    </Link>
+                                                
+                                                    { project.fields.projectLink && 
+                                                        <a href={project.fields.projectLink} target="blank" className="project">
+                                                            <h2>open project</h2>
+                                                        </a>
+                                                    }
+                                                </div>
+                                            </div>
                                             {/* <div class="images">
                                                 { 
                                                     project.fields.images.map((image) => 
