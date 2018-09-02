@@ -43,7 +43,6 @@ export default class ProjectScreen extends Component {
 
     render() {
         const projects = this.state.projects;
-        console.log(projects)
         return (
             <div className="app">
                 <div className="wrapper">

@@ -8,22 +8,22 @@ html {
   text-rendering: optimizeLegibility;
   padding: 0px;
   color: #fff;
-  margin: 5px;
-  background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
-  animation: nc17 6s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  
 
   body {
     margin: 0px;
-    height: 99vh;
+    height: 100vh;
     overflow: hidden;
-    
+    background: linear-gradient(to bottom, rgb(212, 2, 125) 67%, #2504df 30%);
+    animation: nc17 3s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
     .content{
-      background-color: #000;
       display: block;
       width: 100%;
       padding: 50px 0 0 0;
       overflow-y: auto;
       height: 100%;
+
     }
 
     .wrapper{
@@ -45,7 +45,7 @@ html {
         a {
           transition: 0.1s all ease-in-out;
           text-decoration: none;
-          color: #b5f9bb;
+          color: #dcf719;
         }
       }
 
@@ -69,7 +69,7 @@ html {
         
         .alt{
           bottom: 30px;
-          background-color: #fe846b;
+          background-color: #ffccf9;
         }
       }
       
@@ -138,10 +138,10 @@ html {
         .projects{
           padding: 50px;
           background-color: #a60295;
-          border: 10px solid #ff856a;
+          border: 10px solid #7affc7;
           opacity: 0;
           margin-bottom: 100px;
-          color: #ddf819;
+          color: #e7ff0e;
           animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
           
@@ -197,6 +197,7 @@ html {
       overflow: hidden;
       grid-gap: 0;
       opacity: 1;
+      display: none;
 
       span{
         border: 2px solid #f334df;
