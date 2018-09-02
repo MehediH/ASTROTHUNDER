@@ -99,7 +99,12 @@ export default class ProjectScreen extends Component {
 
                 </div>
                 
-               
+                <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
+
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
             </div>
         )
     }
