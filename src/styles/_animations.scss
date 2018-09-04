@@ -171,3 +171,14 @@
     box-shadow: 25px 21px 0px 0px;
   }
 }
+
+
+@keyframes nightcrawler {
+  0% {
+    overflow: hidden;
+  }
+
+  100% {
+    overflow: auto;
+  }
+}

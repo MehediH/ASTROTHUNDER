@@ -84,7 +84,7 @@
 } 
 
 @media (max-width: 850px){
-    .content{
+    .wrapper{
         padding: 50px 0 !important;
 
         header{
@@ -124,6 +124,7 @@
 
             .hi{
                 font-size: 1.3em !important;
+                padding-bottom: 5px !important;
             }
 
             h2{
@@ -156,7 +157,7 @@
             }
 
             .hi{
-                font-size: 17em !important;
+                font-size: 17px !important;
             }
         }
 
