@@ -125,11 +125,11 @@
                 margin-top: 20px !important;
                 
                 .inner{
-                    grid-auto-flow: row !important;
                     transform: none !important;
                     position: relative !important;
                     grid-gap: 50px !important;
-
+                    display: block !important;
+                    
                     a{
                         background-color: transparent !important;
                         box-shadow: 0px !important;
@@ -137,6 +137,9 @@
                         padding: 0px !important;
                         border: 0px !important;
                         animation: stronger 3s 1.5s forwards cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+                        float: left !important;
+                        margin-right: 20px !important;
+                        margin-bottom: 20px !important;
                     }
                 }
             }
@@ -251,8 +254,14 @@
                 font-size: 1em !important;
             }
         }
+    }
 
-        
+    .projects{
+        padding: 50px !important;
+
+        article .meta h1{
+            font-size: 2em !important;
+        }
     }
 }
 
@@ -276,6 +285,10 @@
                 padding: 15px !important;
             }
         }
+    }
+
+    .projects article .meta h1{
+        font-size: 1.5em !important;
     }
 }
 
