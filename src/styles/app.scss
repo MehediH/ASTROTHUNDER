@@ -256,6 +256,8 @@ html {
       a{
         color: #b5f9bb;
         text-decoration: none;
+        position: relative;
+        display: block;
       }
       
       article{
@@ -265,6 +267,7 @@ html {
         margin-bottom: 20px;
         display: grid;
         grid-template-columns: 3fr 1fr;
+        grid-gap: 20px;
         
         .meta{
           position: absolute;
@@ -283,7 +286,7 @@ html {
         }
         
         img{
-          width: 100%;
+          width: calc(100% - 220px);
           margin-left: 200px;
           max-width: 1300px;
           position: absolute;

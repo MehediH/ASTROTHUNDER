@@ -26,11 +26,121 @@
             }
         }
     }
+
+    .projects {
+        .project{
+            .meta{
+                h1{
+                    font-size: 3em;
+                }
+            }
+
+            img{
+                margin-left: 100px;
+                width: calc(100% - 120px);
+            }
+
+        }
+        
+        .links{
+            a{
+                padding: 15px 30px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1540px){
+    .projects{
+        article{
+            grid-auto-flow: row;
+            grid-template-columns: none !important;
+            grid-template-rows: 3fr 1fr;
+
+            .links{
+                width: 50% !important;
+                left: 50%;
+                transform: translateX(-50%);
+
+                .inner{
+                    display: grid;
+                    grid-auto-flow: column;
+                    grid-gap: 100px
+                }
+
+                a{
+                    margin-bottom: 0px !important;
+                    padding: 15px 30px !important;
+
+                    h2{
+                        margin: 0px !important;
+                        font-size: 20px;
+                    }
+                }
+
+                
+            }
+        }
+    }
 }
 
 @media (max-width: 1320px){
     .main{
         grid-template-columns: 3fr 1.5fr !important;
+    }
+
+    .projects{
+        article{
+            display: block !important;
+            height: auto !important;
+            margin-bottom: 40px !important;
+
+            .meta{
+                position: relative !important;
+                margin-top: 40px !important;
+                display: inline-block !important;
+                transform: none !important;
+                margin-left: 25px !important;
+
+                h1{
+                    font-size: 2.5em !important;
+                }
+            }
+
+            img{
+                width: 100% !important;
+                margin-left: 0px !important;
+                position: relative !important;
+                transform: none !important;
+                display: block !important;
+                top: 0 !important;
+                animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+            }
+            
+            .links{
+                transform: none !important;
+                left: 0% !important;
+                width: 100% !important;
+                margin-left: 25px !important;
+                margin-top: 20px !important;
+                
+                .inner{
+                    grid-auto-flow: row !important;
+                    transform: none !important;
+                    position: relative !important;
+                    grid-gap: 50px !important;
+
+                    a{
+                        background-color: transparent !important;
+                        box-shadow: 0px !important;
+                        text-decoration: underline !important;
+                        padding: 0px !important;
+                        border: 0px !important;
+                        animation: stronger 3s 1.5s forwards cubic-bezier(0.215, 0.610, 0.355, 1) !important;
+                    }
+                }
+            }
+        }
     }
 }
 
