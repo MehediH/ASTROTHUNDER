@@ -21,17 +21,19 @@ export default class ProjectScreen extends Component {
     } 
 
     componentWillMount(){
-        client.getEntry(this.props.match.params.project).then((entry) => {
-            this.setState({project: entry})
+        client.getEntries({content_type: "7leLzv8hW06amGmke86y8G", "fields.slug[match]": this.props.match.params.project}).then((entry) => {
+            entry.total == 1 ? this.setState({project: entry.items[0]}) : this.setState({notFound: true})
         }).catch((error) => {
-            this.setState({notFound: true})
+            console.error(error)
         })
+
     }
 
  
 
     render() {
         const project = this.state.project;
+        console.log(project)
 
         return (
             <div className="wrapper">
@@ -46,18 +48,26 @@ export default class ProjectScreen extends Component {
                 { project.fields && 
                     <article key={project.sys.id} className="project-wrapper">
                         <Link to={"projects/"  + project.sys.id }>
-                            <img src={project.fields.featuredImage.fields.file.url}/>
+                            <img src={project.fields.coverImage.fields.file.url}/>
 
                             <div className="meta" style={{backgroundColor: project.fields.accent, boxShadow: `0 2px 20px ${project.fields.accent}`}}>
                                 <h1>{project.fields.title}</h1>
                                 <p>{project.fields.blogExcerpt}</p>
                             </div>
+
+                            <div class="images">
+                                                { project.fields.image &&
+                                                    project.fields.images.map((image) => 
+                                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
+                                                    )
+                                                }
+                                            </div>
                         </Link>
                     </article>  
                 } 
 
                 { this.state.notFound &&
-                    <div class="project-wrapper">Sorry, this project does not exist.</div>
+                    <div className="project-wrapper">Sorry, this project does not exist.</div>
                 }
             </div>
         )

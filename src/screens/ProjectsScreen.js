@@ -16,20 +16,23 @@ export default class ProjectScreen extends Component {
         this.state = {
             projects: [],
             gridSizeX: 0,
-            gridSizeY: 0
+            gridSizeY: 0,
+            window: 0
         }
     } 
 
     componentWillMount(){
         this.setState({
             gridSizeX: Math.round(window.innerWidth / 256),
-            gridSizeY: Math.round(window.innerHeight / 288)
+            gridSizeY: Math.round(window.innerHeight / 288),
+            window: window.innerWidth
         })
         
         window.addEventListener('resize', () => {        
             this.setState({
                 gridSizeX: Math.round(window.innerWidth / 256),
-                gridSizeY: Math.round(window.innerHeight / 288)
+                gridSizeY: Math.round(window.innerHeight / 288),
+                window: window.innerWidth
             })
     
         })
@@ -40,6 +43,7 @@ export default class ProjectScreen extends Component {
             this.setState({projects: entries.items});
         }) 
     }
+
 
     render() {
         const projects = this.state.projects;
@@ -67,19 +71,22 @@ export default class ProjectScreen extends Component {
                                             
                                                 <div className="meta">
                                                     <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
-                                                    <div className="links-alt">
-                                                        <div className="inner">
-                                                            <Link to={"./projects/" + project.fields.slug} className="detail">
-                                                                <h2>view in detail</h2>
-                                                            </Link>
-                                                        
-                                                            { project.fields.projectLink && 
-                                                                <a href={project.fields.projectLink} target="blank" className="project">
-                                                                    <h2>open project</h2>
-                                                                </a>
-                                                            }
+                                                    
+                                                    { this.state.window < 1320 && 
+                                                        <div className="links-alt">
+                                                            <div className="inner">
+                                                                <Link to={"./projects/" + project.fields.slug} className="detail">
+                                                                    <h2>view in detail</h2>
+                                                                </Link>
+                                                            
+                                                                { project.fields.projectLink && 
+                                                                    <a href={project.fields.projectLink} target="blank" className="project">
+                                                                        <h2>open project</h2>
+                                                                    </a>
+                                                                }
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    }
                                                 </div>
 
                                             </Link>
@@ -97,13 +104,7 @@ export default class ProjectScreen extends Component {
                                                     }
                                                 </div>
                                             </div>
-                                            {/* <div class="images">
-                                                { 
-                                                    project.fields.images.map((image) => 
-                                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
-                                                    )
-                                                }
-                                            </div> */}
+                                            
                                     </article>  
                                 : <div> </div>
                                 
@@ -119,10 +120,7 @@ export default class ProjectScreen extends Component {
                         [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
                     }
                 </div>
-                </React.Fragment>
-
-            
+            </React.Fragment>   
         )
     }
 }
-
