@@ -275,6 +275,23 @@
             }
         }
     }
+
+    .single-project{
+        padding: 20px 50px !important;
+
+        h1{
+            font-size: 2em !important;
+        }
+
+        p{
+            font-size: 1.5em !important;
+        }
+
+        .article-content{
+            font-size: 22px !important;
+            line-height: 30px !important;
+        }
+    }
 }
 
 @media (max-width: 540px){
@@ -286,7 +303,7 @@
                 .inner{
                     justify-content: space-around !important;
                 }
-                
+
                 a{
                     margin: 0px !important;
                 }

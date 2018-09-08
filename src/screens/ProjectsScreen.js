@@ -93,7 +93,7 @@ export default class ProjectScreen extends Component {
                                             
                                             <div className="links">
                                                 <div className="inner">
-                                                    <Link to={"./projects/" + project.fields.slug} className="detail">
+                                                    <Link to={"/projects/" + project.fields.slug} className="detail">
                                                         <h2>view in detail</h2>
                                                     </Link>
                                                 

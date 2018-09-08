@@ -15,61 +15,95 @@ export default class ProjectScreen extends Component {
 
         this.state = {
             project: [],
-            notFound: false
+            notFound: false,
+            gridSizeX: 0,
+            gridSizeY: 0
         }
         
     } 
 
+
     componentWillMount(){
+        this.setState({
+            gridSizeX: Math.round(window.innerWidth / 256),
+            gridSizeY: Math.round(window.innerHeight / 288)
+        })
+        
+        window.addEventListener('resize', () => {        
+            this.setState({
+                gridSizeX: Math.round(window.innerWidth / 256),
+                gridSizeY: Math.round(window.innerHeight / 288)
+            })
+    
+        })
+    }
+
+    componentDidMount(){
         client.getEntries({content_type: "7leLzv8hW06amGmke86y8G", "fields.slug[match]": this.props.match.params.project}).then((entry) => {
-            entry.total == 1 ? this.setState({project: entry.items[0]}) : this.setState({notFound: true})
+            entry.total === 1 ? this.setState({project: entry.items[0]}) : this.setState({notFound: true})
         }).catch((error) => {
             console.error(error)
         })
 
     }
 
- 
 
     render() {
         const project = this.state.project;
-        console.log(project)
-
         return (
-            <div className="wrapper">
-                <div className="comp-header">
-                    <div className="meta">
-                        <h1>
-                            <Link to="/">inspect element</Link> { project.fields && <span>{project.fields.title}</span>}
-                        </h1>  
-                    </div>
-                </div>
-
-                { project.fields && 
-                    <article key={project.sys.id} className="project-wrapper">
-                        <Link to={"projects/"  + project.sys.id }>
-                            <img src={project.fields.coverImage.fields.file.url}/>
-
-                            <div className="meta" style={{backgroundColor: project.fields.accent, boxShadow: `0 2px 20px ${project.fields.accent}`}}>
+            <React.Fragment>
+                <div className="wrapper">
+                    <header>
+                        <h1><Link to="/">built by meh.</Link></h1>
+                        <div>
+                            <span></span><span className="alt"></span>
+                        </div>
+                    </header>
+                    
+                    { project.fields && !this.state.notFound && 
+                        <article className="single-project">
+                            
+                            <div className="meta">
                                 <h1>{project.fields.title}</h1>
-                                <p>{project.fields.blogExcerpt}</p>
+                                <p>{project.fields.slogan}</p>
                             </div>
 
-                            <div class="images">
-                                                { project.fields.image &&
-                                                    project.fields.images.map((image) => 
-                                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
-                                                    )
-                                                }
-                                            </div>
-                        </Link>
-                    </article>  
-                } 
+                            <div className="article-content">
+                                {project.fields.content}
+                            </div>
 
-                { this.state.notFound &&
-                    <div className="project-wrapper">Sorry, this project does not exist.</div>
-                }
-            </div>
+                            <div className="images">
+                                { project.fields.images &&
+                                    project.fields.images.map((image) => 
+                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
+                                    )
+                                }
+                            </div>
+                        </article>
+                    }
+
+                    {
+                        this.state.notFound && 
+
+                        <article className="single-project">
+                            
+                            <div className="meta">
+                                <h1>This project doesn't exist.</h1>
+                                <p>The project you are looking for couldn't be found. You can <Link to="/projects">view all of our projects here</Link>, or <Link to="/">go back to the homepage here instead.</Link></p>
+                            </div>
+
+                        </article>
+                    }
+                
+                </div>
+                
+                <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
+
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
+            </React.Fragment>   
         )
     }
 }

@@ -358,6 +358,49 @@ html {
         }
       }
     }
+
+    .single-project{
+      padding: 50px 100px;
+      display: block;
+      overflow: hidden;
+      max-width: 1800px;
+      margin: 0 auto;
+      opacity: 0;
+      animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      img{
+        width: 100%;
+      }
+
+      .meta{
+        margin-top: 20px;
+
+        h1{
+          font-size: 3em;
+          margin: 0px;
+          color: #e7ff0e;
+        }
+
+        p{
+          font-size: 2em;
+          margin: 0px;
+          padding-top: 20px;
+          color: #b4f8ba;
+
+          a{
+            color: #b4f8ba;
+          }
+        }
+      }
+
+      .article-content{
+        font-size: 25px;
+        line-height: 34px;
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+        margin: 20px 0;
+      }
+    }
   }
 }
 
