@@ -98,12 +98,18 @@
             .meta{
                 position: relative !important;
                 margin-top: 40px !important;
-                display: inline-block !important;
+                display: grid !important;
                 transform: none !important;
-                margin-left: 25px !important;
-
+                width: 100% !important;
+                grid-auto-flow: column;
+                grid-gap: 50px;
+                grid-template-columns: min-content 2fr;
+                
                 h1{
                     font-size: 2.5em !important;
+                    display: block !important;
+                    color: #b5f9bb;
+                    box-shadow: 25px 21px 0px 0px !important;
                 }
             }
 
@@ -118,28 +124,29 @@
             }
             
             .links{
-                transform: none !important;
-                left: 0% !important;
-                width: 100% !important;
-                margin-left: 25px !important;
-                margin-top: 20px !important;
-                
+               display: none !important;
+            }
+
+            .links-alt{
+                display: block !important;
+
                 .inner{
-                    transform: none !important;
-                    position: relative !important;
-                    grid-gap: 50px !important;
-                    display: block !important;
-                    
-                    a{
-                        background-color: transparent !important;
-                        box-shadow: 0px !important;
-                        text-decoration: underline !important;
-                        padding: 0px !important;
-                        border: 0px !important;
-                        animation: stronger 3s 1.5s forwards cubic-bezier(0.215, 0.610, 0.355, 1) !important;
-                        float: left !important;
-                        margin-right: 20px !important;
-                        margin-bottom: 20px !important;
+                    display: flex !important;
+                    justify-content: flex-end;
+                }
+
+                a{
+                    margin: 0px !important;
+                    border: 0px !important;
+                    padding: 5px 10px !important;
+                    font-size: 12px !important;
+                    display: inline-block !important;
+                    margin-left: 40px !important;
+                    box-shadow: none !important;
+                    animation: stargazing 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+                    h2{
+                        margin: 0px !important;
                     }
                 }
             }
@@ -259,8 +266,31 @@
     .projects{
         padding: 50px !important;
 
-        article .meta h1{
-            font-size: 2em !important;
+        article .meta{
+            grid-auto-flow: row !important;
+            grid-template-columns: none !important;
+
+            h1{
+                font-size: 1.8em !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px){
+    .projects{
+        article{
+            .links-alt{
+                margin-top: 20px !important;
+                
+                .inner{
+                    justify-content: space-around !important;
+                }
+                
+                a{
+                    margin: 0px !important;
+                }
+            }
         }
     }
 }
@@ -299,5 +329,9 @@
         .hero, .children div{
             border: 0px !important;
         }
+    }
+
+    .projects article .meta h1{
+        font-size: 1.2em !important;
     }
 }

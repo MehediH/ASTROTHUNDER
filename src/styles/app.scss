@@ -304,10 +304,18 @@ html {
           transform: translateY(-50%);
         }
 
+        .links-alt{
+          display: none;
+        }
+
         .links{
+          display: block;
+        }
+
+        .links, .links-alt{
           width: 100%;
           position: relative;
-          display: block;
+          
           
           .detail{
             padding: 20px 50px;

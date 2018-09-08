@@ -65,7 +65,22 @@ export default class ProjectScreen extends Component {
                                                     style={{color: project.fields.acent}}
                                                 />
                                             
-                                                <div className="meta"><h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1></div>
+                                                <div className="meta">
+                                                    <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
+                                                    <div className="links-alt">
+                                                        <div className="inner">
+                                                            <Link to={"./projects/" + project.fields.slug} className="detail">
+                                                                <h2>view in detail</h2>
+                                                            </Link>
+                                                        
+                                                            { project.fields.projectLink && 
+                                                                <a href={project.fields.projectLink} target="blank" className="project">
+                                                                    <h2>open project</h2>
+                                                                </a>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                             </Link>
                                             
