@@ -6,6 +6,7 @@ import { Switch, Route, BrowserRouter, Link } from 'react-router-dom'
 import Home from './screens/HomeScreen.js';
 import Projects from './screens/ProjectsScreen.js';
 import Project from './screens/ProjectScreen.js';
+import Services from './screens/ServicesScreen.js';
 import FourOhFour from './screens/404Screen.js';
 
 
@@ -27,6 +28,7 @@ export default class App extends Component {
           <Route path="/about" component={About}/>
           <Route exact path="/projects" component={Projects}/>
           <Route path="/projects/:project" component={Project}/>
+          <Route path="/services" component={Services}/>
           <Route component={FourOhFour}/>
         </Switch>
       </BrowserRouter>

@@ -1,0 +1,83 @@
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+
+export default class ServicesSccreen extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+        gridSizeX: 0,
+        gridSizeY: 0,
+        messages: [
+            "ok, hi! i am mehedi hassan",
+            "i live in london, currently studying computer science at a top russel group university",
+            "for the most part, i write about tech at thurrott.com",
+            "i write the latest news, break scoops, review hardware, and more",
+            "on the side, i am developer building experiences",
+            "i build things like tweeten, one of the most popular twitter clients for windows and mac",
+            "i build apps that are unique, fast, and reliable. it's as simple as that.",
+            "as a designer, creating beautiful and restless experiences is my priority",
+            "i work with all the latest tech: react, node, vue, electron, framer, figma, wordpress, php, python, you name it.",
+            "right now, i can help you build a beautiful user interface for your next project, or develop the entire thing.",
+            "i've got a keen eye for details, and experiences that stand-out while working effectively.",
+            "point is, i can help you build a beautiful, robust, and effortless app for your next project, regardless of the platform.",
+            "let's work together!",
+            "...or just hit me up on twitter if you have any other ideas or questions.",
+        ]
+    }
+
+  }
+
+  componentWillMount(){
+    this.setState({
+        gridSizeX: Math.round(window.innerWidth / 256),
+        gridSizeY: Math.round(window.innerHeight / 288)
+    })
+    
+    window.addEventListener('resize', () => {        
+        this.setState({
+            gridSizeX: Math.round(window.innerWidth / 256),
+            gridSizeY: Math.round(window.innerHeight / 288)
+        })
+
+    })
+  }
+
+  render() {
+    return (
+        <React.Fragment>
+            <div className="wrapper">
+                <header>
+                    <h1><Link to="/">built by meh.</Link></h1>
+                    <div>
+                        <span></span><span className="alt"></span>
+                    </div>
+                </header>
+                
+                <div className="page-services">
+                    <ul>
+                        {
+                            this.state.messages.map((message, i) => 
+                            (
+                                <li key={i}><p>{message} {3 + (3 / i)}</p></li>
+                            )
+                              
+                                
+                            )
+                        }
+                    </ul>
+                </div>
+
+            </div>
+
+            <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                {   
+
+                    [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                }
+            </div>
+           </React.Fragment>
+    )
+  }
+}
