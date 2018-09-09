@@ -29,18 +29,18 @@ export default class ServicesSccreen extends Component {
     })
 
     var messages = [
-        "ok, hi! i am mehedi hassan",
+        "hey, i am mehedi hassan!",
         "i live in london, currently studying computer science at a top russel group university",
         "for the most part, i write about tech at thurrott.com",
         "i write the latest news, break scoops, review hardware, and more",
-        "on the side, i am developer building experiences",
+        "on the side, i am a developer and designer building experiences",
         "i build things like tweeten, one of the most popular twitter clients for windows and mac",
         "i build apps that are unique, fast, and reliable. it's as simple as that.",
         "as a designer, creating beautiful and restless experiences is my priority",
         "i work with all the latest tech: react, node, vue, electron, framer, figma, wordpress, php, python, you name it.",
         "right now, i can help you build a beautiful user interface for your next project, or develop the entire thing.",
         "i've got a keen eye for details, and experiences that stand-out while working effectively.",
-        "point is, i can help you build a beautiful, robust, and effortless app for your next project, regardless of the platform.",
+        "point is, i can help you build a beautiful, robust, and effortless app for your next project or personal brand, regardless of the platform.",
         "let's work together!",
         "...or just hit me up on twitter if you have any other ideas or questions.",
     ]
@@ -74,6 +74,8 @@ export default class ServicesSccreen extends Component {
                 
                 <div className="page-services">
                     <ul>
+                        <li class="loader"><p><span></span><span></span><span></span></p></li>
+
                         {
                             this.state.messages.map((message, i) => 
                                 (

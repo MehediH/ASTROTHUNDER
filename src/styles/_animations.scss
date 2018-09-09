@@ -184,3 +184,27 @@
 }
 
 
+@keyframes chevelle {
+  0% {
+    visibility: hidden;
+    height: 0px;
+    transform: translateY(40px);
+  }
+
+  100% {
+    visibility: visible;
+    height: auto;
+    transform: translateY(0px);
+  }
+}
+
+
+@keyframes applepie {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
