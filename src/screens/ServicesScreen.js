@@ -30,9 +30,9 @@ export default class ServicesSccreen extends Component {
 
     var messages = [
         "hey, i am mehedi hassan!",
-        "i live in london, currently studying computer science at a top russel group university",
+        "i live in london, studying computer science at a top russel group university",
         "for the most part, i write about tech at thurrott.com",
-        "i write the latest news, break scoops, review hardware, and more",
+        "i write about the latest news, break scoops, review hardware, and more",
         "on the side, i am a developer and designer building experiences",
         "i build things like tweeten, one of the most popular twitter clients for windows and mac",
         "i build apps that are unique, fast, and reliable. it's as simple as that.",
@@ -41,8 +41,7 @@ export default class ServicesSccreen extends Component {
         "right now, i can help you build a beautiful user interface for your next project, or develop the entire thing.",
         "i've got a keen eye for details, and experiences that stand-out while working effectively.",
         "point is, i can help you build a beautiful, robust, and effortless app for your next project or personal brand, regardless of the platform.",
-        "let's work together!",
-        "...or just hit me up on twitter if you have any other ideas or questions.",
+        "let's work together!"
     ]
 
     var x = 0;
@@ -58,7 +57,7 @@ export default class ServicesSccreen extends Component {
         } else{
             clearInterval(loadMessages)
         }
-    }, 1200);
+    }, 1500);
   }
 
   render() {
@@ -72,14 +71,14 @@ export default class ServicesSccreen extends Component {
                     </div>
                 </header>
                 
-                <div className="page-services">
+                <div className="page-services site-cont">
                     <ul>
-                        <li class="loader"><p><span></span><span></span><span></span></p></li>
+                        
 
                         {
                             this.state.messages.map((message, i) => 
                                 (
-                                    <li key={i}><p>{message} </p></li>
+                                    <li key={i}><p className="loader"><span></span><span></span><span></span></p><p className={"text item-" + i}>{message} </p></li>
                                 )
                             )
                         }

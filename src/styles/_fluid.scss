@@ -204,6 +204,10 @@
 } 
 
 @media (max-width: 850px){
+    .site-cont{
+        padding: 50px !important;
+    }
+
     .wrapper{
         padding: 50px 0 !important;
 
@@ -264,8 +268,6 @@
     }
 
     .projects{
-        padding: 50px !important;
-
         article .meta{
             grid-auto-flow: row !important;
             grid-template-columns: none !important;
@@ -277,8 +279,6 @@
     }
 
     .single-project{
-        padding: 20px 50px !important;
-
         h1{
             font-size: 2em !important;
         }
@@ -340,9 +340,11 @@
 }
 
 @media (max-width: 370px){
-    .main{
+    .site-cont{
         padding: 20px !important;
+    }
 
+    .main{
         .hero, .children div{
             border: 0px !important;
         }

@@ -39,7 +39,7 @@ export default class HomeScreen extends Component {
                     </div>
                 </header>
                 
-                <div className="main">
+                <div className="main site-cont">
                     <div className="hero">
                         <h1 className="hi">hi! i'm mehedi.</h1>
                         <h1>a creative designer, developer based in london.</h1>

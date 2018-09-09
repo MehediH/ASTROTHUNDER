@@ -208,3 +208,37 @@
     opacity: 0;
   }
 }
+
+@keyframes nightslikethis {
+  0% {
+    opacity: 1;
+  }
+
+  100%{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: transparent;
+  }
+}
+
+@keyframes iwishicould {
+  0% {
+    visibility: hidden;
+  }
+
+  100%{
+    visibility: visible;
+  }
+}
+
+@keyframes brackets {
+  0% {
+     opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

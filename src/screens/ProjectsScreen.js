@@ -57,7 +57,7 @@ export default class ProjectScreen extends Component {
                         </div>
                     </header>
                     
-                    <div className="projects">
+                    <div className="projects site-cont">
                         {
                             projects.map((project) =>
                                 project.fields.visible ? 

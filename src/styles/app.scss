@@ -76,11 +76,14 @@ html {
       }
       
     }
+
+    .site-cont{
+      padding: 50px 100px;
+    }
     
     .main{
       display: grid;
       overflow: hidden;
-      padding: 100px 100px 50px 100px;
       grid-template-columns: 2fr 1fr 1fr;
       grid-gap: 80px;
       
@@ -251,7 +254,6 @@ html {
     }
 
     .projects{
-      padding: 50px 100px;
 
       a{
         color: #b5f9bb;
@@ -360,7 +362,6 @@ html {
     }
 
     .single-project{
-      padding: 50px 100px;
       display: block;
       overflow: hidden;
       max-width: 1800px;
@@ -403,20 +404,20 @@ html {
     }
 
     .page-services{
-      padding: 50px 100px;
       display: block; 
       height: calc(100vh - 200px);
+      position: relative;
 
       ul{
         list-style-type: none;
         padding: 0px;
         max-width: 500px;
         margin: 0 auto;
-        height: calc(100vh - 200px);
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        
        
 
         li {
@@ -426,11 +427,10 @@ html {
           visibility: hidden;
           animation: chevelle 2s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           height: 0px;
-          transition: all 0.2s;
           margin-bottom: 10px;
+          position: relative;
 
           p{
-            position:relative;
             padding:10px 20px;
             border-radius: 25px 25px 25px 0px;
             background: #b4f8ba;
@@ -438,29 +438,53 @@ html {
             float: left;
             margin: 0px;
           }
+
+          .text{
+            visibility: hidden;
+            animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1), BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            border-radius: 25px 25px 25px 25px;
+          }
+
+          .item-12{
+            border-radius: 25px 25px 25px 0px;
+          }
+
+          .loader{
+            opacity: 1;
+            animation: nightslikethis 0s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+            span{
+              width: 7px;
+              height: 7px;
+              margin-right: 7px;
+              border-radius: 50px;
+              opacity: 0.5;
+              background-color: #333;
+              display: inline-block;
+              margin-bottom: 2px;
+              animation: applepie .9s ease-in-out infinite;
+            }
+            
+            span:nth-child(2){
+              animation: applepie .9s 0.6s ease-in-out infinite;
+            }
+            
+            span:nth-child(3){
+              animation: applepie .9s 0.9s ease-in-out infinite;
+            }
+          }
         }
 
-        .loader{
-          span{
-            width: 7px;
-            height: 7px;
-            margin-right: 7px;
-            border-radius: 50px;
-            opacity: 0.5;
-            background-color: #333;
-            display: inline-block;
-            margin-bottom: 2px;
-            animation: applepie .9s ease-in-out infinite;
+        .loaded{
+          .loader{
+            display: none;
           }
-          
-          span:nth-child(2){
-            animation: applepie .9s 0.6s ease-in-out infinite;
-          }
-          
-          span:nth-child(3){
-            animation: applepie .9s 0.9s ease-in-out infinite;
+
+          .text{
+            display: block;
           }
         }
+
 
       }
     }

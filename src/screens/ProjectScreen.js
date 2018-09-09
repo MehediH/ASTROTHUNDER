@@ -61,7 +61,7 @@ export default class ProjectScreen extends Component {
                     </header>
                     
                     { project.fields && !this.state.notFound && 
-                        <article className="single-project">
+                        <article className="single-project site-cont">
                             
                             <div className="meta">
                                 <h1>{project.fields.title}</h1>
@@ -85,7 +85,7 @@ export default class ProjectScreen extends Component {
                     {
                         this.state.notFound && 
 
-                        <article className="single-project">
+                        <article className="single-project site-cont">
                             
                             <div className="meta">
                                 <h1>This project doesn't exist.</h1>
