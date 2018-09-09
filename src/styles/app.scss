@@ -416,6 +416,8 @@ html {
           display: block;
           width: 100%;
           overflow: hidden;
+          opacity: 0;
+          animation: stargazing 2s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           p{
             position:relative;

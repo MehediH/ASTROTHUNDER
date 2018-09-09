@@ -9,22 +9,7 @@ export default class ServicesSccreen extends Component {
     this.state = {
         gridSizeX: 0,
         gridSizeY: 0,
-        messages: [
-            "ok, hi! i am mehedi hassan",
-            "i live in london, currently studying computer science at a top russel group university",
-            "for the most part, i write about tech at thurrott.com",
-            "i write the latest news, break scoops, review hardware, and more",
-            "on the side, i am developer building experiences",
-            "i build things like tweeten, one of the most popular twitter clients for windows and mac",
-            "i build apps that are unique, fast, and reliable. it's as simple as that.",
-            "as a designer, creating beautiful and restless experiences is my priority",
-            "i work with all the latest tech: react, node, vue, electron, framer, figma, wordpress, php, python, you name it.",
-            "right now, i can help you build a beautiful user interface for your next project, or develop the entire thing.",
-            "i've got a keen eye for details, and experiences that stand-out while working effectively.",
-            "point is, i can help you build a beautiful, robust, and effortless app for your next project, regardless of the platform.",
-            "let's work together!",
-            "...or just hit me up on twitter if you have any other ideas or questions.",
-        ]
+        messages: []
     }
 
   }
@@ -42,6 +27,38 @@ export default class ServicesSccreen extends Component {
         })
 
     })
+
+    var messages = [
+        "ok, hi! i am mehedi hassan",
+        "i live in london, currently studying computer science at a top russel group university",
+        "for the most part, i write about tech at thurrott.com",
+        "i write the latest news, break scoops, review hardware, and more",
+        "on the side, i am developer building experiences",
+        "i build things like tweeten, one of the most popular twitter clients for windows and mac",
+        "i build apps that are unique, fast, and reliable. it's as simple as that.",
+        "as a designer, creating beautiful and restless experiences is my priority",
+        "i work with all the latest tech: react, node, vue, electron, framer, figma, wordpress, php, python, you name it.",
+        "right now, i can help you build a beautiful user interface for your next project, or develop the entire thing.",
+        "i've got a keen eye for details, and experiences that stand-out while working effectively.",
+        "point is, i can help you build a beautiful, robust, and effortless app for your next project, regardless of the platform.",
+        "let's work together!",
+        "...or just hit me up on twitter if you have any other ideas or questions.",
+    ]
+
+    var x = 0;
+
+    var loadMessages = setInterval(() => {
+        if(x < messages.length){
+            var messagesTemp = this.state.messages;
+            messagesTemp.push(messages[x])
+            
+            this.setState({ messages: messagesTemp})
+            
+            x++;
+        } else{
+            clearInterval(loadMessages)
+        }
+    }, 1200);
   }
 
   render() {
@@ -59,11 +76,9 @@ export default class ServicesSccreen extends Component {
                     <ul>
                         {
                             this.state.messages.map((message, i) => 
-                            (
-                                <li key={i}><p>{message} {3 + (3 / i)}</p></li>
-                            )
-                              
-                                
+                                (
+                                    <li key={i}><p>{message} </p></li>
+                                )
                             )
                         }
                     </ul>
