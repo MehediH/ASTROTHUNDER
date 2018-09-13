@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
+
 export default class ServicesSccreen extends Component {
 
   constructor(props){
@@ -88,14 +89,19 @@ export default class ServicesSccreen extends Component {
                                         ref = {(el) => {
                                                 if (el) {
                                                     el.addEventListener("animationend", event  => {
-                                                        if(event.animationName == "nightslikethis"){
+                                                        if(event.animationName === "nightslikethis"){
                                                             this.servicesRef.current.scrollTo(0, 90000000000000)
                                                         }
                                                     });
                                                 }
                                             }}
                                     >
-                                        <p className="loader"><span></span><span></span><span></span></p><p className={"text item-" + i}>{message} </p>
+                                        <p className="loader"><span></span><span></span><span></span></p>
+                                        
+                                        { i !== 12 
+                                            ? <p className={"text item-" + i}>{message}</p>
+                                            : <p className={"text item-" + i}><Link to="./contact">{message}</Link></p>
+                                        }
                                     </li>
                                 )
                             )
