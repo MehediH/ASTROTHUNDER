@@ -12,6 +12,8 @@ export default class ServicesSccreen extends Component {
         messages: []
     }
 
+    this.servicesRef = React.createRef();
+
   }
 
   componentWillMount(){
@@ -54,16 +56,19 @@ export default class ServicesSccreen extends Component {
             this.setState({ messages: messagesTemp})
             
             x++;
+
         } else{
             clearInterval(loadMessages)
         }
     }, 1500);
+
+
   }
 
   render() {
     return (
         <React.Fragment>
-            <div className="wrapper">
+            <div className="wrapper" ref={this.servicesRef}>
                 <header>
                     <h1><Link to="/">built by meh.</Link></h1>
                     <div>
@@ -78,7 +83,20 @@ export default class ServicesSccreen extends Component {
                         {
                             this.state.messages.map((message, i) => 
                                 (
-                                    <li key={i}><p className="loader"><span></span><span></span><span></span></p><p className={"text item-" + i}>{message} </p></li>
+                                    <li 
+                                        key={i}
+                                        ref = {(el) => {
+                                                if (el) {
+                                                    el.addEventListener("animationend", event  => {
+                                                        if(event.animationName == "nightslikethis"){
+                                                            this.servicesRef.current.scrollTo(0, 90000000000000)
+                                                        }
+                                                    });
+                                                }
+                                            }}
+                                    >
+                                        <p className="loader"><span></span><span></span><span></span></p><p className={"text item-" + i}>{message} </p>
+                                    </li>
                                 )
                             )
                         }
@@ -93,7 +111,7 @@ export default class ServicesSccreen extends Component {
                     [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
                 }
             </div>
-           </React.Fragment>
+        </React.Fragment>
     )
   }
 }

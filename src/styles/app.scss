@@ -403,9 +403,12 @@ html {
       }
     }
 
+    .testwrap{
+      overflow-y: scroll;
+    }
+
     .page-services{
       display: block; 
-      height: calc(100vh - 200px);
       position: relative;
 
       ul{
@@ -418,7 +421,6 @@ html {
         flex-direction: column;
         justify-content: flex-end;
         
-       
 
         li {
           display: block;
@@ -429,6 +431,7 @@ html {
           height: 0px;
           margin-bottom: 10px;
           position: relative;
+          flex-shrink: 0;
 
           p{
             padding:10px 20px;
