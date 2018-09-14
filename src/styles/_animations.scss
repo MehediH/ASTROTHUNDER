@@ -242,3 +242,16 @@
     opacity: 1;
   }
 }
+
+@keyframes prettylittlefears {
+  0% {
+    transform: rotate(-10deg) translateY(60px);
+    opacity: 0;
+  }
+  
+  100% {
+    
+    opacity: 1;
+    transform: rotate(5deg) translateY(0px);
+  }
+}

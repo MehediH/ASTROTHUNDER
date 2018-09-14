@@ -403,10 +403,6 @@ html {
       }
     }
 
-    .testwrap{
-      overflow-y: scroll;
-    }
-
     .page-services{
       display: block; 
       position: relative;
@@ -450,6 +446,26 @@ html {
 
           .item-12{
             border-radius: 25px 25px 25px 0px;
+            position: relative;
+            z-index: 9999;
+            padding: 0px;
+            transition: 0.3s all ease-in-out;
+
+            a{
+              text-decoration: none;
+              padding: 10px 20px;
+              display: block;
+
+              &:hover, &:focus, &:active{
+                color: #333;
+              }
+              
+            }
+            
+            &:hover, &:focus, &:active{
+              background-color: #dbf619;
+              color: #333;
+            }
           }
 
           .loader{
@@ -490,6 +506,26 @@ html {
 
 
       }
+    }
+
+    .contact{
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 100px;
+
+      .meta{
+        background-color: #96cf9b;
+        max-width: 800px;
+        padding: 30px 50px;
+        
+        p{
+          margin: 0 auto;
+          display: block;
+          line-height: 35px;
+          color: #333;
+        }
+      }
+
     }
   }
 }
