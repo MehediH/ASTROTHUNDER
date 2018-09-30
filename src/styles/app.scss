@@ -2,7 +2,15 @@
   box-sizing: border-box;
 }
 
+.no-bg{
+  header h1{
+    animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
 
+  header div span {
+    animation: pickupthephonebaby 2s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) ;
+  }
+}
 html {
   font-family: 'Roboto Mono', monospace;
   text-rendering: optimizeLegibility;
@@ -450,6 +458,7 @@ html {
             z-index: 9999;
             padding: 0px;
             transition: 0.3s all ease-in-out;
+            background-color: #ffe68d;
 
             a{
               text-decoration: none;
@@ -514,20 +523,19 @@ html {
       grid-gap: 100px;
 
       .meta{
-        max-width: 50vw;
+        max-width: 60vw;
         
         p{
           margin: 0 auto;
           display: block;
           line-height: 35px;
-          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 30px;
           line-height: 55px;
           opacity: 0;
-          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
 
@@ -538,7 +546,7 @@ html {
           color: #b5f9bb;
           opacity: 0;
           padding-bottom: 15px;
-          animation: stargazing 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
           margin-top: 40px;
 
@@ -551,20 +559,24 @@ html {
         .twttr{
           color: #19e0f6;
           opacity: 0;
-          animation: perfecto 3s 1.7s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: perfecto 3s .8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         .gthb{
           color: #c1aa32;
           opacity: 0;
-          animation: perfecto 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: perfecto 3s .9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
       }
 
     }
+
+   
   }
 }
 
 
 @import "./_animations.scss";
 @import "./_fluid.scss";
+
+
