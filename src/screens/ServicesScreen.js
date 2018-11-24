@@ -9,8 +9,7 @@ export default class ServicesSccreen extends Component {
 
     this.state = {
         gridSizeX: 0,
-        gridSizeY: 0,
-        messages: []
+        gridSizeY: 0
     }
 
     this.servicesRef = React.createRef();
@@ -31,39 +30,6 @@ export default class ServicesSccreen extends Component {
 
     })
 
-    var messages = [
-        "👋🏼, i am mehedi hassan!",
-        "i live in london, studying computer science at a top russel group university 🤓",
-        "for the most part, i write about tech at thurrott.com. ",
-        "i write about the latest news, break scoops, review hardware, and more 🌊",
-        "on the side, i am a developer and designer building experiences 🔥",
-        "i build things like tweeten, one of the most popular twitter clients for windows and mac 🐣",
-        "i build apps and experiences that are unique, fast, and reliable ⚡",
-        "as a designer, creating beautiful and restless experiences is my priority 💯",
-        "i work with all the latest tech & tools: react, node, vue, electron, framer, figma, wordpress, php, python, you name it 🛠",
-        "i can help you build a beautiful user interface for your next project, or develop the entire thing 🤟🏼",
-        "i've got a keen eye for details, and experiences that stand-out while working effectively. plus, i'm really good at team work 👀",
-        "point is, i can help you build a beautiful, robust, and crating effortless app for your next project or personal brand, regardless of the platform 🤙🏼",
-        "let's work together! 🙌🏼"
-    ]
-
-    var x = 0;
-
-    var loadMessages = setInterval(() => {
-        if(x < messages.length){
-            var messagesTemp = this.state.messages;
-            messagesTemp.push(messages[x])
-            
-            this.setState({ messages: messagesTemp})
-            
-            x++;
-
-        } else{
-            clearInterval(loadMessages)
-        }
-    }, 1500);
-
-
   }
 
   render() {
@@ -79,33 +45,25 @@ export default class ServicesSccreen extends Component {
                 
                 <div className="page-services site-cont">
                     <ul>
-                        
+                        <li>
+                            <h2>interface design</h2>
+                            <p>i design interfaces. not your run-of-the-mill interfaces. unique interfaces. the ones that stand out, the ones that grab your customer's attention, the ones that are built to last and just work.</p>
+                        </li>
 
-                        {
-                            this.state.messages.map((message, i) => 
-                                (
-                                    <li 
-                                        key={i}
-                                        ref = {(el) => {
-                                                if (el) {
-                                                    el.addEventListener("animationend", event  => {
-                                                        if(event.animationName === "nightslikethis"){
-                                                            this.servicesRef.current.scrollTo(0, 90000000000000)
-                                                        }
-                                                    });
-                                                }
-                                            }}
-                                    >
-                                        <p className="loader"><span></span><span></span><span></span></p>
-                                        
-                                        { i !== 12 
-                                            ? <p className={"text item-" + i}>{message}</p>
-                                            : <p className={"text item-" + i}><Link to="./contact">{message}</Link></p>
-                                        }
-                                    </li>
-                                )
-                            )
-                        }
+                        <li>
+                            <h2>product dev</h2>
+                            <p>i can help with the planning, design, and development of your app or website. i have a keen eye for details, and i love making produts that are built to please the user -- right from the planning to the development.</p>
+                        </li>
+
+                        <li>
+                            <h2>app and web dev</h2>
+                            <p>i build beautiful, reliable, and robust mobile apps, websites, or web apps. making apps that are secure and work flawlessly across all your devices is a priority for me.</p>
+                        </li>
+                
+                        <li>
+                            <h2>tech</h2>
+                            <p>i work with all the latest tech & tools: react, node, electron, framer, figma, wordpress, php, python, you name it. my projects are built to last.</p>
+                        </li>
                     </ul>
                 </div>
 

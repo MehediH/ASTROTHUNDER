@@ -60,18 +60,6 @@
   }
 }
 
-@keyframes nc17 {
-  0% {
-    background-position: 0 0%;
-    background-size: 200% 5%;
-  }
-
-  100% {
-    background-position: 0 55%;
-    background-size: 400% 400%;
-  }
-}
-
 @keyframes pickupthephonebaby {
   0% {
     width: 0%;
@@ -265,5 +253,17 @@
   100% {
     opacity: 0.7;
     transform: translateY(0px);
+  }
+}
+
+@keyframes sunday {
+  0% {
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+
+  100%{
+    border: 1px solid hsl(197, 82%, 32%);
+    box-shadow: 0px 3px 25px 11px hsla(197, 82%, 32%, 0.26);
   }
 }

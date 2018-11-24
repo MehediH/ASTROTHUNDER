@@ -84,6 +84,15 @@
     }
 }
 
+@media(max-width: 1435px){
+    .page-services{
+        ul{
+            grid-template-columns: 1fr 1fr !important;;
+            grid-auto-flow: unset !important;
+        }
+    }
+}
+
 @media (max-width: 1320px){
     .main{
         grid-template-columns: 3fr 1.5fr !important;
@@ -206,6 +215,21 @@
 @media (max-width: 850px){
     .site-cont{
         padding: 50px !important;
+    }
+
+    .page-services{
+        ul{
+            grid-template-columns: 1fr !important;;
+            grid-auto-flow: unset !important;
+
+            li{
+                padding: 30px !important;
+            }
+
+            h2{
+                font-size: 1.5em !important;
+            }
+        }
     }
 
     .wrapper{
