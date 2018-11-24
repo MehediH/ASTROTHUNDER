@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles/app.scss';
-import { Switch, Route, BrowserRouter, Link } from 'react-router-dom'
-
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
  
 import Home from './screens/HomeScreen.js';
 import Projects from './screens/ProjectsScreen.js';
