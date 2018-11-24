@@ -502,25 +502,26 @@ html {
           background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-size: 30px;
-          line-height: 55px;
+          font-size: 25px;
           opacity: 0;
+          font-family: "Inconsolata", monospace;
+          font-weight: 400;
         }
 
 
         a{
           display: block;
-          font-size: 30px;
+          font-size: 25px;
           text-decoration: none;
           color: #b5f9bb;
           opacity: 0;
           padding-bottom: 15px;
           animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
-          margin-top: 40px;
+          margin-top: 25px;
 
           &:hover{
-            transform: translateY(20px);
+            transform: translateY(-20px);
           }
         }
 

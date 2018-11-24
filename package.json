@@ -1,6 +1,7 @@
 {
   "name": "astrothunder",
   "version": "0.1.0",
+  "homepage" : "https://mehedhi.github.io/astrothunder",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
