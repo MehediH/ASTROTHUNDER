@@ -2,7 +2,15 @@
   box-sizing: border-box;
 }
 
+.no-bg{
+  header h1{
+    animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
 
+  header div span {
+    animation: pickupthephonebaby 2s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) ;
+  }
+}
 html {
   font-family: 'Roboto Mono', monospace;
   text-rendering: optimizeLegibility;
@@ -446,105 +454,35 @@ html {
     .page-about{
       display: block; 
       position: relative;
+      max-width: 60vw;
 
-      ul{
-        list-style-type: none;
-        padding: 0px;
-        max-width: 500px;
-        margin: 0 auto;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+      .gr{
+        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      h1{
+        line-height: 35px;
         
+        font-size: 30px;
+        opacity: 0;
+        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
-        li {
-          display: block;
-          width: 100%;
-          overflow: hidden;
-          visibility: hidden;
-          animation: chevelle 2s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          height: 0px;
-          margin-bottom: 10px;
-          position: relative;
-          flex-shrink: 0;
+        span{
+          float: left;
+        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
-          p{
-            padding:10px 20px;
-            border-radius: 25px 25px 25px 0px;
-            background: #b4f8ba;
-            color: #333;
-            float: left;
-            margin: 0px;
-          }
-
-          .text{
-            visibility: hidden;
-            animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1), BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-            border-radius: 25px 25px 25px 25px;
-          }
-
-          .item-12{
-            border-radius: 25px 25px 25px 0px;
-            position: relative;
-            z-index: 9999;
-            padding: 0px;
-            transition: 0.3s all ease-in-out;
-
-            a{
-              text-decoration: none;
-              padding: 10px 20px;
-              display: block;
-
-              &:hover, &:focus, &:active{
-                color: #333;
-              }
-              
-            }
-            
-            &:hover, &:focus, &:active{
-              background-color: #dbf619;
-              color: #333;
-            }
-          }
-
-          .loader{
-            opacity: 1;
-            animation: nightslikethis 0s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-
-            span{
-              width: 7px;
-              height: 7px;
-              margin-right: 7px;
-              border-radius: 50px;
-              opacity: 0.5;
-              background-color: #333;
-              display: inline-block;
-              margin-bottom: 2px;
-              animation: applepie .9s ease-in-out infinite;
-            }
-            
-            span:nth-child(2){
-              animation: applepie .9s 0.6s ease-in-out infinite;
-            }
-            
-            span:nth-child(3){
-              animation: applepie .9s 0.9s ease-in-out infinite;
-            }
-          }
         }
+      }
 
-        .loaded{
-          .loader{
-            display: none;
-          }
-
-          .text{
-            display: block;
-          }
-        }
-
-
+      ul li{
+        font-size: 25px;
+        list-style: square;
+        margin-bottom: 30px;
+        opacity: 0;
+        animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
       }
     }
 
@@ -554,20 +492,19 @@ html {
       grid-gap: 100px;
 
       .meta{
-        max-width: 50vw;
+        max-width: 60vw;
         
         p{
           margin: 0 auto;
           display: block;
           line-height: 35px;
-          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 30px;
           line-height: 55px;
           opacity: 0;
-          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
 
@@ -578,7 +515,7 @@ html {
           color: #b5f9bb;
           opacity: 0;
           padding-bottom: 15px;
-          animation: stargazing 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
           margin-top: 40px;
 
@@ -591,20 +528,24 @@ html {
         .twttr{
           color: #19e0f6;
           opacity: 0;
-          animation: perfecto 3s 1.7s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: perfecto 3s .8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         .gthb{
           color: #c1aa32;
           opacity: 0;
-          animation: perfecto 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: perfecto 3s .9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
       }
 
     }
+
+   
   }
 }
 
 
 @import "./_animations.scss";
 @import "./_fluid.scss";
+
+

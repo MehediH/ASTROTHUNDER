@@ -52,7 +52,7 @@ export default class ServicesSccreen extends Component {
 
                         <li>
                             <h2>product dev</h2>
-                            <p>i can help with the planning, design, and development of your app or website. i have a keen eye for details, and i love making produts that are built to please the user -- right from the planning to the development.</p>
+                            <p>i can help with the planning, design, and development of your app or website. i have a keen eye for details, and i love making produts that are built to please the user -- right from the planning to the develop</p>
                         </li>
 
                         <li>
