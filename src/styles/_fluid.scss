@@ -370,8 +370,37 @@
 }
 
 @media (max-width: 430px){
+    .site-cont{
+        padding: 30px 20px !important;    
+    }
+
+    // .background-overlay{
+    //     span{
+    //         width: 100px !important;
+    //         height: 100px !important;
+    //     }
+    // }
+
+    .wrapper{
+        header{
+            padding-left: 20px !important;
+        }
+
+        .main{
+            padding: 30px 20px !important;
+
+            .hero, .card{
+                border-width: 6px !important;
+            }
+
+            .card.services{
+                border-width: 2px !important;
+            }
+        }
+    }
 
     .main{
+        
         .hero{
             padding: 15px !important;
 
@@ -398,7 +427,7 @@
 
 @media (max-width: 370px){
     .site-cont{
-        padding: 20px !important;
+        padding: 5px !important;
     }
 
     .main{
@@ -409,5 +438,34 @@
 
     .projects article .meta h1{
         font-size: 1.2em !important;
+    }
+}
+
+
+@media (max-width: 1366px){
+    .background-overlay span{
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 1000px){
+    .background-overlay span{
+        width: 220px !important;
+        height: 220px !important;
+    }
+}
+
+@media (max-width: 800px){
+    .background-overlay span{
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 600px){
+    .background-overlay span{
+        width: 150px !important;
+        height: 150px !important;
     }
 }

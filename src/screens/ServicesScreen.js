@@ -1,33 +1,22 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-
+import { generateBG } from '../utils/bgAnim.js';
 
 export default class ServicesSccreen extends Component {
 
-  constructor(props){
-    super(props);
-
-    this.state = {
-        gridSizeX: 0,
-        gridSizeY: 0
-    }
-
-    this.servicesRef = React.createRef();
-
-  }
-
   componentWillMount(){
-    this.setState({
-        gridSizeX: Math.round(window.innerWidth / 256),
-        gridSizeY: Math.round(window.innerHeight / 288)
-    })
-    
-    window.addEventListener('resize', () => {        
-        this.setState({
-            gridSizeX: Math.round(window.innerWidth / 256),
-            gridSizeY: Math.round(window.innerHeight / 288)
-        })
+    var elemProps = generateBG(window.innerWidth, window.innerHeight, false);
 
+    this.setState({
+        ...elemProps
+    })
+
+    window.addEventListener('resize', () => {
+        var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
+
+        this.setState({
+            ...elemProps
+        })
     })
 
   }
@@ -35,7 +24,7 @@ export default class ServicesSccreen extends Component {
   render() {
     return (
         <React.Fragment>
-            <div className="wrapper" ref={this.servicesRef}>
+            <div className="wrapper">
                 <header>
                     <h1><Link to="/">built by meh.</Link></h1>
                     <div>
@@ -69,7 +58,7 @@ export default class ServicesSccreen extends Component {
 
             </div>
 
-            <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+            <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
                 {   
 
                     [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)

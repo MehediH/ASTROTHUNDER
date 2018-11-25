@@ -17,27 +17,21 @@ html {
   padding: 0px;
   color: #fff;
   margin: 5px;
-  background: linear-gradient( to bottom, rgb(212, 2, 125) 33%, rgb(37, 4, 223) 67% );
-  background-position: 0 55%;
-  background-size: 400% 400%;
+
 
   body {
     margin: 0px;
-    height: 99vh;
-    overflow: hidden;
     background-color: #000;
     
     .content{
-      height: 100%;
+      position: relative;
     }
 
     .wrapper{
       z-index: 99999;
-      position: relative;
       display: block; 
       width: 100%;
       padding: 50px 0 0 0;
-      overflow-y: hidden;
       height: 100%;
       animation: nightcrawler 7s 1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
     }
@@ -206,7 +200,8 @@ html {
     .background-overlay{
       width: 100%;
       height: 100%;
-      position: absolute;
+      position: fixed;
+      z-index: -9999;
       top: 0;
       left: 0;
       display: grid;
@@ -216,15 +211,23 @@ html {
       opacity: 1;
 
       span{
-        border: 2px solid transparent;
-        border-image: linear-gradient(to bottom, #d4027d 33%, #2504df 145%);
-        border-image-slice: 1;
+        border: 2px solid #ff00e0;
+        box-shadow: 0px 3px 35px rgb(37, 4, 223); 
         height: 100%;
-        margin-left: -300px;
         opacity: 0;
-
-        animation: chanel 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1), sweetsweet 3s 0.1s forwards cubic-bezier(1, -0.22, 0.65, 0.73);
+        width: 300px;
+        height: 300px;
       }
+    }
+    
+    .square-anim span{
+      animation: chanel 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1), ultravio 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1), sweetsweet 3s 0.1s forwards cubic-bezier(1, -0.22, 0.65, 0.73);
+    }
+
+    .sn-anim span{
+      transform: rotate(45deg);
+      opacity: 1;
+      margin-left: 0px;
     }
 
     .anim{
@@ -333,32 +336,32 @@ html {
           
           
           .detail{
-            padding: 20px 50px;
+            padding: 10px 20px;
             background-color: #a60295;
-            border: 10px solid #ff856a;
+            border: 5px solid #ff856a;
             opacity: 0;
             margin-bottom: 100px;
             color: #ddf819;
-            animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            animation: spacecadet 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
             transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
             display: block;
             overflow: hidden;
 
             &:hover{
-              border: 10px solid #6fdeb0;
+              border: 5px solid #6fdeb0;
             }
     
           }
     
           .project{
-            padding: 20px 50px;
+            padding: 10px 20px;
             background-color: #751414;
-            border: 10px solid #e7ff0f;
+            border: 5px solid #e7ff0f;
             display: block;
             overflow: hidden;
             opacity: 0;
             color: #4890ff;
-            animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            animation: spacecadet 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
   
             transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
             
@@ -367,7 +370,7 @@ html {
             }
 
             &:hover{
-              border: 10px solid #6fdeb0;
+              border: 5px solid #6fdeb0;
             }
           }
         }
@@ -429,7 +432,7 @@ html {
 
         li{
           padding: 50px;
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.7);
           border: 1px solid #000;
           transition: box-shadow .15s ease-out, transform .35s ease-out, opacity .2s ease-out;
           animation: sunday 4s 1.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);

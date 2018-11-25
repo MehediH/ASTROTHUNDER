@@ -1,30 +1,22 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { generateBG } from '../utils/bgAnim.js';
 
 export default class ContactScreen extends Component {
-
-  constructor(props){
-    super(props);
-
-    this.state = {
-        gridSizeX: 0,
-        gridSizeY: 0
-    }
-
-  }
-
   componentWillMount(){
-    this.setState({
-        gridSizeX: Math.round(window.innerWidth / 256),
-        gridSizeY: Math.round(window.innerHeight / 288)
-    })
-    
-    window.addEventListener('resize', () => {        
-        this.setState({
-            gridSizeX: Math.round(window.innerWidth / 256),
-            gridSizeY: Math.round(window.innerHeight / 288)
-        })
+    var elemProps = generateBG(window.innerWidth, window.innerHeight, false);
 
+    this.setState({
+        ...elemProps
+    })
+
+
+    window.addEventListener('resize', () => {
+        var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
+
+        this.setState({
+            ...elemProps
+        })
     })
   }
 

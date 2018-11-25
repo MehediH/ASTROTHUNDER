@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { generateBG } from '../utils/bgAnim.js';
 
 import * as contentful from 'contentful';
 
@@ -22,19 +23,19 @@ export default class ProjectScreen extends Component {
         
     } 
 
-
     componentWillMount(){
+        var elemProps = generateBG(window.innerWidth, window.innerHeight, false);
+
         this.setState({
-            gridSizeX: Math.round(window.innerWidth / 256),
-            gridSizeY: Math.round(window.innerHeight / 288)
+            ...elemProps
         })
-        
-        window.addEventListener('resize', () => {        
+
+        window.addEventListener('resize', () => {
+            var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
+
             this.setState({
-                gridSizeX: Math.round(window.innerWidth / 256),
-                gridSizeY: Math.round(window.innerHeight / 288)
+                ...elemProps
             })
-    
         })
     }
 
@@ -97,7 +98,7 @@ export default class ProjectScreen extends Component {
                 
                 </div>
                 
-                <div className="background-overlay anim" style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
                     {   
 
                         [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
