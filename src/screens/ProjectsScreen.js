@@ -17,8 +17,7 @@ export default class ProjectScreen extends Component {
         this.state = {
             projects: [],
             gridSizeX: 0,
-            gridSizeY: 0,
-            window: 0
+            gridSizeY: 0
         }
     } 
 
@@ -26,16 +25,14 @@ export default class ProjectScreen extends Component {
         var elemProps = generateBG(window.innerWidth, window.innerHeight, false);
 
         this.setState({
-            ...elemProps,
-            window: window.innerWidth
+            ...elemProps
         })
 
         window.addEventListener('resize', () => {
             var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
 
             this.setState({
-                ...elemProps,
-                window: window.innerWidth
+                ...elemProps
             })
         })
 
@@ -74,39 +71,11 @@ export default class ProjectScreen extends Component {
                                             
                                                 <div className="meta">
                                                     <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
-                                                    
-                                                    { this.state.window < 1320 && 
-                                                        <div className="links-alt">
-                                                            <div className="inner">
-                                                                <Link to={"./projects/" + project.fields.slug} className="detail">
-                                                                    <h2>view in detail</h2>
-                                                                </Link>
-                                                            
-                                                                { project.fields.projectLink && 
-                                                                    <a href={project.fields.projectLink} target="blank" className="project">
-                                                                        <h2>open project</h2>
-                                                                    </a>
-                                                                }
-                                                            </div>
-                                                        </div>
-                                                    }
+                            
                                                 </div>
 
                                             </Link>
-                                            
-                                            <div className="links">
-                                                <div className="inner">
-                                                    <Link to={"/projects/" + project.fields.slug} className="detail">
-                                                        <h2>view in detail</h2>
-                                                    </Link>
-                                                
-                                                    { project.fields.projectLink && 
-                                                        <a href={project.fields.projectLink} target="blank" className="project">
-                                                            <h2>open project</h2>
-                                                        </a>
-                                                    }
-                                                </div>
-                                            </div>
+                
                                             
                                     </article>  
                                 : <div> </div>

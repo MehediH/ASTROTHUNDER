@@ -280,12 +280,10 @@ html {
       
       article{
         width: 100%;
-        height: calc(100vh - 200px);
+        height: 100vh;
         position: relative;
         margin-bottom: 20px;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-gap: 20px;
+       
         
         .meta{
           position: absolute;
@@ -307,73 +305,10 @@ html {
           width: calc(100% - 220px);
           margin-left: 200px;
           max-width: 1300px;
-          position: absolute;
-          top: 50%;
-          transform: translate(0, -50%);
           opacity: 0;
-          animation: bounceback 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1), hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .inner{
-          width: 100%;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .links-alt{
-          display: none;
-        }
-
-        .links{
-          display: block;
-        }
-
-        .links, .links-alt{
-          width: 100%;
-          position: relative;
-          
-          
-          .detail{
-            padding: 10px 20px;
-            background-color: #a60295;
-            border: 5px solid #ff856a;
-            opacity: 0;
-            margin-bottom: 100px;
-            color: #ddf819;
-            animation: spacecadet 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-            transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
-            display: block;
-            overflow: hidden;
-
-            &:hover{
-              border: 5px solid #6fdeb0;
-            }
-    
-          }
-    
-          .project{
-            padding: 10px 20px;
-            background-color: #751414;
-            border: 5px solid #e7ff0f;
-            display: block;
-            overflow: hidden;
-            opacity: 0;
-            color: #4890ff;
-            animation: spacecadet 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-  
-            transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
-            
-            h2{
-              color: #fff;
-            }
-
-            &:hover{
-              border: 5px solid #6fdeb0;
-            }
-          }
-        }
       }
     }
 

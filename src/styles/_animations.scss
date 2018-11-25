@@ -199,6 +199,20 @@
 }
 
 
+@media (max-width: 430px){
+  @keyframes hope {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+      box-shadow: 8px 12px 0px 0px;
+    }
+  }
+
+}
+
 @keyframes nightcrawler {
   0% {
     overflow: hidden;

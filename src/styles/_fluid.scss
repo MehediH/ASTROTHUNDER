@@ -41,12 +41,6 @@
             }
 
         }
-        
-        .links{
-            a{
-                padding: 15px 30px !important;
-            }
-        }
     }
 }
 
@@ -56,30 +50,6 @@
             grid-auto-flow: row;
             grid-template-columns: none !important;
             grid-template-rows: 3fr 1fr;
-
-            .links{
-                width: 50% !important;
-                left: 50%;
-                transform: translateX(-50%);
-
-                .inner{
-                    display: grid; 
-                    grid-auto-flow: column;
-                    grid-gap: 100px
-                }
-
-                a{
-                    margin-bottom: 0px !important;
-                    padding: 15px 30px !important;
-
-                    h2{
-                        margin: 0px !important;
-                        font-size: 20px;
-                    }
-                }
-
-                
-            }
         }
     }
 
@@ -112,7 +82,7 @@
 
             .meta{
                 position: relative !important;
-                margin-top: 40px !important;
+                margin-top: 30px !important;
                 display: grid !important;
                 transform: none !important;
                 width: 100% !important;
@@ -123,8 +93,10 @@
                 h1{
                     font-size: 2.5em !important;
                     display: block !important;
-                    color: #b5f9bb;
-                    box-shadow: 25px 21px 0px 0px !important;
+                    color: #fff;
+                    box-shadow: 12px 13px 0px 0px !important;
+                    padding: 10px !important;
+                    padding-left: 15px !important;
                 }
             }
 
@@ -138,33 +110,6 @@
                 animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
             }
             
-            .links{
-               display: none !important;
-            }
-
-            .links-alt{
-                display: block !important;
-
-                .inner{
-                    display: flex !important;
-                    justify-content: flex-end;
-                }
-
-                a{
-                    margin: 0px !important;
-                    border: 0px !important;
-                    padding: 5px 10px !important;
-                    font-size: 12px !important;
-                    display: inline-block !important;
-                    margin-left: 40px !important;
-                    box-shadow: none !important;
-                    animation: stargazing 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-
-                    h2{
-                        margin: 0px !important;
-                    }
-                }
-            }
         }
     }
 }
@@ -334,21 +279,6 @@
 }
 
 @media (max-width: 540px){
-    .projects{
-        article{
-            .links-alt{
-                margin-top: 20px !important;
-                
-                .inner{
-                    justify-content: space-around !important;
-                }
-
-                a{
-                    margin: 0px !important;
-                }
-            }
-        }
-    }
 
     .contact{
         .meta{
@@ -373,13 +303,6 @@
     .site-cont{
         padding: 30px 20px !important;    
     }
-
-    // .background-overlay{
-    //     span{
-    //         width: 100px !important;
-    //         height: 100px !important;
-    //     }
-    // }
 
     .wrapper{
         header{
@@ -421,7 +344,8 @@
     }
 
     .projects article .meta h1{
-        font-size: 1.5em !important;
+        font-size: 1.3em !important;
+        box-shadow: 6px 8px 0px 0px !important;
     }
 }
 
