@@ -4,19 +4,22 @@ import { generateBG } from '../utils/bgAnim.js';
 
 export default class ContactScreen extends Component {
   componentWillMount(){
-    var elemProps = generateBG(window.innerWidth, window.innerHeight, false);
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var elemProps = generateBG(width, height, false);
 
     this.setState({
         ...elemProps
     })
 
-
     window.addEventListener('resize', () => {
-        var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
-
-        this.setState({
-            ...elemProps
-        })
+        if(width != window.innerWidth){
+            var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
+    
+            this.setState({
+                ...elemProps
+            })
+        }
     })
   }
 

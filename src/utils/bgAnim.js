@@ -13,6 +13,7 @@ export const generateBG = (screenWidth, screneHeight, animated)=>{
     } else{
         elemW = 300;
     }
+    
 
     var elemProps = {
         gridSizeX: Math.round(screenWidth / (elemW - 100)),
