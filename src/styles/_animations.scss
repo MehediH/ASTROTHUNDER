@@ -78,7 +78,7 @@
   }
 
   50% {
-    transform: rotate(130deg);
+    transform: rotate(90deg);
   }
 
   100% {
@@ -91,7 +91,7 @@
     opacity: 0;
   }
 
-  100% {
+  100% { 
     opacity: 1;
   }
 }
@@ -99,12 +99,10 @@
 @keyframes chanel {
   0% {
     margin-left: -300px; 
-    width: 100px;
   }
 
   50% {
-    margin-left: 150px;
-    width: 120px;
+    margin-left: 100px;
   }
 
   100% {
