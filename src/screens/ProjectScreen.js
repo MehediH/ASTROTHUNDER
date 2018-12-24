@@ -5,8 +5,8 @@ import { generateBG } from '../utils/bgAnim.js';
 import * as contentful from 'contentful';
 
 var client = contentful.createClient({
-  space: "f1nnr97nijby",
-  accessToken: "5a1f8b547286fd1ca20085700faf704f17836f0cbe89209e8b61a3326af658ed"
+    space: process.env.REACT_APP_BLOG_SPACE,
+    accessToken: process.env.REACT_APP_BLOG_ACCESS
 })
 
 

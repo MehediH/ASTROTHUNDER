@@ -15,7 +15,6 @@
     "contentful": "^7.0.0",
     "css-loader": "0.28.7",
     "dns": "^0.2.2",
-    "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "4.10.0",
     "eslint-config-react-app": "^2.1.0",
@@ -56,6 +55,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "dotenv": "^4.0.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
   },
