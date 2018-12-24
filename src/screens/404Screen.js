@@ -25,7 +25,7 @@ export default class HomeScreen extends Component {
 
   render() {
     return (
-        <div className="app">
+        <div className="app fof">
             <h1 className="four">it's a 404<Link to="/">let's go back home <span className="arrow">-></span></Link></h1>
 
             <div className={"background-overlay 404 anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>

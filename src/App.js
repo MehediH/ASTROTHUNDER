@@ -21,7 +21,7 @@ export default class App extends Component {
           <Route path="/projects/:project" component={Project}/>
           <Route path="/services" component={Services}/>
           <Route path="/contact" component={Contact}/>
-          <Route path="/mehedi" component={AboutMe}/>
+          <Route path="/meh" component={AboutMe}/>
           <Route component={FourOhFour}/>
         </Switch>
       </BrowserRouter>
