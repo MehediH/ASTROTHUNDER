@@ -14,9 +14,9 @@ import AboutMe from './screens/AboutMe.js';
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Switch>
-          <Route path="/" component={Home}/>
+          <Route exact path="/" component={Home}/>
           <Route exact path="/projects" component={Projects}/>
           <Route path="/projects/:project" component={Project}/>
           <Route path="/services" component={Services}/>
