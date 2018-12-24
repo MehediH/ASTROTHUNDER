@@ -94,8 +94,9 @@ export default class ServicesSccreen extends Component {
                                         ref = {(el) => {
                                                 if (el) {
                                                     el.addEventListener("animationend", event  => {
+                                                        console.log(event)
                                                         if(event.animationName === "nightslikethis"){
-                                                            this.aboutRef.current.scrollTo(0, 90000000000000)
+                                                            window.scrollTo(0, 90000000000000)
                                                         }
                                                     });
                                                 }

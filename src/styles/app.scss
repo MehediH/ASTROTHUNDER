@@ -5,6 +5,10 @@
 .no-bg{
   header h1{
     animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    a{
+      animation: none !important;
+    }
   }
 
   header div span {
@@ -275,22 +279,55 @@ html {
         color: #b5f9bb;
         text-decoration: none;
         position: relative;
-        display: block;
+        display: inline-block;
+        left: 50%;
+        transform: translate(-50%); 
+        outline: 0 !important;
+
+        &:focus, &:active, &:hover{
+          .meta{
+            opacity: 1;
+          }
+
+          .overlay{
+            opacity: 0.65 !important;
+          }
+        }
       }
       
       article{
         width: 100%;
-        height: 100vh;
         position: relative;
-        margin-bottom: 20px;
-       
+        margin-bottom: 100px;
+
         
+        .container{ 
+          display: inline-block;
+          opacity: 0;
+          margin: 0 auto;
+          position: relative;
+          left: 50%;
+          transform: translate(-50%);
+          animation: ofn 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+          .overlay{
+            background-color: #000;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: 0.4s all ease-in-out;
+          }
+        }
+
         .meta{
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
+          left: 50%;
+          transform: translate(-50%, -50%);
           opacity: 0;
-          animation: stronger 3s 1.5s forwards cubic-bezier(0.215, 0.610, 0.355, 1);
+          transition: 0.4s all ease-in-out;
         }
 
         h1{
@@ -302,10 +339,11 @@ html {
         }
         
         img{
-          width: calc(100% - 220px);
-          margin-left: 200px;
+          width: 100%;
           max-width: 1300px;
           opacity: 0;
+          margin: 0 auto;
+          display: block;
           animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
@@ -392,35 +430,105 @@ html {
     .page-about{
       display: block; 
       position: relative;
-      max-width: 60vw;
 
-      .gr{
-        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      h1{
-        line-height: 35px;
+      ul{
+        list-style-type: none;
+        padding: 0px;
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         
-        font-size: 30px;
-        opacity: 0;
-        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
-        span{
-          float: left;
-        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        li {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          visibility: hidden;
+          animation: chevelle 2s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          height: 0px;
+          margin-bottom: 10px;
+          position: relative;
+          flex-shrink: 0;
 
+          p{
+            padding:10px 20px;
+            border-radius: 25px 25px 25px 0px;
+            background: #b4f8ba;
+            color: #333;
+            float: left;
+            margin: 0px;
+          }
+
+          .text{
+            visibility: hidden;
+            animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1), BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            border-radius: 25px 25px 25px 25px;
+          }
+
+          .item-12{
+            border-radius: 25px 25px 25px 0px;
+            position: relative;
+            z-index: 9999;
+            padding: 0px;
+            transition: 0.3s all ease-in-out;
+
+            a{
+              text-decoration: none;
+              padding: 10px 20px;
+              display: block;
+
+              &:hover, &:focus, &:active{
+                color: #333;
+              }
+              
+            }
+            
+            &:hover, &:focus, &:active{
+              background-color: #dbf619;
+              color: #333;
+            }
+          }
+
+          .loader{
+            opacity: 1;
+            animation: nightslikethis 0s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+            span{
+              width: 7px;
+              height: 7px;
+              margin-right: 7px;
+              border-radius: 50px;
+              opacity: 0.5;
+              background-color: #333;
+              display: inline-block;
+              margin-bottom: 2px;
+              animation: applepie .9s ease-in-out infinite;
+            }
+            
+            span:nth-child(2){
+              animation: applepie .9s 0.6s ease-in-out infinite;
+            }
+            
+            span:nth-child(3){
+              animation: applepie .9s 0.9s ease-in-out infinite;
+            }
+          }
         }
-      }
 
-      ul li{
-        font-size: 25px;
-        list-style: square;
-        margin-bottom: 30px;
-        opacity: 0;
-        animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        .loaded{
+          .loader{
+            display: none;
+          }
+
+          .text{
+            display: block;
+          }
+        }
+
+
       }
     }
 

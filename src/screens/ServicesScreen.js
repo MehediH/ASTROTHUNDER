@@ -59,6 +59,8 @@ export default class ServicesSccreen extends Component {
                     </ul>
                 </div>
 
+                <Link to="/mehedi">..and some more 👀</Link>
+
             </div>
 
             <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>

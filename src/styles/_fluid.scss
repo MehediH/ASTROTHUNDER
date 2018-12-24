@@ -34,25 +34,11 @@
                     font-size: 3em;
                 }
             }
-
-            img{
-                margin-left: 100px;
-                width: calc(100% - 120px);
-            }
-
         }
     }
 }
 
 @media (max-width: 1540px){
-    .projects{
-        article{
-            grid-auto-flow: row;
-            grid-template-columns: none !important;
-            grid-template-rows: 3fr 1fr;
-        }
-    }
-
     .contact {
         .meta{
             max-width: 80vw !important;
@@ -74,44 +60,7 @@
         grid-template-columns: 3fr 1.5fr !important;
     }
 
-    .projects{
-        article{
-            display: block !important;
-            height: auto !important;
-            margin-bottom: 40px !important;
 
-            .meta{
-                position: relative !important;
-                margin-top: 30px !important;
-                display: grid !important;
-                transform: none !important;
-                width: 100% !important;
-                grid-auto-flow: column;
-                grid-gap: 50px;
-                grid-template-columns: min-content 2fr;
-                
-                h1{
-                    font-size: 2.5em !important;
-                    display: block !important;
-                    color: #fff;
-                    box-shadow: 12px 13px 0px 0px !important;
-                    padding: 10px !important;
-                    padding-left: 15px !important;
-                }
-            }
-
-            img{
-                width: 100% !important;
-                margin-left: 0px !important;
-                position: relative !important;
-                transform: none !important;
-                display: block !important;
-                top: 0 !important;
-                animation: hope 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-            }
-            
-        }
-    }
 }
 
 @media (max-width: 1165px){
@@ -164,6 +113,22 @@
 } 
 
 @media (max-width: 850px){
+    .projects { 
+        article{
+            margin-bottom: 50px !important;
+        }
+
+        .project{
+            .meta{
+                opacity: 1 !important;
+            }
+
+            .overlay{
+                opacity: 0.65 !important;
+            }
+        }
+    }
+
     .site-cont{
         padding: 50px !important;
     }
@@ -243,8 +208,6 @@
 
     .projects{
         article .meta{
-            grid-auto-flow: row !important;
-            grid-template-columns: none !important;
 
             h1{
                 font-size: 1.8em !important;
@@ -279,11 +242,11 @@
 }
 
 @media (max-width: 540px){
-
+    
     .contact{
         .meta{
             p, a {
-                font-size: 22px !important;
+                font-size: 20px !important;
                 line-height: 35px !important;
             }
 

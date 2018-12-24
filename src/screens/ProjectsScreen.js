@@ -67,15 +67,16 @@ export default class ProjectScreen extends Component {
                                 project.fields.visible ? 
                                     <article key={project.sys.id}>
                                             <Link to={"./projects/" + project.fields.slug} className="project">
-                                                <img 
-                                                    alt={project.fields.coverImage.fields.title}
-                                                    src={project.fields.coverImage.fields.file.url}
-                                                    style={{color: project.fields.acent}}
-                                                />
-                                            
-                                                <div className="meta">
-                                                    <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
-                            
+                                                <div className="container">
+                                                    <img 
+                                                        alt={project.fields.coverImage.fields.title}
+                                                        src={project.fields.coverImage.fields.file.url}
+                                                        style={{color: project.fields.acent}}
+                                                    />
+                                                    <div class="overlay"></div>
+                                                    <div className="meta">
+                                                        <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
+                                                    </div>
                                                 </div>
 
                                             </Link>

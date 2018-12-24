@@ -8,6 +8,7 @@ import Project from './screens/ProjectScreen.js';
 import Services from './screens/ServicesScreen.js';
 import Contact from './screens/ContactScreen.js';
 import FourOhFour from './screens/404Screen.js';
+import AboutMe from './screens/AboutMe.js';
 
 
 export default class App extends Component {
@@ -20,6 +21,7 @@ export default class App extends Component {
           <Route path="/projects/:project" component={Project}/>
           <Route path="/services" component={Services}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/mehedi" component={AboutMe}/>
           <Route component={FourOhFour}/>
         </Switch>
       </BrowserRouter>
