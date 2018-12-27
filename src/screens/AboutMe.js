@@ -27,7 +27,7 @@ export default class ServicesSccreen extends Component {
     })
 
     window.addEventListener('resize', () => {
-        if(width != window.innerWidth){
+        if(width !== window.innerWidth){
             var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
     
             this.setState({
@@ -94,9 +94,9 @@ export default class ServicesSccreen extends Component {
                                         ref = {(el) => {
                                                 if (el) {
                                                     el.addEventListener("animationend", event  => {
-                                                        console.log(event)
                                                         if(event.animationName === "nightslikethis"){
-                                                            window.scrollTo(0, 90000000000000)
+                                                            var size = this.aboutRef.current.clientHeight;
+                                                            window.scrollTo(0, size);
                                                         }
                                                     });
                                                 }

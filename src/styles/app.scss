@@ -26,6 +26,7 @@ html {
   body {
     margin: 0px;
     background-color: #000;
+    overflow-x: hidden;
     
     .content{
       position: relative;
@@ -48,19 +49,20 @@ html {
       h1 {
         font-size: 50px;
         margin: 0px;
+
+          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          background: linear-gradient(to right, #ffa290 63%, #aaa8b5 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         opacity: 0;
-        animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        color: transparent;
+        }
         
         a {
           transition: 0.1s all ease-in-out;
           text-decoration: none;
-          animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          background: linear-gradient(to right, #ffa290 77%, #ffffffbf 100%);
-          -webkit-background-clip: text;
-          color: transparent;
+          
         }
-      }
-
       
       div{
         position: relative;
@@ -109,7 +111,8 @@ html {
         opacity: 0;
         color: #2cd08c;
         animation: boasy 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        
+        box-shadow: 0px 0px 0px 0px transparent;
+
         h1{
           padding-bottom: 20px;
           font-size: 3em;
@@ -134,8 +137,8 @@ html {
           font-size: 30px;
           text-decoration: none;
           color: #def919;
-          display: inline-block;
-          
+          opacity: 0;
+          animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           border-bottom: 3px solid #def919;
         }
 
@@ -164,6 +167,7 @@ html {
           color: #1536bb;
           animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          box-shadow: 0px 0px 0px 0px transparent;
 
           h2{
             color: #ebff37;
@@ -185,6 +189,7 @@ html {
           animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          box-shadow: 0px 0px 0px 0px transparent;
           
           h2{
             color: #e3eeff;
@@ -438,19 +443,23 @@ html {
       .about-me{
         text-align: center;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         color: #ccc;
         text-decoration: none;
         font-weight: 300;
         font-size: 20px;
         font-family: "Inconsolata", monospace;
-        margin-top: 50px;
+        margin: 60px 0;
         animation: xnxx 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         opacity: 0;
         transition: 0.3s all ease-in-out;
 
         &:hover, &:active, &:focus{
           color: #fff;
+        }
+
+        span{
+          padding-left: 10px;
         }
       }
     }
@@ -480,11 +489,12 @@ html {
           margin-bottom: 10px;
           position: relative;
           flex-shrink: 0;
+          transform: none;
 
           p{
             padding:10px 20px;
             border-radius: 25px 25px 25px 0px;
-            background: #b4f8ba;
+            background-color: #b4f8ba;
             color: #333;
             float: left;
             margin: 0px;
@@ -521,8 +531,9 @@ html {
           }
 
           .loader{
-            opacity: 1;
             animation: nightslikethis 0s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            background-color: #b4f8ba;
+            opacity: 1;
 
             span{
               width: 7px;
@@ -593,10 +604,6 @@ html {
           animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
           margin-top: 25px;
-
-          &:hover{
-            transform: translateY(-20px);
-          }
         }
 
 

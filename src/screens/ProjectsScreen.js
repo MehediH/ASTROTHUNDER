@@ -31,7 +31,7 @@ export default class ProjectScreen extends Component {
         })
 
         window.addEventListener('resize', () => {
-            if(width != window.innerWidth){
+            if(width !== window.innerWidth){
                 var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
         
                 this.setState({

@@ -112,22 +112,25 @@
     }
 } 
 
-@media (max-width: 850px){
+@media (hover: none){
     .projects { 
         article{
             margin-bottom: 50px !important;
         }
-
+    
         .project{
             .meta{
                 opacity: 1 !important;
             }
-
+    
             .overlay{
                 opacity: 0.65 !important;
             }
         }
     }
+}
+
+@media (max-width: 850px){
 
     .site-cont{
         padding: 50px !important;

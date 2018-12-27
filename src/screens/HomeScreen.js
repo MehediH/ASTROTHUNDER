@@ -13,7 +13,7 @@ export default class HomeScreen extends Component {
     })
 
     window.addEventListener('resize', () => {
-        if(width != window.innerWidth || height != window.innerHeight){
+        if(width !== window.innerWidth || height !== window.innerHeight){
             var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
     
             this.setState({
@@ -28,7 +28,7 @@ export default class HomeScreen extends Component {
         <React.Fragment>
             <div className="wrapper">
                 <header>
-                    <h1><Link to="/">built by meh.</Link></h1>
+                    <Link to="/"><h1>built by meh.</h1></Link>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>

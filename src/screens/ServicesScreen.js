@@ -14,7 +14,7 @@ export default class ServicesSccreen extends Component {
     })
 
     window.addEventListener('resize', () => {
-        if(width != window.innerWidth){
+        if(width !== window.innerWidth){
             var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
     
             this.setState({
@@ -58,7 +58,7 @@ export default class ServicesSccreen extends Component {
                         </li>
                     </ul>
 
-                    <Link to="/meh" className="about-me">..and some more 👀</Link>
+                    <Link to="/meh" className="about-me">..and some more <span role="img" aria-label="peeking eye emoji">👀</span></Link>
                 </div>
 
 
