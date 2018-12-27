@@ -170,7 +170,7 @@ html {
           }
 
           &:hover{
-            border: 10px solid #6fdeb0;
+            border: 10px solid  #a645a8;
           }
   
         }
@@ -178,7 +178,7 @@ html {
         .contact{
           padding: 50px;
           background-color: #a745a9;
-          border: 10px solid #68ffc0;
+          border: 10px solid #ddf819;
         
           opacity: 0;
           color: #1536bb;
@@ -187,11 +187,11 @@ html {
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
           
           h2{
-            color: #ebff37;
+            color: #e3eeff;
           }
 
           &:hover{
-            border: 10px solid #ddf819;
+            border: 10px solid  #a645a8;
           }
         }
       }
