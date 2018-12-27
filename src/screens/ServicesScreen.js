@@ -57,8 +57,8 @@ export default class ServicesSccreen extends Component {
                             <p>i work with all the latest tech & tools: react, node, electron, framer, figma, wordpress, php, python, you name it. my projects are built to last.</p>
                         </li>
                     </ul>
-                    
-                    <Link to="/mehedi" className="about-me">..and some more 👀</Link>
+
+                    <Link to="/meh" className="about-me">..and some more 👀</Link>
                 </div>
 
 

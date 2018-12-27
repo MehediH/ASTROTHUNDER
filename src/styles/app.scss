@@ -149,17 +149,26 @@ html {
           text-decoration: none;
           color: #fff;
         }
+
+        h2{
+          font-weight: 300;
+          font-family: "Inconsolata", monospace;
+        }
         
         .projects{
           padding: 50px;
-          background-color: #a60295;
-          border: 10px solid #ff856a;
+          background-color: #a745a9;
+          border: 10px solid #ddf819;
           opacity: 0;
           margin-bottom: 100px;
-          color: #ddf819;
+          color: #1536bb;
           animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
-          
+
+          h2{
+            color: #ebff37;
+          }
+
           &:hover{
             border: 10px solid #6fdeb0;
           }
@@ -168,21 +177,21 @@ html {
   
         .contact{
           padding: 50px;
-          background-color: #751414;
-          border: 10px solid #e7ff0f;
+          background-color: #a745a9;
+          border: 10px solid #68ffc0;
         
           opacity: 0;
-          color: #4890ff;
+          color: #1536bb;
           animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
           
           h2{
-            color: #6df8b3;
+            color: #ebff37;
           }
 
           &:hover{
-            border: 10px solid #6fdeb0;
+            border: 10px solid #  ddf819;
           }
         }
       }
