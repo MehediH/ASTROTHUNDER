@@ -54,7 +54,7 @@ export default class ServicesSccreen extends Component {
 
     var x = 0;
 
-    var loadMessages = setInterval(() => {
+    this.interval = setInterval(() => {
         if(x < messages.length){
             var messagesTemp = this.state.messages;
             messagesTemp.push(messages[x])
@@ -64,11 +64,14 @@ export default class ServicesSccreen extends Component {
             x++;
 
         } else{
-            clearInterval(loadMessages)
+            clearInterval(this.interval)
         }
     }, 1500);
 
+  }
 
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {
