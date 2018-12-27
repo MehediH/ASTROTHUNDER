@@ -13,7 +13,7 @@ export default class HomeScreen extends Component {
     })
 
     window.addEventListener('resize', () => {
-        if(width != window.innerWidth){
+        if(width != window.innerWidth || height != window.innerHeight){
             var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
     
             this.setState({
