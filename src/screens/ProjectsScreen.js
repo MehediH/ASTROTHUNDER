@@ -73,7 +73,7 @@ export default class ProjectScreen extends Component {
                                                         src={project.fields.coverImage.fields.file.url}
                                                         style={{color: project.fields.acent}}
                                                     />
-                                                    <div class="overlay"></div>
+                                                    <div className="overlay"></div>
                                                     <div className="meta">
                                                         <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>
                                                     </div>

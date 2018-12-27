@@ -58,7 +58,7 @@ export default class ServicesSccreen extends Component {
                         </li>
                     </ul>
 
-                    <Link to="/meh" className="about-me">..and some more <span role="img" aria-label="peeking eye emoji">👀</span></Link>
+                    <Link to="/meh" className="about-me">more about me <span role="img" aria-label="peeking eye emoji">👀</span></Link>
                 </div>
 
 
