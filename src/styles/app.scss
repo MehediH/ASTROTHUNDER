@@ -605,6 +605,10 @@ html {
           animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
           margin-top: 25px;
+
+          &:hover{
+            color: #cf1775;
+          }
         }
 
 

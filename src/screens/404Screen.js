@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 export default class HomeScreen extends Component {
   componentWillMount(){
@@ -26,6 +27,10 @@ export default class HomeScreen extends Component {
   render() {
     return (
         <div className="app fof">
+            <Helmet>
+                <title>it's a 404 // built by meh.</title>
+            </Helmet>
+
             <h1 className="four">it's a 404<Link to="/">let's go back home <span className="arrow">-></span></Link></h1>
 
             <div className={"background-overlay 404 anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 export default class ContactScreen extends Component {
   componentWillMount(){
@@ -27,6 +28,11 @@ export default class ContactScreen extends Component {
     return (
         <React.Fragment>
             <div className="wrapper no-bg">
+                <Helmet>
+                    <title>contact // built by meh.</title>
+                    <meta name="description" content="A creative designer and developer based in London." />
+                </Helmet>
+
                 <header>
                     <h1><Link to="/">built by meh.</Link></h1>
                     <div>

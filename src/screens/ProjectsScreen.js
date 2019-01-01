@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 import * as contentful from 'contentful';
 
@@ -53,6 +54,11 @@ export default class ProjectScreen extends Component {
         const projects = this.state.projects;
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>projects built by meh.</title>
+                    <meta name="description" content="A creative designer and developer based in London." />
+                </Helmet>
+                
                 <div className="wrapper">
                     <header>
                         <h1><Link to="/">built by meh.</Link></h1>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 export default class HomeScreen extends Component {
   componentWillMount(){
@@ -26,6 +27,11 @@ export default class HomeScreen extends Component {
   render() {
     return (
         <React.Fragment>
+            <Helmet>
+                <title>built by meh.</title>
+                <meta name="description" content="A creative designer and developer based in London." />
+            </Helmet>
+
             <div className="wrapper">
                 <header>
                     <Link to="/"><h1>built by meh.</h1></Link>

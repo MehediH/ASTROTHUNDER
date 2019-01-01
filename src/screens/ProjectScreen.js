@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 import * as contentful from 'contentful';
 
@@ -57,6 +58,7 @@ export default class ProjectScreen extends Component {
         const project = this.state.project;
         return (
             <React.Fragment>
+                
                 <div className="wrapper">
                     <header>
                         <h1><Link to="/">built by meh.</Link></h1>
@@ -67,7 +69,11 @@ export default class ProjectScreen extends Component {
                     
                     { project.fields && !this.state.notFound && 
                         <article className="single-project site-cont">
-                            
+                            <Helmet>
+                                <title>{project.fields.title} // built by meh.</title>
+                                <meta name="description" content={project.fields.slogan} />
+                            </Helmet>
+
                             <div className="meta">
                                 <h1>{project.fields.title}</h1>
                                 <p>{project.fields.slogan}</p>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
+import {Helmet} from "react-helmet";
 
 export default class ServicesSccreen extends Component {
 
@@ -77,6 +78,10 @@ export default class ServicesSccreen extends Component {
   render() {
     return (
         <React.Fragment>
+            <Helmet>
+                <title>about me // built by meh.</title>
+                <meta name="description" content="A creative designer and developer based in London." />
+            </Helmet>
             <div className="wrapper" ref={this.aboutRef}>
                 <header>
                     <h1><Link to="/">built by meh.</Link></h1>
