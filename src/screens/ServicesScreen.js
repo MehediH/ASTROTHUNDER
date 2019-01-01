@@ -49,7 +49,7 @@ export default class ServicesSccreen extends Component {
 
                         <li>
                             <h2>product dev</h2>
-                            <p>i can help with the planning, design, and development of your app or website. i have a keen eye for details, and i love making produts that are built to please the user -- right from the planning to the develop</p>
+                            <p>i can help with the planning, design, and development of your app or website. making products that are built to plaese the user is my main goal, and my keen eye for details will ensure your website, app, or any other product stands out and grabs the user's attention.</p>
                         </li>
 
                         <li>
@@ -59,7 +59,7 @@ export default class ServicesSccreen extends Component {
                 
                         <li>
                             <h2>tech</h2>
-                            <p>i work with all the latest tech & tools: react, node, electron, framer, figma, wordpress, php, python, you name it. my projects are built to last.</p>
+                            <p>i work with all the latest tech & tools: react, node, react native, electron, vue.js, firebase, framer, figma, adobe xd, wordpress, etc. everything i make is built to last.</p>
                         </li>
                     </ul>
 

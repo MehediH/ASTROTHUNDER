@@ -41,15 +41,15 @@ export default class ServicesSccreen extends Component {
         "👋🏼, i am mehedi hassan!",
         "i live in london, studying computer science at a top russel group university 🤓",
         "for the most part, i write about tech at thurrott.com. ",
-        "i write about the latest news, break scoops, review hardware, and more 🌊",
-        "on the side, i am a developer and designer building experiences 🔥",
-        "i build things like tweeten, one of the most popular twitter clients for windows and mac 🐣",
-        "i build apps and experiences that are unique, fast, and reliable ⚡",
+        "part of my main job is to write about the latest news, break scoops, review hardware, and more 🌊",
+        "and i am also a developer and designer building experiences 🔥",
+        "i build apps like tweeten, one of the most popular twitter clients for windows and mac 🐣",
+        "most of my time is spent building apps and experiences that are unique, fast, and reliable ⚡",
         "as a designer, creating beautiful and restless experiences is my priority 💯",
-        "i work with all the latest tech & tools: react, node, vue, electron, framer, figma, wordpress, php, python, you name it 🛠",
-        "i can help you build a beautiful user interface for your next project, or develop the entire thing 🤟🏼",
+        "i work with all the latest tech & tools: react, node, vue.js, react native, electron, adobe xd, framer, figma, wordpress, php, you name it 🛠",
+        "currently, i am looking for some work and i'd love to help you build a beautiful user interface for your next project, or develop the entire thing 🤟🏼",
         "i've got a keen eye for details, and experiences that stand-out while working effectively. plus, i'm really good at team work 👀",
-        "point is, i can help you build a beautiful, robust, and crating effortless app for your next project or personal brand, regardless of the platform 🤙🏼",
+        "point is, i can help you build a beautiful, robust, and effortless experience for your next project or personal brand, regardless of the platform 🤙🏼",
         "let's work together! 🙌🏼"
     ]
 
