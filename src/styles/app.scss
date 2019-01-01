@@ -51,7 +51,7 @@ html {
         margin: 0px;
 
           animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          background: linear-gradient(to right, #d01875 36%, #6705b1 100%);
+          background: linear-gradient(to right, #d82881 36%, #8d27da 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 0;
@@ -83,7 +83,7 @@ html {
         
         .alt{
           bottom: 30px;
-          background-color: #d01875;
+          background-color: #b91c6c;
         }
       }
       
@@ -121,7 +121,7 @@ html {
         
         .hi{
           font-size: 2.7em;
-          color: #fff;
+          color: #b3ffb3;
         }
 
         h2{
@@ -138,7 +138,7 @@ html {
           text-decoration: none;
           color: #def919;
           opacity: 0;
-          animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 2.5s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           border-bottom: 3px solid #def919;
           display: inline-block;
         }
@@ -161,7 +161,7 @@ html {
         
         .projects{
           padding: 50px;
-          background-color: #a745a9;
+          background-color: #b91c6c;
           border: 10px solid #ddf819;
           opacity: 0;
           margin-bottom: 100px;
@@ -175,14 +175,14 @@ html {
           }
 
           &:hover{
-            border: 10px solid  #a645a8;
+            border: 10px solid  #b91c6c;
           }
   
         }
   
         .contact{
           padding: 50px;
-          background-color: #a745a9;
+          background-color: #b91c6c;
           border: 10px solid #ddf819;
         
           opacity: 0;
@@ -197,7 +197,7 @@ html {
           }
 
           &:hover{
-            border: 10px solid  #a645a8;
+            border: 10px solid  #b91c6c;
           }
         }
       }

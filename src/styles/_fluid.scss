@@ -60,6 +60,16 @@
         grid-template-columns: 3fr 1.5fr !important;
     }
 
+    .fof{
+        .four{
+            font-size: 3.5em;
+            text-align: center;
+        }
+
+        a{
+            font-size: 20px !important;
+        }
+    }
 
 }
 
@@ -93,6 +103,16 @@
 
         
     }
+
+    .fof{
+        .four{
+            font-size: 3em;
+        }
+
+        a{
+            font-size: 17px !important;
+        }
+    }
 }
 
 @media (max-width: 1156px){
@@ -110,6 +130,7 @@
             margin-top: 0px;
         }
     }
+
 } 
 
 @media (hover: none){
@@ -240,6 +261,18 @@
                 line-height: 40px !important;
             }
             
+        }
+    }
+
+    .fof{
+        .four{
+            width: 80%;
+            font-size: 2em;
+            padding: 40px 20px;
+        }
+
+        a{
+            font-size: 16px !important;
         }
     }
 }
