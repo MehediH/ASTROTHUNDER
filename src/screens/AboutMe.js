@@ -11,7 +11,8 @@ export default class ServicesSccreen extends Component {
     this.state = {
         gridSizeX: 0,
         gridSizeY: 0,
-        messages: []
+        messages: [],
+        scroll: true
     }
 
     this.aboutRef = React.createRef();
@@ -69,6 +70,10 @@ export default class ServicesSccreen extends Component {
         }
     }, 1500);
 
+    window.addEventListener('mousewheel', () => {
+        this.setState({scroll: false});
+    });
+
   }
 
   componentWillUnmount() {
@@ -102,7 +107,7 @@ export default class ServicesSccreen extends Component {
                                         ref = {(el) => {
                                                 if (el) {
                                                     el.addEventListener("animationend", event  => {
-                                                        if(event.animationName === "nightslikethis"){
+                                                        if(event.animationName === "nightslikethis" && this.state.scroll){
                                                             var size = this.aboutRef.current.clientHeight;
                                                             window.scrollTo(0, size);
                                                         }
