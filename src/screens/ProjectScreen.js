@@ -78,9 +78,13 @@ export default class ProjectScreen extends Component {
                                 <h1>{project.fields.title}</h1>
                                 <p>{project.fields.slogan}</p>
                             </div>
-
+                            
                             <div className="article-content">
                                 {project.fields.content}
+                                
+                                { project.fields.projectLink !== undefined && 
+                                    <div><a href={project.fields.projectLink} target="_blank" class="view">view project</a></div>
+                                }
                             </div>
 
                             <div className="images">
