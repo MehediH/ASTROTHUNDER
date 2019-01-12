@@ -406,6 +406,16 @@ html {
         font-weight: 400;
         margin: 20px 0;
 
+        a{
+          color: #fff;
+          transition: 0.3s all ease-in-out;
+
+          &:hover, &:active, &:focus{
+            opacity: 0.75;
+          }
+        }
+
+
         .view{
           color: #fff;
           display: inline-block;
