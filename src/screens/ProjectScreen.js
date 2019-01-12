@@ -89,7 +89,7 @@ export default class ProjectScreen extends Component {
                                 <Markdown>{project.fields.content}</Markdown>
                                 
                             </div>
-                        </article>
+                        </article> 
                     }
 
                     {
