@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
 import {Helmet} from "react-helmet";
+import Markdown from 'markdown-to-jsx';
 
 import * as contentful from 'contentful';
 
@@ -56,6 +57,7 @@ export default class ProjectScreen extends Component {
 
     render() {
         const project = this.state.project;
+
         return (
             <React.Fragment>
                 
@@ -80,19 +82,12 @@ export default class ProjectScreen extends Component {
                             </div>
                             
                             <div className="article-content">
-                                {project.fields.content}
-                                
                                 { project.fields.projectLink !== undefined && 
                                     <div><a href={project.fields.projectLink} target="_blank" class="view">view project</a></div>
                                 }
-                            </div>
 
-                            <div className="images">
-                                { project.fields.images &&
-                                    project.fields.images.map((image) => 
-                                        <img key={image.fields.photo.sys.id} alt={image.fields.photo.fields.title} src={image.fields.photo.fields.file.url}/>
-                                    )
-                                }
+                                <Markdown>{project.fields.content}</Markdown>
+                                
                             </div>
                         </article>
                     }

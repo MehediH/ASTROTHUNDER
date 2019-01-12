@@ -46,7 +46,7 @@ export default class ProjectScreen extends Component {
     componentDidMount(){
         client.getEntries({
             content_type: "7leLzv8hW06amGmke86y8G",
-            order: "fields.position"
+            order: "-fields.position"
         }).then(entries => {
             this.setState({projects: entries.items});
         }) 
