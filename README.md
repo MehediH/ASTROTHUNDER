@@ -1,6 +1,6 @@
 # ASTROTHUNDER
 
-![alt text](https://images.ctfassets.net/f1nnr97nijby/5LEmTAK4qAKQKiE6yAiE0K/c48df31bc72fee9ec0037fab67635b5f/astro.jpg "builtbymeh.com demo")
+[![alt text](https://images.ctfassets.net/f1nnr97nijby/5LEmTAK4qAKQKiE6yAiE0K/c48df31bc72fee9ec0037fab67635b5f/astro.jpg "builtbymeh.com demo")]((https://builtbymeh.com))
 
 
 ASTROTUHNDER is the website for my new portfolio. I had a very simple portfolio in the past and didn't feature much of my work or exactly what I do there. ASTROTHUNDER is a full-blown PWA app based on React and uses Contentful for the content delivery.
