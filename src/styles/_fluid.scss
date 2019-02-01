@@ -245,7 +245,7 @@
         }
 
         p{
-            font-size: 1.5em !important;
+            font-size: 20px !important;
         }
 
         .article-content{
@@ -294,6 +294,12 @@
                 margin-top: 5px !important;
             }
             
+        }
+    }
+
+    .single-project{
+        p{
+            font-size: 18px !important;
         }
     }
 }
