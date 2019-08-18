@@ -40,21 +40,24 @@ export default class ServicesSccreen extends Component {
 
     var messages = [
         "👋🏼, i am mehedi hassan!",
-        "i live in london, studying computer science at a top russel group university 🤓",
-        "for the most part, i write about tech at thurrott.com. ",
-        "part of my main job is to write about the latest news, break scoops, review hardware, and more 🌊",
-        "and i am also a developer and designer building experiences 🔥",
+        "i live in london, studying computer science and currently looking for internships 🤓",
+        "i am also a developer and designer building experiences 🔥",
         "i build apps like tweeten, one of the most popular twitter clients for windows and mac 🐣",
         "most of my time is spent building apps and experiences that are unique, fast, and reliable ⚡",
-        "as a designer, creating beautiful and restless experiences is my priority 💯",
+        "as a designer, creating beautiful and restless experiences is my priority 🙌",
         "i work with all the latest tech & tools: react, node, vue.js, react native, electron, adobe xd, framer, figma, wordpress, php, you name it 🛠",
         "currently, i am looking for some work and i'd love to help you build a beautiful user interface for your next project, or develop the entire thing 🤟🏼",
         "i've got a keen eye for details, and experiences that stand-out while working effectively. plus, i'm really good at team work 👀",
-        "point is, i can help you build a beautiful, robust, and effortless experience for your next project or personal brand, regardless of the platform 🤙🏼",
+        "i can help you build a beautiful, robust, and effortless experience for your next project or personal brand, regardless of the platform 🤙🏼",
         "let's work together! 🙌🏼"
     ]
 
-    var x = 0;
+    var x = 1;
+
+    var messagesTemp = this.state.messages;
+    messagesTemp.push(messages[0])
+            
+    this.setState({ messages: messagesTemp})
 
     this.interval = setInterval(() => {
         if(x < messages.length){
@@ -68,7 +71,7 @@ export default class ServicesSccreen extends Component {
         } else{
             clearInterval(this.interval)
         }
-    }, 1500);
+    }, 3000);
 
     window.addEventListener('mousewheel', () => {
         this.setState({scroll: false});
@@ -117,7 +120,7 @@ export default class ServicesSccreen extends Component {
                                     >
                                         <p className="loader"><span></span><span></span><span></span></p>
                                         
-                                        { i !== 12 
+                                        { i !== 10
                                             ? <p className={"text item-" + i}>{message}</p>
                                             : <p className={"text item-" + i}><Link to="./contact">{message}</Link></p>
                                         }

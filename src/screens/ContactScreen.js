@@ -45,7 +45,6 @@ export default class ContactScreen extends Component {
                         <p>hey! i am always looking for work, so if you have a project that you would like me to work on, feel free to hit me up. i can help with the development of websites, web apps, mobile apps, desktop web-based apps, and more. if you need help with the design of your next app or project, as well as all the creative planning required to bring your idea to life, i'd love to help! i have experience with all the latest tech & tools: react, node, vue, electron, firebase, adobe xd, framer, figma -- and yes, i can help with wordpress, and php, too.</p>
                     
                         <a href="mailto:meh@builtbymeh.com">let's work together -></a>
-                        <a href="https://twitter.com/mehedih_" className="twttr">reach out on twitter -></a>
                         <a href="https://github.com/MehediH/" className="gthb">checkout my work on github -></a>
                     </div>
 

@@ -49,12 +49,12 @@ export default class ServicesSccreen extends Component {
 
                         <li>
                             <h2>product dev</h2>
-                            <p>i can help with the planning, design, and development of your app or website. making products that are built to please the user is my main goal, and my keen eye for details will ensure your website, app, or any other product stands out and grabs the user's attention.</p>
+                            <p>i can help with the planning, design, and development of your app or website. making products that are built to please the user is forte, and my keen eye for details will ensure your website, app, or any other product stands out and grabs the user's attention.</p>
                         </li>
 
                         <li>
                             <h2>app and web dev</h2>
-                            <p>i build beautiful, reliable, and robust mobile apps, websites, or web apps. making apps that are secure and work flawlessly across all your devices is a priority for me.</p>
+                            <p>i build beautiful, reliable, and robust mobile apps, websites, or web apps. making apps that are secure and work flawlessly across all your devices is what it's all about :)</p>
                         </li>
                 
                         <li>
