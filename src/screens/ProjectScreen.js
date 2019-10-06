@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { generateBG } from '../utils/bgAnim.js';
 import {Helmet} from "react-helmet";
-import * as contentful from 'contentful';
+import Markdown from 'markdown-to-jsx';
 
+import * as contentful from 'contentful';
 
 var client = contentful.createClient({
     space: process.env.REACT_APP_BLOG_SPACE,
@@ -16,60 +18,77 @@ export default class ProjectScreen extends Component {
 
         this.state = {
             project: [],
-            notFound: false
+            notFound: false,
+            gridSizeX: 0,
+            gridSizeY: 0
         }
-
+        
     } 
 
-   
+    componentWillMount(){
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var elemProps = generateBG(width, height, false);
+
+        this.setState({
+            ...elemProps
+        })
+
+        window.addEventListener('resize', () => {
+            if(width !== window.innerWidth){
+                var elemProps = generateBG(window.innerWidth, window.innerHeight, true);
+        
+                this.setState({
+                    ...elemProps
+                })
+            }
+        })
+    }
 
     componentDidMount(){
-        client.getEntries({content_type: "project", "fields.slug[match]": this.props.match.params.project}).then((entry) => {
+        client.getEntries({content_type: "7leLzv8hW06amGmke86y8G", "fields.slug[match]": this.props.match.params.project}).then((entry) => {
             entry.total === 1 ? this.setState({project: entry.items[0]}) : this.setState({notFound: true})
         }).catch((error) => {
             console.error(error)
         })
 
-        
     }
 
 
     render() {
         const project = this.state.project;
+
         return (
             <React.Fragment>
                 
                 <div className="wrapper">
                     <header>
-                        <h1><Link to="/">Emily Ko.</Link></h1>
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/chui-lam-emily-k-b3920b159/">LinkedIn</a></li>
-                            <li><a href="mailto:emily_ko@live.co.uk">Email</a></li>
-                        </ul>
+                        <h1><Link to="/">built by meh.</Link></h1>
+                        <div>
+                            <span></span><span className="alt"></span>
+                        </div>
                     </header>
                     
                     { project.fields && !this.state.notFound && 
                         <article className="single-project site-cont">
                             <Helmet>
-                                <title>{project.fields.title} - Emily Ko.</title>
+                                <title>{project.fields.title} // built by meh.</title>
                                 <meta name="description" content={project.fields.slogan} />
                             </Helmet>
 
                             <div className="meta">
                                 <h1>{project.fields.title}</h1>
-                                <p>{project.fields.description}</p>
+                                <p>{project.fields.slogan}</p>
                             </div>
-
-                            <div className="photos">
-
-                                {
-                                    project.fields.photos.map((photo, i) => {
-                                        return <img key={i} src={photo.fields.file.url} alt={photo.fields.title} />
-                                    })
+                            
+                            <div className="article-content">
+                                { project.fields.projectLink !== undefined && 
+                                    <div><a href={project.fields.projectLink} target="_blank" class="view">view project</a></div>
                                 }
 
-                            </div>
+                                <Markdown>{project.fields.content}</Markdown>
                                 
+                            </div>
                         </article> 
                     }
 
@@ -88,7 +107,12 @@ export default class ProjectScreen extends Component {
                 
                 </div>
                 
-            
+                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
+
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
             </React.Fragment>   
         )
     }
