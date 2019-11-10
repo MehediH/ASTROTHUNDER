@@ -1,7 +1,7 @@
 {
-  "name": "astrothunder",
+  "name": "coffeebean",
   "version": "1.0.0",
-  "homepage": "https://astrothunder.netlify.com/",
+  "homepage": "https://coffeebean.netlify.com/",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
@@ -30,6 +30,7 @@
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "macy": "^2.5.0",
     "markdown-to-jsx": "^6.9.0",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
@@ -40,6 +41,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
+    "react-masonry-component": "^6.2.1",
     "react-router-dom": "^4.3.1",
     "resolve": "1.6.0",
     "style-loader": "0.19.0",
