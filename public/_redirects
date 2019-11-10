@@ -1,4 +1,4 @@
 /* /index.html 200
 
 # Redirect default Netlify subdomain to primary domain
-http://coffeebean.netlify.com/* http://builtbymeh.com/:splat 301!
+http://astrothunder.netlify.com/* http://builtbymeh.com/:splat 301!
