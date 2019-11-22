@@ -43,8 +43,8 @@ export default class HomeScreen extends Component {
                 <div className="main site-cont">
                     <div className="hero">
                         <h1 className="hi">hi! i'm mehedi.</h1>
-                        <h1>a creative developer, designer based in london.</h1>
-                        <h2>i build beautiful, robust, and effortless websites, apps, and other web-based experiences.</h2>
+                        <h1>a compsci undergrad, software engineer, and designer based in london.</h1>
+                        <h2>i love solving problems, building problems that tackle real-life challenges, and designing intutive experiences.</h2>
                         <Link to="/services" className="services card">see what i do <span className="arrow">-></span></Link>
                     </div>
 

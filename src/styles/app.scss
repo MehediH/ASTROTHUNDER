@@ -113,10 +113,11 @@ html {
         color: #2cd08c;
         animation: boasy 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         box-shadow: 0px 0px 0px 0px transparent;
+        
 
         h1{
           padding-bottom: 20px;
-          font-size: 3em;
+          font-size: 2.5em;
           color: #e7ff0e;
         }
         
@@ -133,8 +134,7 @@ html {
         }
 
         .services{
-          position: absolute;
-          bottom: 45px;
+          margin-top: 20px;
           font-size: 30px;
           text-decoration: none;
           color: #def919;
@@ -290,6 +290,8 @@ html {
     }
 
     .projects{
+      opacity: 0;
+      animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
       a{
         color: #b5f9bb;
@@ -315,16 +317,14 @@ html {
         width: 100%;
         position: relative;
         margin-bottom: 100px;
-
+        
         
         .container{ 
           display: inline-block;
-          opacity: 0;
           margin: 0 auto;
           position: relative;
           left: 50%;
           transform: translate(-50%);
-          animation: ofn 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
           .overlay{
             background-color: #000;
@@ -505,6 +505,11 @@ html {
         flex-direction: column;
         justify-content: flex-end;
         
+        @for $i from 1 through 11 {
+          :nth-child(#{$i}n){
+              animation-delay: #{$i * 3}s;
+          }
+        }
 
         li {
           display: block;

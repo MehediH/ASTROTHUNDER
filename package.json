@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "dotenv": "^4.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.0",
     "sass-loader": "^7.1.0"
   },
   "jest": {

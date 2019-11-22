@@ -39,39 +39,29 @@ export default class ServicesSccreen extends Component {
     })
 
     var messages = [
-        "👋🏼, i am mehedi hassan!",
-        "i live in london, studying computer science and currently looking for internships 🤓",
-        "i am also a developer and designer building experiences 🔥",
-        "i build apps like tweeten, one of the most popular twitter clients for windows and mac 🐣",
-        "most of my time is spent building apps and experiences that are unique, fast, and reliable ⚡",
-        "as a designer, creating beautiful and restless experiences is my priority 🙌",
-        "i work with all the latest tech & tools: react, node, vue.js, react native, electron, adobe xd, framer, figma, wordpress, php, you name it 🛠",
-        "currently, i am looking for some work and i'd love to help you build a beautiful user interface for your next project, or develop the entire thing 🤟🏼",
-        "i've got a keen eye for details, and experiences that stand-out while working effectively. plus, i'm really good at team work 👀",
-        "i can help you build a beautiful, robust, and effortless experience for your next project or personal brand, regardless of the platform 🤙🏼",
-        "let's work together! 🙌🏼"
+        "Hey! I'm Mehedi Hassan!",
+        "I live in London, studying Computer Science at QMUL and currently looking for internships 🤓",
+        "I love solving problems that tackle real-life challenges and design solutions that work effortlessly ⚡",
+        "So far, my biggest project is Tweeten, one of the most popular Twitter clients for Windows and Mac with more than 1.3m downloads 🐣",
+        "I have extensive knowledge about software, with years of experience in writing code with Python, JavaScript, Java, and PHP ⚡",
+        "As a designer, creating beautiful, accessible, and intuitive interfaces is my priority 🙌",
+        "I have expereince with a lot of the latest tech & tools: Git, JavaScript, React, Node.js, React Native, Electron, SQL, Firebase, Docker, Google Cloud, AWS, Adobe XD, Framer, you name it 🛠",
+        "Oh and, I love working on open-source software and incredibly passionate about using complex algorithms and data structures to help build efficient, fast, and effortless software 👨‍👩‍👦‍👦",
+        "Currently, I am looking for a tech-related product or software engineering internship for 2020 🤟🏼",
+        "As an individual who loves solving problems and tackling real-world challenges, I am always looking forward to learning new things. Plus, I've got a keen eye for details, and a lot of experience that could be a perfect fit for your company 🤙🏼",
+        "let's work together! 👀"
     ]
 
-    var x = 1;
 
-    var messagesTemp = this.state.messages;
-    messagesTemp.push(messages[0])
-            
-    this.setState({ messages: messagesTemp})
+    for(let i=0; i < messages.length; i++){
+        var messagesTemp = this.state.messages;
 
-    this.interval = setInterval(() => {
-        if(x < messages.length){
-            var messagesTemp = this.state.messages;
-            messagesTemp.push(messages[x])
-            
-            this.setState({ messages: messagesTemp})
-            
-            x++;
+        messagesTemp.push(messages[i])
+        
+       
+    }
 
-        } else{
-            clearInterval(this.interval)
-        }
-    }, 3000);
+    
 
     window.addEventListener('mousewheel', () => {
         this.setState({scroll: false});
