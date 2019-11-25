@@ -131,6 +131,7 @@ html {
           font-family: "Inconsolata", monospace;
           font-weight: 400;
           color: #fff;
+          line-height: 40px;
         }
 
         .services{
@@ -507,7 +508,15 @@ html {
         
         @for $i from 1 through 11 {
           :nth-child(#{$i}n){
-              animation-delay: #{$i * 3}s;
+              animation-delay: #{$i * 2}s !important;
+
+              .loader{
+                animation-delay: #{($i * 2) + 1}s !important;
+              }
+
+              .text{
+                animation-delay: #{($i * 2) + 1}s !important;
+              }
           }
         }
 
