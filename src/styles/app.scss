@@ -542,18 +542,9 @@ html {
       display: block; 
       position: relative;
 
-      ul{
-        list-style-type: none;
-        padding: 0px;
-        max-width: 800px;
-        margin: 0 auto;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        
-        @for $i from 1 through 11 {
-          :nth-child(#{$i}n){
+      .animated{
+        @for $i from 1 through 12 {
+          li:nth-child(#{$i}n){
               animation-delay: #{$i * 2}s !important;
 
               .loader{
@@ -565,7 +556,32 @@ html {
               }
           }
         }
+        
+        .text{
+          visibility: hidden;
+          animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1), BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+          
+      }
 
+      .stopaim li .text{
+        visibility: visible;
+
+        .animControl{
+          display: none;
+        }
+      }
+
+      ul{
+        list-style-type: none;
+        padding: 0px;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
         li {
           display: block;
           width: 100%;
@@ -593,12 +609,36 @@ html {
           }
 
           .text{
-            visibility: hidden;
-            animation: iwishicould 3s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1), BRACKETS 5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
             border-radius: 25px 25px 25px 25px;
+
+            .hide{
+              opacity: 1;
+              animation: diff 1.5s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+            }
+
+            span{
+              position: absolute;
+              right: 0;
+              text-transform: uppercase;
+              border: 3px solid #ccc;
+              color: #ccc;
+              padding: 5px 20px;
+              top: 0;
+              border-radius: 20px;
+              opacity: 0;
+              cursor: pointer;
+              animation: lastname 4s 4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+              transition: 0.3s all ease-in-out;
+
+              &:hover{
+                background-color: #7f5af0;
+                border: 3px solid #7f5af0;
+                color: #fff;
+              }
+            }
           }
 
-          .item-10{
+          .item-11{
             border-radius: 25px 25px 25px 0px;
             position: relative;
             z-index: 9999;

@@ -11,8 +11,22 @@ export default class ServicesSccreen extends Component {
     this.state = {
         gridSizeX: 0,
         gridSizeY: 0,
-        messages: [],
-        scroll: true
+        messages: [
+            "Hey! I'm Mehedi Hassan!",
+            "I live in London, studying Computer Science at QMUL and currently looking for internships 🤓",
+            "I love solving problems that tackle real-life challenges and design solutions that work effortlessly ⚡",
+            "So far, my biggest project is Tweeten, one of the most popular Twitter clients for Windows and Mac with more than 1.3M downloads 🐣",
+            "As a designer, creating beautiful, accessible, and intuitive interfaces is my priority 🙌",
+            "I have experience working with the leading tech and programming languages. ",
+            "Oh and, I love working on open-source software.",
+            "I am incredibly passionate about using complex algorithms and data structures to help build efficient, fast, and effortless software 👨‍👩‍👦‍👦",
+            "Currently, I am looking for a tech-related product or software engineering internship for 2020 🤟🏼",
+            "I am always looking forward to learning new things.",
+            "Plus, I've got a keen eye for details, and a lot of experience that could be a perfect fit for your company 🤙🏼",
+            "let's work together! 👀"
+        ],
+        scroll: true,
+        animateState: "animated"
     }
 
     this.aboutRef = React.createRef();
@@ -37,30 +51,6 @@ export default class ServicesSccreen extends Component {
             })
         }
     })
-
-    var messages = [
-        "Hey! I'm Mehedi Hassan!",
-        "I live in London, studying Computer Science at QMUL and currently looking for internships 🤓",
-        "I love solving problems that tackle real-life challenges and design solutions that work effortlessly ⚡",
-        "So far, my biggest project is Tweeten, one of the most popular Twitter clients for Windows and Mac with more than 1.3m downloads 🐣",
-        "I have extensive knowledge about software, with years of experience in writing code with Python, JavaScript, Java, and PHP ⚡",
-        "As a designer, creating beautiful, accessible, and intuitive interfaces is my priority 🙌",
-        "I have expereince with a lot of the latest tech & tools: Git, JavaScript, React, Node.js, React Native, Electron, SQL, Firebase, Docker, Google Cloud, AWS, Adobe XD, Framer, you name it 🛠",
-        "Oh and, I love working on open-source software and incredibly passionate about using complex algorithms and data structures to help build efficient, fast, and effortless software 👨‍👩‍👦‍👦",
-        "Currently, I am looking for a tech-related product or software engineering internship for 2020 🤟🏼",
-        "As an individual who loves solving problems and tackling real-world challenges, I am always looking forward to learning new things. Plus, I've got a keen eye for details, and a lot of experience that could be a perfect fit for your company 🤙🏼",
-        "let's work together! 👀"
-    ]
-
-
-    for(let i=0; i < messages.length; i++){
-        var messagesTemp = this.state.messages;
-
-        messagesTemp.push(messages[i])
-        
-       
-    }
-
     
 
     window.addEventListener('mousewheel', () => {
@@ -69,8 +59,19 @@ export default class ServicesSccreen extends Component {
 
   }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
+
+  stopAnim(){
+    this.setState({animateState: "stopaim"})
+  }
+
+  loadMessage(msg, i){
+    if(i == 0){
+        return <p className={"text item-" + i}>{msg}<span className="animControl" onClick={this.stopAnim.bind(this)}>Skip</span></p>
+    } else if(i == 11){
+        return <p className={"text item-" + i}><Link to="./contact">{msg}</Link></p>
+    } else{
+        return <p className={"text item-" + i}>{msg}</p>
+    }
   }
 
   render() {
@@ -89,9 +90,7 @@ export default class ServicesSccreen extends Component {
                 </header>
                 
                 <div className="page-about site-cont">
-                    <ul>
-                        
-
+                    <ul className={this.state.animateState}>
                         {
                             this.state.messages.map((message, i) => 
                                 (
@@ -100,6 +99,13 @@ export default class ServicesSccreen extends Component {
                                         ref = {(el) => {
                                                 if (el) {
                                                     el.addEventListener("animationend", event  => {
+                                                       
+                                                        if(event.animationName === "iwishicould"){
+                                                            if(event.srcElement.className.indexOf("item-9") > -1){
+                                                                document.getElementsByClassName("animControl")[0].className += " hide"
+                                                            }
+                                                        }
+
                                                         if(event.animationName === "nightslikethis" && this.state.scroll){
                                                             var size = this.aboutRef.current.clientHeight;
                                                             window.scrollTo(0, size);
@@ -110,10 +116,9 @@ export default class ServicesSccreen extends Component {
                                     >
                                         <p className="loader"><span></span><span></span><span></span></p>
                                         
-                                        { i !== 10
-                                            ? <p className={"text item-" + i}>{message}</p>
-                                            : <p className={"text item-" + i}><Link to="./contact">{message}</Link></p>
-                                        }
+                                     
+                                        {this.loadMessage(message, i)}
+                                    
                                     </li>
                                 )
                             )
