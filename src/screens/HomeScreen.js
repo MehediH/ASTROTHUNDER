@@ -28,13 +28,13 @@ export default class HomeScreen extends Component {
     return (
         <React.Fragment>
             <Helmet>
-                <title>built by meh.</title>
+                <title>mehedi hassan.</title>
                 <meta name="description" content="A creative designer and developer based in London." />
             </Helmet>
 
             <div className="wrapper">
                 <header>
-                    <Link to="/"><h1>built by meh.</h1></Link>
+                    <Link to="/"><h1>mehedi hassan.</h1></Link>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>
@@ -45,19 +45,24 @@ export default class HomeScreen extends Component {
                         <h1 className="hi">hi! i'm mehedi.</h1>
                         <h1>a compsci undergrad, software engineer, and designer based in london.</h1>
                         <h2>i love solving problems, building products that tackle real-life challenges, and designing intuitive experiences.</h2>
-                        <Link to="/services" className="services card">see what i do <span className="arrow">-></span></Link>
+                        <Link to="/contact" className="services card">more about me <span className="arrow">-></span></Link>
                     </div>
 
                     <div className="children">
+                        <div class="socials">
+                            <a target="_blank" href="https://github.com/MehediH">GitHub</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/meh-hassan/">LinkedIn</a>
+                            <a target="_blank" href="https://www.instagram.com/builtbymeh/">Instagram</a>
+                        </div>
                         <Link to="./projects">
                             <div className="projects card">
                                 <h2>view my projects</h2>
                             </div>
                         </Link>
 
-                        <Link to="./contact">
+                        <Link to="./meh">
                             <div className="contact card">
-                                <h2>let's work together</h2>
+                                <h2>personal details</h2>
                             </div>
                         </Link>
                     </div>

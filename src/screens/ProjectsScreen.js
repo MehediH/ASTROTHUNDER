@@ -58,13 +58,13 @@ export default class ProjectScreen extends Component {
         return (
             <React.Fragment>
                 <Helmet>
-                    <title>projects built by meh.</title>
+                    <title>projects // mehedi hassan.</title>
                     <meta name="description" content="A creative designer and developer based in London." />
                 </Helmet>
                 
                 <div className="wrapper">
                     <header>
-                        <h1><Link to="/">built by meh.</Link></h1>
+                        <h1><Link to="/">mehedi hassan.</Link></h1>
                         <div>
                             <span></span><span className="alt"></span>
                         </div>
@@ -76,12 +76,8 @@ export default class ProjectScreen extends Component {
                                 project.fields.visible ? 
                                     <article key={project.sys.id}>
                                             <Link to={"./projects/" + project.fields.slug} className="project">
-                                                <div className="container">
-                                                    <img 
-                                                        alt={project.fields.coverImage.fields.title}
-                                                        src={project.fields.coverImage.fields.file.url}
-                                                        style={{color: project.fields.acent}}
-                                                    />
+                                                <div className="container" style={{backgroundImage: `url(${project.fields.coverImage.fields.file.url})`, color: project.fields.acent}}>
+                                                    
                                                     <div className="overlay"></div>
                                                     <div className="meta">
                                                         <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>

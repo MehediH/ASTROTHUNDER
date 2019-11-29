@@ -107,10 +107,10 @@ html {
       
       .hero{
         padding: 50px;
-        background-color: #4791ff;
-        border: 10px solid #def919;
+        background-color: #7f5af0;
+        border: 10px solid #e7ff0e;
         opacity: 0;
-        color: #2cd08c;
+        color: #2cb57c;
         animation: boasy 3s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
         box-shadow: 0px 0px 0px 0px transparent;
         
@@ -123,7 +123,7 @@ html {
         
         .hi{
           font-size: 2.7em;
-          color: #b3ffb3;
+          color: #f1f1f1;
         }
 
         h2{
@@ -138,7 +138,7 @@ html {
           margin-top: 20px;
           font-size: 30px;
           text-decoration: none;
-          color: #def919;
+          color: #e7ff0e;
           opacity: 0;
           animation: stargazing 2.5s 1.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           border-bottom: 3px solid #def919;
@@ -149,7 +149,6 @@ html {
       }
 
       .children{
-        margin-top: 100px;
 
         a{
           text-decoration: none;
@@ -163,35 +162,34 @@ html {
         
         .projects{
           padding: 50px;
-          background-color: #b91c6c;
-          border: 10px solid #ddf819;
+          background-color:#ef4565;
           opacity: 0;
           margin-bottom: 100px;
-          color: #1536bb;
+          color: #7f5af0;
           animation: boasy 3s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          transition: 0.3s all ease-in-out;
           box-shadow: 0px 0px 0px 0px transparent;
+          display: block;
 
           h2{
-            color: #ebff37;
+            color: white;
           }
 
           &:hover{
-            border: 10px solid  #b91c6c;
+            background-color: #2cb57c;
           }
-  
+
         }
   
         .contact{
           padding: 50px;
-          background-color: #b91c6c;
-          border: 10px solid #ddf819;
+          background-color:#c53651;
         
           opacity: 0;
-          color: #1536bb;
+          color: #7f5af0;
           animation: boasy 3s 2.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
-          transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          transition: 0.3s all ease-in-out;
           box-shadow: 0px 0px 0px 0px transparent;
           
           h2{
@@ -199,7 +197,37 @@ html {
           }
 
           &:hover{
-            border: 10px solid  #b91c6c;
+            background-color: #2cb57c;
+          }
+        }
+
+        .socials{
+          display: grid;
+          height: 60px;
+          margin-bottom: 50px !important;
+          grid-auto-flow: column;
+          grid-gap: 10px;
+          text-align: center;
+          line-height: 60px;
+          margin-top: 20px;
+          text-transform: uppercase;
+
+          @for $i from 2 through 3 {
+            :nth-child(#{$i}n){
+                animation-delay: #{1.9 + ($i * 0.2)}s !important;
+            }
+          }
+
+          
+          a{
+            border: 5px solid transparent;
+            opacity: 0;
+            animation: lovestolay 2s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: 0.3s all ease-in-out;
+
+            &:hover{
+                background-color: #2cb57c;
+            }
           }
         }
       }
@@ -293,14 +321,16 @@ html {
     .projects{
       opacity: 0;
       animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto;
+      grid-gap: 100px;
 
       a{
         color: #b5f9bb;
         text-decoration: none;
         position: relative;
-        display: inline-block;
-        left: 50%;
-        transform: translate(-50%); 
+        display: block;
         outline: 0 !important;
 
         &:focus, &:active, &:hover{
@@ -315,17 +345,17 @@ html {
       }
       
       article{
-        width: 100%;
         position: relative;
-        margin-bottom: 100px;
         
         
         .container{ 
-          display: inline-block;
+          display: block;
           margin: 0 auto;
-          position: relative;
-          left: 50%;
-          transform: translate(-50%);
+          height: 50vh;
+          width: 100%;
+          background-size: contain;
+          -webkit-animation: hope 3s 1.9s forwards cubic-bezier(.2,.8,.2,1);
+          animation: hope 3s 1.9s forwards cubic-bezier(.2,.8,.2,1);
 
           .overlay{
             background-color: #000;
@@ -381,23 +411,52 @@ html {
 
       .meta{
         margin-top: 20px;
+        background-color: #7f5af0;
+        padding: 50px;
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 30px;
 
         h1{
           font-size: 3em;
           margin: 0px;
-          color: #d72880;
+          color: #e7ff0e;
+          padding: 20px 0;
         }
 
         p{
           font-size: 2em;
           margin: 0px;
           padding-top: 20px;
-          color: #b4f8ba;
+          color: #f1f1f1;
+          font-size: 25px;
 
           a{
-            color: #b4f8ba;
+            color: #e7ff0e;
+            transition: 0.3s all ease-in-out;
+
+            &:hover{
+              opacity: 0.75;
+            }
           }
         }
+
+        .view{
+          color: #fff;
+          display: inline-block;
+          margin: 20px 0;
+          padding: 10px 20px;
+          background-color: #b91c6c;
+          transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
+          box-shadow: 8px 9px 0px 0px #46bd8b;
+          text-decoration: none;
+
+          &:hover, &:active, &:focus{
+            background-color: #860044;
+          }
+        }
+
       }
 
       .article-content{
@@ -417,20 +476,7 @@ html {
         }
 
 
-        .view{
-          color: #fff;
-          display: inline-block;
-          margin: 20px 0;
-          padding: 10px 20px;
-          background-color: #b91c6c;
-          transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
-          box-shadow: 8px 9px 0px 0px #1536bb;
-          text-decoration: none;
-
-          &:hover, &:active, &:focus{
-            background-color: #860044;
-          }
-        }
+        
       }
     }
 
@@ -499,7 +545,7 @@ html {
       ul{
         list-style-type: none;
         padding: 0px;
-        max-width: 500px;
+        max-width: 800px;
         margin: 0 auto;
         overflow: hidden;
         display: flex;
@@ -533,12 +579,17 @@ html {
           transform: none;
 
           p{
-            padding:10px 20px;
+            padding: 10px 20px;
             border-radius: 25px 25px 25px 0px;
-            background-color: #b4f8ba;
-            color: #333;
+            background-color: #7f5af0;
+            color: #fff;
             float: left;
+            font-family: "Inconsolata", monospace;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
             margin: 0px;
+
           }
 
           .text{
@@ -547,33 +598,31 @@ html {
             border-radius: 25px 25px 25px 25px;
           }
 
-          .item-12{
+          .item-10{
             border-radius: 25px 25px 25px 0px;
             position: relative;
             z-index: 9999;
             padding: 0px;
             transition: 0.3s all ease-in-out;
+            background-color: #542cce;
 
             a{
               text-decoration: none;
               padding: 10px 20px;
               display: block;
+              color: #fff;
 
-              &:hover, &:focus, &:active{
-                color: #333;
-              }
               
             }
             
             &:hover, &:focus, &:active{
-              background-color: #dbf619;
-              color: #333;
+              background-color: #7f5af0;
             }
           }
 
           .loader{
             animation: nightslikethis 0s 3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-            background-color: #b4f8ba;
+            background-color: #7f5af0;
             opacity: 1;
 
             span{
@@ -582,7 +631,7 @@ html {
               margin-right: 7px;
               border-radius: 50px;
               opacity: 0.5;
-              background-color: #333;
+              background-color: #ccc;
               display: inline-block;
               margin-bottom: 2px;
               animation: applepie .9s ease-in-out infinite;
@@ -625,44 +674,56 @@ html {
           display: block;
           line-height: 35px;
           animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          background: linear-gradient(to right, #ffa290 0%, #aaa8b5 100%);
+          background: linear-gradient(to right, #82b4ff 40%, #bf2dae 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 25px;
           opacity: 0;
           font-family: "Inconsolata", monospace;
-          font-weight: 400;
+          font-weight: 700;
         }
 
+        ul {
+          padding: 0px;
+          font-family: "Inconsolata", monospace;
+          font-weight: 400;
+          font-size: 23px;
+          line-height: 30px;
+          list-style-type: none;
+          
+          @for $i from 1 through 11 {
+            :nth-child(#{$i}n){
+                animation-delay: #{$i * 0.3}s !important;
+            }
+          }
+
+          
+          li{
+            margin: 10px 0;  
+            padding: 15px;
+            background-color: #7f5af0;
+            opacity: 0;
+            animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+        }
 
         a{
           display: block;
           font-size: 25px;
           text-decoration: none;
-          color: #b5f9bb;
+          color: #ef4565;
           opacity: 0;
           padding-bottom: 15px;
-          animation: stargazing 3s .6s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+          animation: stargazing 3s 2.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           transition: 0.3s all ease-in-out;
           margin-top: 25px;
 
           &:hover{
-            color: #cf1775;
+            color: #82b4ff;
           }
         }
 
 
-        .twttr{
-          color: #19e0f6;
-          opacity: 0;
-          animation: perfecto 3s .8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .gthb{
-          color: #c1aa32;
-          opacity: 0;
-          animation: perfecto 3s .9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
       }
 
     }

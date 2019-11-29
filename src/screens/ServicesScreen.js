@@ -30,11 +30,11 @@ export default class ServicesSccreen extends Component {
         <React.Fragment>
             <div className="wrapper">
                 <Helmet>
-                    <title>services // built by meh.</title>
+                    <title>services // mehedi hassan.</title>
                     <meta name="description" content="I design beautiful interfaces, build functional websites and apps, and more." />
                 </Helmet>
                 <header>
-                    <h1><Link to="/">built by meh.</Link></h1>
+                    <h1><Link to="/">mehedi hassan.</Link></h1>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>

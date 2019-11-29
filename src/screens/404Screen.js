@@ -28,7 +28,7 @@ export default class HomeScreen extends Component {
     return (
         <div className="app fof">
             <Helmet>
-                <title>it's a 404 // built by meh.</title>
+                <title>it's a 404 // mehedi hassan.</title>
             </Helmet>
 
             <h1 className="four">it's a 404<Link to="/">let's go back home <span className="arrow">-></span></Link></h1>

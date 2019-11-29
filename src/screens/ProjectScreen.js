@@ -58,12 +58,30 @@ export default class ProjectScreen extends Component {
     render() {
         const project = this.state.project;
 
+        const hideImg = ({ children, ...props }) => (null);
+        
+        // filter out paragraph blocks
+        const showImg = ({ children}) => {
+            let c = []
+
+            children.map((child) => {
+                if (child.type === "img"){
+                    c.push(child)
+                } 
+
+            })
+
+            return c
+        };
+            
+
+
         return (
             <React.Fragment>
                 
                 <div className="wrapper">
                     <header>
-                        <h1><Link to="/">built by meh.</Link></h1>
+                        <h1><Link to="/">mehedi hassan.</Link></h1>
                         <div>
                             <span></span><span className="alt"></span>
                         </div>
@@ -79,14 +97,19 @@ export default class ProjectScreen extends Component {
                             <div className="meta">
                                 <h1>{project.fields.title}</h1>
                                 <p>{project.fields.slogan}</p>
+                                
+                                { project.fields.projectLink !== undefined && 
+                                    <div><a href={project.fields.projectLink} target="_blank" className="view">view project</a></div>
+                                }
+
+                                <Markdown options={{overrides: {img: {component: hideImg}}}}>{project.fields.content}</Markdown>
+
+                                
                             </div>
                             
                             <div className="article-content">
-                                { project.fields.projectLink !== undefined && 
-                                    <div><a href={project.fields.projectLink} target="_blank" class="view">view project</a></div>
-                                }
-
-                                <Markdown>{project.fields.content}</Markdown>
+                                
+                                <Markdown options={{overrides: {p: {component: showImg}}}}>{project.fields.content}</Markdown>
                                 
                             </div>
                         </article> 
