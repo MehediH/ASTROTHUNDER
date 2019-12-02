@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { generateBG } from '../utils/bgAnim.js';
 import {Helmet} from "react-helmet";
+import pdf from '../assets/mehedi-hassan-cv.pdf';
 
 export default class ContactScreen extends Component {
   componentWillMount(){
@@ -60,7 +61,7 @@ export default class ContactScreen extends Component {
                         
 
                         <div class="socials">
-                            <a href="./mehedi-hassan-cv.pdf">Download CV</a>
+                            <a href={pdf}>Download CV</a>
                             <a href="mailto:meh@builtbymeh.com">Email</a>
                             <a target="_blank" href="https://github.com//mehedi-hassan-cv.pdf">GitHub</a>
                             <a target="_blank" href="https://www.linkedin.com/in/meh-hassan/">LinkedIn</a>
