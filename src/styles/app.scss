@@ -228,7 +228,7 @@ html {
         .socials{
           @for $i from 2 through 3 {
             :nth-child(#{$i}n){
-                animation-delay: #{1.9 + ($i * 0.2)}s !important;
+                animation-delay: 1.9 + $i * 0.2s !important;
             }
           }
 
@@ -553,14 +553,14 @@ html {
       .animated{
         @for $i from 1 through 12 {
           li:nth-child(#{$i}n){
-              animation-delay: #{$i * 2}s !important;
+              animation-delay: $i * 2s !important;
 
               .loader{
-                animation-delay: #{($i * 2) + 1}s !important;
+                animation-delay: $i * 2 + 1s !important;
               }
 
               .text{
-                animation-delay: #{($i * 2) + 1}s !important;
+                animation-delay: $i * 2 + 1s !important;
               }
           }
         }
@@ -718,7 +718,7 @@ html {
       .socials{
         @for $i from 2 through 5 {
           :nth-child(#{$i}n){
-              animation-delay: #{1.9 + ($i * 0.2)}s !important;
+              animation-delay: 1.9 + $i * 0.2s !important;
           }
         }
 
@@ -726,7 +726,7 @@ html {
           color: #fff !important;
           text-decoration: none;
         }
-
+ 
       }
     
 
@@ -757,7 +757,7 @@ html {
           
           @for $i from 1 through 11 {
             :nth-child(#{$i}n){
-                animation-delay: #{$i * 0.3}s !important;
+                animation-delay: $i * 0.3s !important;
             }
           }
 
