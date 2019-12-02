@@ -93,6 +93,30 @@ html {
     .site-cont{
       padding: 50px 100px;
     }
+
+    .socials{
+      display: grid;
+      height: 60px;
+      margin-bottom: 50px !important;
+      grid-auto-flow: column;
+      grid-gap: 10px;
+      text-align: center;
+      line-height: 60px;
+      margin-top: 20px;
+      text-transform: uppercase;
+
+      
+      a{
+        border: 5px solid transparent;
+        opacity: 0;
+        animation: lovestolay 2s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        transition: 0.3s all ease-in-out;
+
+        &:hover{
+            background-color: #2cb57c;
+        }
+      }
+    }
     
     .main{
       display: grid;
@@ -202,33 +226,12 @@ html {
         }
 
         .socials{
-          display: grid;
-          height: 60px;
-          margin-bottom: 50px !important;
-          grid-auto-flow: column;
-          grid-gap: 10px;
-          text-align: center;
-          line-height: 60px;
-          margin-top: 20px;
-          text-transform: uppercase;
-
           @for $i from 2 through 3 {
             :nth-child(#{$i}n){
                 animation-delay: #{1.9 + ($i * 0.2)}s !important;
             }
           }
 
-          
-          a{
-            border: 5px solid transparent;
-            opacity: 0;
-            animation: lovestolay 2s 1.9s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-            transition: 0.3s all ease-in-out;
-
-            &:hover{
-                background-color: #2cb57c;
-            }
-          }
         }
       }
 
@@ -353,10 +356,15 @@ html {
           margin: 0 auto;
           height: 50vh;
           width: 100%;
-          background-size: contain;
+          background-size: cover;
+          background-repeat: no-repeat;
           -webkit-animation: hope 3s 1.9s forwards cubic-bezier(.2,.8,.2,1);
           animation: hope 3s 1.9s forwards cubic-bezier(.2,.8,.2,1);
-
+          
+          img{
+            display: none;
+          }
+          
           .overlay{
             background-color: #000;
             opacity: 0;
@@ -706,6 +714,22 @@ html {
       grid-auto-flow: column;
       grid-gap: 100px;
 
+
+      .socials{
+        @for $i from 2 through 5 {
+          :nth-child(#{$i}n){
+              animation-delay: #{1.9 + ($i * 0.2)}s !important;
+          }
+        }
+
+        a{
+          color: #fff !important;
+          text-decoration: none;
+        }
+
+      }
+    
+
       .meta{
         max-width: 60vw;
         
@@ -747,21 +771,7 @@ html {
           }
         }
 
-        a{
-          display: block;
-          font-size: 25px;
-          text-decoration: none;
-          color: #ef4565;
-          opacity: 0;
-          padding-bottom: 15px;
-          animation: stargazing 3s 2.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-          transition: 0.3s all ease-in-out;
-          margin-top: 25px;
-
-          &:hover{
-            color: #82b4ff;
-          }
-        }
+    
 
 
       }

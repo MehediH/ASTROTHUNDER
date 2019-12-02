@@ -77,7 +77,7 @@ export default class ProjectScreen extends Component {
                                     <article key={project.sys.id}>
                                             <Link to={"./projects/" + project.fields.slug} className="project">
                                                 <div className="container" style={{backgroundImage: `url(${project.fields.coverImage.fields.file.url})`, color: project.fields.acent}}>
-                                                    
+                                                    <img src={project.fields.coverImage.fields.file.url} alt={project.fields.coverImage.fields.file.title} style={{color: project.fields.acen}}/>
                                                     <div className="overlay"></div>
                                                     <div className="meta">
                                                         <h1 style={{backgroundColor: project.fields.acent}}>{project.fields.title}</h1>

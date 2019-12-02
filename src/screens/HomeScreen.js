@@ -52,7 +52,6 @@ export default class HomeScreen extends Component {
                         <div class="socials">
                             <a target="_blank" href="https://github.com/MehediH">GitHub</a>
                             <a target="_blank" href="https://www.linkedin.com/in/meh-hassan/">LinkedIn</a>
-                            <a target="_blank" href="https://www.instagram.com/builtbymeh/">Instagram</a>
                         </div>
                         <Link to="./projects">
                             <div className="projects card">

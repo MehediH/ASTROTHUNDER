@@ -44,6 +44,22 @@
             max-width: 80vw !important;
         }
     }
+
+    .projects.site-cont{
+        display: block;
+
+        article{
+            margin-bottom: 100px;
+
+            img{
+                display: block !important;
+            }
+
+            .container{
+                height: auto;
+            }
+        }
+    }
 }
 
 @media(max-width: 1435px){
@@ -51,6 +67,22 @@
         ul{
             grid-template-columns: 1fr 1fr !important;;
             grid-auto-flow: unset !important;
+        }
+    }
+
+    .single-project.site-cont{
+        h1{
+            font-size: 2.5em !important;
+        }
+
+        p{
+            font-size: 25px !important;
+            line-height: 33px !important;
+        }
+
+        .view{
+            font-size: 20px !important;
+            line-height: 25px !important;
         }
     }
 }
@@ -122,12 +154,16 @@
         .services{
             position: relative !important;
             bottom: initial !important;
-            padding-top: 40px !important;
             display: block;
         }
 
         .children{
             margin-top: 0px;
+
+            .socials{
+                padding-bottom: 50px !important;
+                align-content: space-between;
+            }
         }
     }
 
@@ -205,6 +241,8 @@
 
     .main{        
         .hero{
+            margin-bottom: 65px;
+
             h1{
                 font-size: 1.5em !important;
             }
@@ -216,6 +254,7 @@
 
             h2{
                 font-size: 1.2em !important;
+                line-height: 1.5em !important;
             }
 
             .services{
@@ -226,6 +265,10 @@
         .children{
             h2{
                 font-size: 1em !important;
+            }
+
+            .socials{
+                padding: 0px !important;
             }
         }
     }
@@ -239,18 +282,23 @@
         }
     }
 
-    .single-project{
+    .single-project.site-cont{
         h1{
-            font-size: 2em !important;
+            font-size: 2.2em !important;
         }
 
         p{
-            font-size: 20px !important;
+            font-size: 23px !important;
+            line-height: 30px !important;
         }
 
-        .article-content{
-            font-size: 22px !important;
-            line-height: 30px !important;
+        .view{
+            font-size: 18px !important;
+            line-height: 23px !important;
+        }
+
+        .meta{
+            padding: 30px;
         }
     }
 
@@ -295,12 +343,33 @@
             }
             
         }
+
+        ul{
+            font-size: 20px !important;
+            line-height: 25px !important;
+        }
     }
 
-    .single-project{
-        p{
-            font-size: 18px !important;
+    .site-cont {
+
+            .socials a{
+                font-size: 1em !important;
+            }
+
+    }
+
+    .single-project.site-cont{
+        h1{
+            font-size: 2em !important;
+            padding: 0px;
         }
+
+        p{
+            font-size: 20px !important;
+            line-height: 26px !important;
+        }
+
+
     }
 }
 

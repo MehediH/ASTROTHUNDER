@@ -52,9 +52,15 @@ export default class ContactScreen extends Component {
                             <li>Languages: English, Bengali, Hindi (speaking), Urdu (speaking)</li>
                         </ul>
                         
-                        <a href="/mehedi-hassan-cv.pdf">request my cv -></a>
 
-                        <a href="https://github.com/MehediH/" className="gthb">checkout my work on github -></a>
+                        <div class="socials">
+                            <a href="./mehedi-hassan-cv.pdf">Download CV</a>
+                            <a href="mailto:meh@builtbymeh.com">Email</a>
+                            <a target="_blank" href="https://github.com//mehedi-hassan-cv.pdf">GitHub</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/meh-hassan/">LinkedIn</a>
+                            <a target="_blank" href="https://www.instagram.com/builtbymeh/">Instagram</a>
+                        </div>
+
                     </div>
 
                 </div>
