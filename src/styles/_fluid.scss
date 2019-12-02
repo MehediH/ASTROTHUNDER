@@ -92,6 +92,12 @@
         grid-template-columns: 3fr 1.5fr !important;
     }
 
+    .contact {
+        .meta{
+            max-width: 100vw !important;
+        }
+    }
+
     .fof{
         .four{
             font-size: 3.5em;
@@ -148,6 +154,18 @@
 }
 
 @media (max-width: 1156px){
+
+    .contact {
+        .socials{
+            grid-auto-flow: row;
+            grid-template-columns: 1fr 1fr;
+
+            :nth-child(5n){
+                display: none !important;
+            }
+        }
+    }
+
     .main{
         display: block !important;
 
@@ -360,15 +378,17 @@
 
     .single-project.site-cont{
         h1{
-            font-size: 2em !important;
-            padding: 0px;
+            font-size: 1.5em !important;
+            padding: 0px !important;
         }
 
         p{
-            font-size: 20px !important;
+            font-size: 18px !important;
             line-height: 26px !important;
-        }
 
+            
+        }
+        
 
     }
 }
