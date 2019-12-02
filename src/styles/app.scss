@@ -635,7 +635,7 @@ html {
               border-radius: 20px;
               opacity: 0;
               cursor: pointer;
-              animation: lastname 4s 4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+              animation: lastname 4s 4s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
               transition: 0.3s all ease-in-out;
 
               &:hover{

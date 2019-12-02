@@ -345,6 +345,20 @@
 
 @media (max-width: 540px){
     
+    .page-about{
+        .animControl{
+            display: block;
+            position: relative !important;
+            width: 85px;
+            margin-top: 10px;
+            animation: lastname 1s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+        }
+
+        .hide{
+            display: none;
+        }
+    }
+
     .contact{
         .meta{
             p, a {

@@ -18,7 +18,7 @@ export const generateBG = (screenWidth, screneHeight, animated)=>{
     var elemProps = {
         gridSizeX: Math.round(screenWidth / (elemW - 100)),
         gridSizeY: Math.round(screneHeight / (elemW - 120)),
-        resize: animated ? "sn-anim" : "square-anim"
+        resize: animated ? "square-anim" : "square-anim"
     }
 
     return elemProps;
