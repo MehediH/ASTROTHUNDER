@@ -84,7 +84,7 @@ export default class ServicesSccreen extends Component {
     return (
         <React.Fragment>
             <Helmet>
-                <title>about me // meehdi hassan.</title>
+                <title>about me // mehedi hassan.</title>
                 <meta name="description" content="A creative designer and developer based in London." />
             </Helmet>
             <div className="wrapper" ref={this.aboutRef}>
