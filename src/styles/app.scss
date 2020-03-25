@@ -847,19 +847,20 @@ html {
         background-color: #191818;
         padding: 50px;
         opacity: 0;
-        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        animation: stargazing 1.5s .1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
       }
 
       .socials{
-        @for $i from 2 through 5 {
-          :nth-child(#{$i}n){
-              animation-delay: 1.9 + $i * 0.2s !important;
-          }
-        }
+        animation: stargazing 1.5s 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        opacity: 0;
 
         a{
           color: #fff !important;
           text-decoration: none;
+          animation: none;
+          opacity: 1;
+          transform: translateY(0px);
+          border: 5px solid #2cb57c;
         }
  
       }
@@ -890,7 +891,7 @@ html {
           
           @for $i from 1 through 11 {
             :nth-child(#{$i}n){
-                animation-delay: $i * 0.3s !important;
+                animation-delay: $i * 0.1s !important;
             }
           }
 
