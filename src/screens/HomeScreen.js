@@ -38,9 +38,9 @@ export default class HomeScreen extends Component {
                 <meta name="description" content="A creative designer and developer based in London." />
             </Helmet>
 
-            <div className="wrapper">
+            <div className={`wrapper ${this.props.location.state && this.props.location.state.comeThru ? "no-bg" : ""}`}>
                 <header>
-                    <Link to="/"><h1>mehedi hassan.</h1></Link>
+                    <Link to={{pathname: "/", state: { ...this.props.location.state, comeThru: true }}}><h1>mehedi hassan.</h1><span></span></Link>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>
@@ -51,7 +51,7 @@ export default class HomeScreen extends Component {
                         <h1 className="hi">hi! i'm mehedi.</h1>
                         <h1>a compsci undergrad, software engineer, and designer based in london.</h1>
                         <h2>i love solving problems, building products that tackle real-life challenges, and designing intuitive experiences.</h2>
-                        <Link to="/contact" className="services card">more about me <span className="arrow">-></span></Link>
+                        <Link to={{pathname: "/contact", state: { ...this.props.location.state, comeThru: true}}} className="services card">more about me <span className="arrow">-></span></Link>
                     </div>
 
                     <div className="children">
@@ -59,13 +59,13 @@ export default class HomeScreen extends Component {
                             <a target="_blank" href="https://github.com/MehediH">GitHub</a>
                             <a target="_blank" href="https://www.linkedin.com/in/meh-hassan/">LinkedIn</a>
                         </div>
-                        <Link to="./projects">
+                        <Link to={{pathname: "/projects", state: { ...this.props.location.state, comeThru: true}}}>
                             <div className="projects card">
                                 <h2>view my projects</h2>
                             </div>
                         </Link>
 
-                        <Link to="./meh">
+                        <Link to={{pathname: "/meh", state: { ...this.props.location.state, comeThru: true }}}>
                             <div className="contact card">
                                 <h2>personal details</h2>
                             </div>
@@ -73,14 +73,14 @@ export default class HomeScreen extends Component {
                     </div>
                 </div>
 
+                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
+
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
             </div>
 
-            <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
-                {   
-
-                    [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
-                }
-            </div>
             
            </React.Fragment>
     )

@@ -41,7 +41,7 @@ export default class ContactScreen extends Component {
                 </Helmet>
 
                 <header>
-                    <h1><Link to="/">mehedi hassan.</Link></h1>
+                    <Link to={{pathname: "/", state: { ...this.props.location.state, comeThru: true }}}><h1>mehedi hassan.</h1><span></span></Link>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>
@@ -49,7 +49,7 @@ export default class ContactScreen extends Component {
                 
                 <div className="contact site-cont">
                     <div className="meta">
-                        <p>Hey! I am currently looking for internships for Summer 2020 and I may just be the perfect fit for your company. I am an individual with great problem-solving and team-working skills, and I would love to work for a company that will enable me to grow myself and my skill set. I love working with advanced algorithms and data structures, building automated systems, designing and building intuitive user-interfaces, engineering scalable systems, and user research.</p>
+                        <div className="intro"><p>Hey! I am currently looking for internships for Summer 2020 and I may just be the perfect fit for your company. I am an individual with great problem-solving and team-working skills, and I would love to work for a company that will enable me to grow myself and my skill set. I love working with advanced algorithms and data structures, building automated systems, designing and building intuitive user-interfaces, engineering scalable systems, and user research.</p></div>
                         <ul>
                             <li>Achieved 86% in the first year of Computer Science BSc</li>
                             <li>Awarded "Engineering Excellence" scholarship for 3 years</li>
@@ -72,7 +72,12 @@ export default class ContactScreen extends Component {
 
                 </div>
 
+                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                        {   
 
+                            [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                        }
+                </div>
             </div>
 
     

@@ -68,9 +68,9 @@ export default class ProjectScreen extends Component {
                     <meta name="description" content="A creative designer and developer based in London." />
                 </Helmet>
                 
-                <div className="wrapper">
+                <div className={`wrapper ${this.props.location.state && this.props.location.state.comeThru ? "no-bg" : ""}`}>
                     <header>
-                        <h1><Link to="/">mehedi hassan.</Link></h1>
+                        <Link to={{pathname: "/", state: { ...this.props.location.state, comeThru: true }}}><h1>mehedi hassan.</h1><span></span></Link>
                         <div>
                             <span></span><span className="alt"></span>
                         </div>
@@ -81,7 +81,7 @@ export default class ProjectScreen extends Component {
                             projects.map((project) =>
                                 project.fields.visible ? 
                                     <article key={project.sys.id}>
-                                            <Link to={"./projects/" + project.fields.slug} className="project">
+                                            <Link to={{pathname: "/projects/" + project.fields.slug, state: { ...this.props.location.state, comeThru: true}}} className="project">
                                                 <div className="container" style={{backgroundImage: `url(${project.fields.coverImage.fields.file.url})`, color: project.fields.acent}}>
                                                     <img src={project.fields.coverImage.fields.file.url} alt={project.fields.coverImage.fields.file.title} style={{color: project.fields.acen}}/>
                                                     <div className="overlay"></div>
@@ -100,14 +100,14 @@ export default class ProjectScreen extends Component {
                         }
                     </div>
 
+                    <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                        {   
+
+                            [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                        }
+                    </div>
                 </div>
                 
-                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
-                    {   
-
-                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
-                    }
-                </div>
             </React.Fragment>   
         )
     }

@@ -26,7 +26,8 @@ export default class ServicesSccreen extends Component {
             "let's work together! 👀"
         ],
         scroll: true,
-        animateState: "animated"
+        animateState: this.props.location.state && this.props.location.state.animationEnd ? "stopaim" : "animated",
+        animationEnd: this.props.location.state.animationEnd !== undefined ? this.props.location.state.animationEnd : false 
     }
 
     this.aboutRef = React.createRef();
@@ -67,7 +68,7 @@ export default class ServicesSccreen extends Component {
 
 
   stopAnim(){
-    this.setState({animateState: "stopaim"})
+    this.setState({animateState: "stopaim", animationEnd: true})
   }
 
   loadMessage(msg, i){
@@ -87,14 +88,14 @@ export default class ServicesSccreen extends Component {
                 <title>about me // mehedi hassan.</title>
                 <meta name="description" content="A creative designer and developer based in London." />
             </Helmet>
-            <div className="wrapper" ref={this.aboutRef}>
+            <div className={`wrapper ${this.props.location.state && this.props.location.state.comeThru ? "no-bg" : ""}`} ref={this.aboutRef}>
                 <header>
-                    <h1><Link to="/">mehedi hassan.</Link></h1>
+                    <Link to={{pathname: "/", state: {comeThru: true, animationEnd: this.state.animationEnd }}}><h1>mehedi hassan.</h1><span></span></Link>
                     <div>
                         <span></span><span className="alt"></span>
                     </div>
                 </header>
-                
+
                 <div className="page-about site-cont">
                     <ul className={this.state.animateState}>
                         {
@@ -108,6 +109,7 @@ export default class ServicesSccreen extends Component {
                                                        
                                                         if(event.animationName === "iwishicould"){
                                                             if(event.srcElement.className.indexOf("item-9") > -1){
+                                                                this.setState({animationEnd: true})
                                                                 document.getElementsByClassName("animControl")[0].className += " hide"
                                                             }
                                                         }
@@ -132,14 +134,14 @@ export default class ServicesSccreen extends Component {
                     </ul>
                 </div>
 
+                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                    {   
+
+                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                    }
+                </div>
             </div>
 
-            <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
-                {   
-
-                    [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
-                }
-            </div>
         </React.Fragment>
     )
   }

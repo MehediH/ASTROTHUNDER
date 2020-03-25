@@ -85,9 +85,9 @@ export default class ProjectScreen extends Component {
         return (
             <React.Fragment>
                 
-                <div className="wrapper">
+                <div className={`wrapper ${this.props.location.state && this.props.location.state.comeThru ? "no-bg" : ""}`}>
                     <header>
-                        <h1><Link to="/">mehedi hassan.</Link></h1>
+                        <Link to={{pathname: "/", state: { ...this.props.location.state, comeThru: true }}}><h1>mehedi hassan.</h1><span></span></Link>
                         <div>
                             <span></span><span className="alt"></span>
                         </div>
@@ -99,7 +99,7 @@ export default class ProjectScreen extends Component {
                                 <title>{project.fields.title} // built by meh.</title>
                                 <meta name="description" content={project.fields.slogan} />
                             </Helmet>
-
+                            <Link className="allProjects" to={{pathname: "/projects", state: { ...this.props.location.state, comeThru: true }}}>{"<- view all projects"}</Link>
                             <div className="meta">
                                 <h1>{project.fields.title}</h1>
                                 <p>{project.fields.slogan}</p>
@@ -134,14 +134,14 @@ export default class ProjectScreen extends Component {
                         </article>
                     }
                 
+                    <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
+                        {   
+
+                            [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
+                        }
+                    </div>
                 </div>
                 
-                <div className={"background-overlay anim " + this.state.resize } style={{gridTemplateColumns: "repeat(" + this.state.gridSizeX + ", 1fr"}}>
-                    {   
-
-                        [...Array(this.state.gridSizeX * this.state.gridSizeY)].map((e, i) => <span key={i}></span>)
-                    }
-                </div>
             </React.Fragment>   
         )
     }

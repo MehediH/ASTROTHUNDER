@@ -4,7 +4,9 @@
 
 .no-bg{
   header h1{
-    animation: stargazing 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation: none !important;
+    display: block;
+    opacity: 1;
 
     a{
       animation: none !important;
@@ -12,16 +14,109 @@
   }
 
   header div span {
-    animation: pickupthephonebaby 2s 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1) ;
+    animation: pickupthephonebaby 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .main.site-cont{
+    animation: boasy 1s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+    .hero{
+      animation: boasy 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+
+      .services{
+        animation: stargazing 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+
+    .children{
+      .socials a{
+        animation: lovestolay 1s 0.25s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .socials :nth-child(2n) {
+        animation-delay: 0.3s !important;
+      }
+
+      .projects{
+        animation: boasy 1s 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .contact{
+        animation: boasy 1s 0.45s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+    }
+    
+  }
+
+  .projects.site-cont{
+    animation: stargazing 1.5s 0.1s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    
+    article .container{
+
+      img{
+        opacity: 1 !important;
+      }
+
+      opacity: 0;
+      animation: hope 1s 0.12s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+  }
+
+  .single-project{
+    animation: stargazing 1s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+
+  .page-about.site-cont{
+    .animated{
+      li:nth-child(1){
+        animation-delay: 0.5s !important;
+
+        .loader{
+          animation-delay: 1.5s !important;
+        }
+
+        .text{
+          animation-delay: 1.5s !important;
+        }
+      }
+
+      @for $i from 2 through 12 {
+        li:nth-child(#{$i}n){
+            animation-delay: $i * 1.3s !important;
+
+            .loader{
+              animation-delay: $i * 1.3 + 1s !important;
+            }
+
+            .text{
+              animation-delay: $i * 1.3 + 1s !important;
+            }
+        }
+      }
+      
+
+        
+    }
+  }
+
+  .background-overlay{
+    animation: none;
+    opacity: 0.3;
+
+    span{
+      animation: none;
+      transform: rotate(45deg);
+      opacity: 1;
+    }
   }
 }
+
 html {
   font-family: 'Roboto Mono', monospace;
   text-rendering: optimizeLegibility;
   padding: 0px;
   color: #fff;
-  margin: 5px;
-
 
   body {
     margin: 0px;
@@ -48,21 +143,34 @@ html {
       padding-left: 100px;
 
       h1 {
-        font-size: 50px;
-        margin: 0px;
-
+         font-size: 50px;
+          margin: 0px;
           animation: stargazing 3s 1.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           background: linear-gradient(to right, #d82881 36%, #8d27da 100%);
+          transition: 0.3s all ease-in-out;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           opacity: 0;
           color: transparent;
+          
+        }
+
+        span{
+          width: 0%;
+          background-color: #d82881;
+          height: 3px;
+          display: block;
         }
         
         a {
           transition: 0.1s all ease-in-out;
           text-decoration: none;
           
+          &:hover{
+            span{
+              animation: benz 1s .2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+          }
         }
       
       div{
@@ -413,13 +521,25 @@ html {
       opacity: 0;
       animation: stargazing 3s 2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
 
+      .allProjects{
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.7;
+        font-size: 15px;
+        transition: 0.3s all ease-in-out;
+
+        &:hover, &:active, &:focus{
+          opacity: 1;
+        }
+      }
+
       img{
         width: 100%;
       }
 
       .meta{
         margin-top: 20px;
-        background-color: #7f5af0;
+        background-color: #191818;
         padding: 50px;
         font-family: "Inconsolata", monospace;
         font-weight: 400;
@@ -457,7 +577,7 @@ html {
           padding: 10px 20px;
           background-color: #b91c6c;
           transition: 0.5s all cubic-bezier(0.2, 0.8, 0.2, 1);
-          box-shadow: 8px 9px 0px 0px #46bd8b;
+          box-shadow: 8px 9px 0px 0px #1536ba;
           text-decoration: none;
 
           &:hover, &:active, &:focus{
@@ -549,6 +669,14 @@ html {
     .page-about{
       display: block; 
       position: relative;
+
+      .stopaim li{
+        animation: chevelle 2s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+
+        .loader{
+          display: none;
+        }
+      }
 
       .animated{
         @for $i from 1 through 12 {
@@ -709,11 +837,18 @@ html {
       }
     }
 
+    
     .contact{
       display: grid;
       grid-auto-flow: column;
       grid-gap: 100px;
 
+      .intro{
+        background-color: #191818;
+        padding: 50px;
+        opacity: 0;
+        animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
 
       .socials{
         @for $i from 2 through 5 {
@@ -737,12 +872,10 @@ html {
           margin: 0 auto;
           display: block;
           line-height: 35px;
-          animation: stargazing 3s .3s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
           background: linear-gradient(to right, #82b4ff 40%, #bf2dae 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 25px;
-          opacity: 0;
           font-family: "Inconsolata", monospace;
           font-weight: 700;
         }
