@@ -839,7 +839,7 @@ html {
 
     
     .contact{
-      display: grid;
+      display: grid; 
       grid-auto-flow: column;
       grid-gap: 100px;
 
@@ -848,7 +848,7 @@ html {
         padding: 50px;
         opacity: 0;
         animation: stargazing 1.5s .1s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
-      }
+      } 
 
       .socials{
         animation: stargazing 1.5s 0.8s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
