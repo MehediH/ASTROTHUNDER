@@ -50,7 +50,7 @@ export default class HomeScreen extends Component {
                     <div className="hero">
                         <h1 className="hi">hi! i'm mehedi.</h1>
                         <h1>a software engineer, compsci undergrad, and designer based in london.</h1>
-                        <h2>i love building beautiful, functional software that solve problems, and designing intuitive experiences.</h2>
+                        <h2>i like making beautiful, functional products designed to solve problems.</h2>
                         <Link to={{pathname: "/contact", state: { ...this.props.location.state, comeThru: true}}} className="services card">more about me <span className="arrow">-></span></Link>
                     </div>
 
