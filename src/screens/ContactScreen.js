@@ -49,7 +49,7 @@ export default class ContactScreen extends Component {
                 
                 <div className="contact site-cont">
                     <div className="meta">
-                        <div className="intro"><p>Hey! I am CompSci undergraduate student who loves learning new tech, and building pretty things — mostly software. I am an individual with great problem-solving and team-working skills. At school, I am mostly learning advanced algorithms and data structures. And in my free time, I design and build intuitive user-interfaces and make products that not only help my own workflow, but other thousands of other developers. Here are a couple of accomplishments.</p></div>
+                        <div className="intro"><p>Hey! I am CompSci undergraduate student who loves learning new tech, and building pretty things — mostly software. I am an individual with great problem-solving and team-working skills. At school, I am mostly learning advanced algorithms and data structures. And in my free time, I design and build intuitive user-interfaces and make products that not only help my own workflow, but thousands of other developers. Here are a couple of accomplishments.</p></div>
                         <ul>
                             {/* <li>Achieved 86% in the first year of Computer Science BSc</li> */}
                             <li>Awarded "Engineering Excellence" scholarship for 3 years</li>
