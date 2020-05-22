@@ -54,7 +54,7 @@ export default class ProjectScreen extends Component {
             content_type: "7leLzv8hW06amGmke86y8G",
             order: "-fields.position"
         }).then(entries => {
-            this.setState({projects: entries.items});
+            this.setState({projects: entries.items.filter(item => item.fields.visible)});
         }) 
     }
 
